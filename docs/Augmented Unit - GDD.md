@@ -14,7 +14,7 @@ Augmented Unit
 ### Gatunki
 
 Gra będzie pomieszaniem gatunków gier narracyjnych i metroidvanii.
-Gra narracyjna, bo silny nacisk będzie kładzony na fabułę i _environmental storytelling_, a z gatunku metroidvanii zapożyczona zostanie struktura poziomów i sposób postępu w grze.
+Gra narracyjna, bo silny nacisk będzie kładzony na fabułę i narrację środowiskową, z gatunku metroidvanii zapożyczona zostanie struktura poziomów i sposób postępu w grze.
 
 ### Odbiorcy
 
@@ -24,20 +24,18 @@ Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku oko�
 
 <!-- Wymagania pożyczone od gry dead cells - podobnej graficznie i konceptualnie do naszej gry -->
 
-"If your PC can run Windows, it can probably run this game", but let's give you some requirements
-
-Aspekt | MINIMUM: | RECOMMENDED:
+Aspekt | Minimalne: | Zalecane:
 ---|---|---
 OS * | Windows 7+ | Windows 7+
-Processor | Intel i5+ | Intel i5+
-Memory | 2 GB RAM | 4 GB RAM
-Graphics | Nvidia 450 GTS / Radeon HD 5750 or better | Nvidia GTX 460 / Radeon HD 7800 or better
-Storage | 500 MB available space | 500 MB available space
-Additional Notes | DirectX 9.1+ or OpenGL 3.2+ | DirectX 9.1+ or OpenGL 3.2+
+Procesor | Intel i5+ | Intel i5+
+Pamięć RAM | 2 GB RAM | 4 GB RAM
+Karta graficzna | Nvidia 450 GTS / Radeon HD 5750 lub lepsza | Nvidia GTX 460 / Radeon HD 7800 lub lepsza
+Miejsce na dysku | 500 MB dostępnego miejsca | 500 MB dostępnego miejsca
+Dodatkowe uwagi | DirectX 9.1+ lub OpenGL 3.2+ | DirectX 9.1+ lub OpenGL 3.2+
 
 ### Monetyzacja
 
-Gra zostanie wypuszczona w modelu free-to-play, aby zachęcić graczy do zagrania w nią i aby zdobyć odrobinę rozgłosu na rynku. Później mogą zostać wydane płatne dodatki do gry, które rozwiną grę o opcjonalne poziomy i poszerzą historię świata.
+Gra zostanie wypuszczona w modelu free-to-play (darmowa), aby zachęcić graczy do zagrania w nią i aby zdobyć odrobinę rozgłosu na rynku. Później mogą zostać wydane płatne dodatki do gry, które rozwiną grę o opcjonalne poziomy i poszerzą historię świata.
 
 ## Tematyka i osadzenie gry
 
@@ -46,16 +44,16 @@ Gra zostanie wypuszczona w modelu free-to-play, aby zachęcić graczy do zagrani
 Gra rozgrywać się będzie na pokładzie wojskowego statku transportowego, którego załoga została wybita, a sam statek dryfuje uszkodzony na środku oceanu.
 Z uwagi na gatunek gry (metroidvania) cały statek będzie jedną, dużą mapą, ale jego konkretne sekcje będą reprezentować oddzielne poziomy.
 
-Przykładowe sekcje, które mogą się znaleźć w grze:
+Sekcje, które będziemy mogli znaleźć w grze:
 Nazwa | Obowiązkowy | Modyfikacja | Logi | Opis
 ---|---|---|---|---
-Pokład statku | Y | dash | - | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
-Kajuty załogi | Y | double-jump | DUŻO, vague historia i tajne pokoje | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
-Magazyn | Y | krzyk | minimum, basic story info | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne
-Reaktor | N | - | - | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie - działkom blokującym inne opcjonalne pokoje i łodzi podwodnej
-Serwerownia | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze hinty na dodatkowe pokoje i głębszą fabułę | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki here
-Zbrojownia | N | - | trochę, żeby zrozumieć skąd broń nuklearna i co robił statek | w nim, z użyciem kodów z serwerowni, można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
-Pokój z łodzią podwodną | N | - | minimum, mówiące po co łódź i że może przetrwać wybuch nuklearny | dzięki niemu można uciec ze statku po tym, jak uruchomimy bombę, łódź potrzebuje zasilania i kodu bezpieczeństwa
+Pokład statku | Y | krzyk | - | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
+Kajuty załogi | Y | double-jump | DUŻO, przybliżające historię postaci | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
+Magazyn | Y | dash | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne
+Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie - działkom blokującym inne opcjonalne pokoje i łodzi podwodnej
+Serwerownia | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
+Zbrojownia | N | - | Kilka, ostatni log Jack'a i kilka o tym, po co nam broń nuklearna | w nim, z użyciem kodów z serwerowni, można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
+Pokój z łodzią podwodną | N | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | dzięki niemu można uciec ze statku po tym, jak uruchomimy bombę, łódź potrzebuje zasilania i kodu bezpieczeństwa
 Pokój treningowy | Y | Narrator | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka, będzie początkowo pokojem developerskim, w którym później umieścimy samouczek
 
 
@@ -63,19 +61,71 @@ Pokój treningowy | Y | Narrator | Jeden, przykład mechaniki | Pokój, do któr
 
 #### Wprowadzenie
 
-Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kapsuły) w szczelnie zamkniętym pomieszczeniu. Dowiaduje się tutaj o swoim celu - zabezpieczeniu tajnych danych znajdujących się na statku.
-Po diagnozie systemów (tutorial) AU dostaje moduł odczytywania logów (narratora), a wyjście się otwiera i AU zostaje wypuszczony na statek, aby wypełnić swój cel.
+Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kapsuły) w szczelnie zamkniętym pomieszczeniu. Dowiaduje się tutaj o swoim celu - zabezpieczeniu tajnych danych znajdujących się na statku. Po diagnozie systemów (tutorial) AU dostaje moduł odczytywania logów (narratora), a wyjście się otwiera i AU zostaje wypuszczony na statek, aby wypełnić swój cel.
 
-#### Wątki
+#### Suche fakty
 
-- Wątek główny
-    - Głównym celem AU jest odnalezienie źródła problemów na statku, które znajduje się w __Serwerowni__, na specjalnym dysku zabezpieczonym szkłem?, które może zostać zniszczone jedynie z użyciem konkretnej __modyfikacji (augment)__. Dostanie się do niej nie jest możliwe od samego początku, więc AU musi znaleźć inne modyfikacje, które umożliwią przedostanie się do __Serwerowni__ przy okazji poznając historię statku i załogi. Ostatnia modyfikacja jest jednak silnie zabezpieczona i podniesienie jej aktywuje specjalny program obronny, który ma na celu zniszczyć wszystko, co znajduje się na statku i jest poza specjalnym pokojem (początkowym).
-- Wątek poboczny - członkowie załogi
-    - Niektórzy członkowie załogi (ciała znajdowane na statku) będą miały przy sobie __logi__, które pozwolą na zrozumienie dodatkowej fabuły, świata, czy mechanik.
-- Wątek poboczny - inne roboty
-    - Na statku będą się też znajdować inne roboty (sprawne lub nie), które pozwolą zrozumieć cel istnienia AU (gracza) w tym świecie.
-- Wątek poboczny (opcjonalny) - zaburzenia czasu
-    - Gra będzie się opierać o time-loop, który potencjalnie będzie można przerwać, wchodząc w interakcję z dodatkową zawartością. Przerwanie pętli będzie "__prawdziwym zakończeniem__", ale będzie wymagać od gracza wysadzenia statku w powietrze z użyciem broni nuklearnej, oraz ucieczkę.
+- STATEK
+    - statek dryfuje zniszczony na środku oceanu
+    - statek jest jednostką transportowo-badawczą
+    - statek przewozi broń nuklearną, tajne wojskowe dane oraz eksperymentalną broń
+    - statek jest napędzany generatorem
+    - statek nie jest już sprawny
+- AU
+    - AU - Augmented Unit
+    - AU jest robotem zdolnym do modyfikowania samego siebie, aby mógł wykonać swój cel
+    - celem AU jest odzyskiwanie i chronienie danych w sytuacjach kryzysowych
+    - AU jest zdolny do użycia DEM - eksperymentalnej broni, która pozwala na podróż w czasie
+        - przy wybraniu tej modyfikacji AU zostaje cofnięty w czasie i przestrzeni do momentu, gdy statek jeszcze funkcjonował - zostaje uruchomiony alarm
+        - AU zabija wszystkich na statku i wraca do swojej kapsuły, gdzie zostaje zresetowany i może zacząć cykl na nowo
+    - AU po uruchomieniu musi przejść test systemów (tutorial) i otrzymać narratora
+    - AU jest w stanie dowiedzieć się, co stało się na statku poprzez logi i rozmowy z CU
+- Postaci drugoplanowe
+    - Cleanup Unit (CU)
+        - CU to mały robot, który pojawia się chwilę za vaultem
+        - CU pomaga AU poprzez powiedzenie, że dane są w serwerowni
+        - CU generalnie będzie pojawiał się, gdy gracz spędzi za dużo czasu w jednym miejscu i nie będzie wiedział, co zrobić
+    - John
+        - Martwy żołnierz zaraz przed wejściem do vaulta
+        - Jedyny nie walczy z AU, jest przerażony
+        - Jego log mówi o tym, że coś się zbliża, po czym słychać krzyk
+    - Aaron
+        - Naukowiec na wejściu do serwerowni
+        - Autor logów znajdowanych na mapie opisujących strukturę statku
+        - Twórca DEM
+        - Odizolowany od ludzi wizjoner, pasjonat postępu, który pragnie spokoju
+        - Nielubiany przez resztę załogi z uwagi na jego obsesję na punkcie DEM
+        - Statek istnieje, aby umożliwić mu pracę, wszyscy mieli go chronić
+    - Admirał Connor
+        - Główny dowódca wojsk
+        - Opisuje w logach broń na statku, konflikt, przez który powstaje DEM i cel ich misji
+        - Skupiony na pracy, stara się udawać, że nie ma życia poza statkiem
+        - Zostaje zabity w walce w generatorze
+        - Zabicie Szeregowego Jack'a odbiło się na jego psychice i zaczął się po tym załamywać
+    - Szeregowy Jack
+        - Zwykły szary żołnierz
+        - Nie lubi być na tym statku i wierzy, że eksperymentalna broń w końcu ich zabije
+        - W logach opisuje to jak bardzo chce się wyrwać z tego statku
+        - Naprowadza gracza na wysadzenie statku i ucieczkę łodzią podwodną
+        - Próbował sam odpalić bombę nuklearną, ale został zabity przez Admirał Connora po kilku ostrzeżeniach
+
+
+#### Logi 
+
+Nazwa | Osoba | Id* | Lokacja | Log
+---|---|---|---|---
+Ostatnie słowa | John | John_1 | Magazyn | Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie! Aaaaaaa!!!!
+Po co to tu jest? | Aaron | Aaron_1 | Magazyn | Augmented Unit... Nie rozumiem po co to trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej żeby ten robot odzyskał wszystkie dane, moja praca nie może przepaść!
+Ci ludzie... | Aaron | Aaron_2 | Magazyn | To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!
+Chociaż nie jest tak źle | Jack | Jack_1 | Magazyn | Warta w magazynie nie jest taka zła, mogę usiąść gdzieś w rogu i próbować zapomnieć o tym szaleństwie po drugiej stronie statku!
+Podziw: bronie | Connor | Connor_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
+Podziw: łódź podwodna | Connor | Connor_2 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
+Na wszelki wypadek... | Jack | Jack_2 | Submarine | Ok... Jack... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został odpalony i generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz!
+Zrobiłem to... | Connor | Connor_3 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
+On musi z kimś porozmawiać | Connor | Connor_4 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
+??? | ??? | ??? | ??? | ???
+
+*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane
 
 ### Postaci
 
@@ -90,14 +140,14 @@ Augmented Unit — uniwersalny robot odpowiedzialny za przechowywanie sekretów 
 
 #### NPC
 
-Popsuty robot na starcie, mówiący o tym, że dane są w sytuacjach awaryjnych za specjalnym materiałem, który można zniszczyć tylko, używając DEM, czyli specjalnej broni. Posiada niski poziom inteligencji, który pozwala mu jedynie chodzić bez celu do momentu opowiedzenia historyjki.
+Cleanup Unit (CU) - mały robot, który pomaga graczowi, jeśli ten spędzi za dużo czasu w jednym obszarze nie wykonując żadnej akcji
 
 ## Rozgrywka i mechaniki
 
 ### Cel gry (cele/wyzwania/questy)
 
 - __Głównym celem__ gracza będzie dostanie się do wspomnianej wcześniej __Serwerowni__. Po drodze napotka różne przeszkody w postaci poruszających się platform, systemów bezpieczeństwa na statku, czy zagrożeń środowiskowych (woda/ogień/prąd).
--  __Dodatkowo__ ciała członków załogi, czy roboty na statku będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
+-  __Dodatkowo__ znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
 - Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
 
 ### Interakcja/kontrolery (/sterowanie?)
