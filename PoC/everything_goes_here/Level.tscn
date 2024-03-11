@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn6qfmbx8bx6i"]
+[gd_scene load_steps=6 format=3 uid="uid://dn6qfmbx8bx6i"]
 
 [ext_resource type="Texture2D" uid="uid://cvm3tkwl5b4g4" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
 [ext_resource type="PackedScene" uid="uid://c7rhrku16kbwb" path="res://PoC/everything_goes_here/player.tscn" id="2_b3lv6"]
+[ext_resource type="PackedScene" uid="uid://b3jcbdf3ri0vt" path="res://PoC/everything_goes_here/Log.tscn" id="3_ffrkd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca041"]
 texture = ExtResource("1_jhkw7")
@@ -76,3 +77,6 @@ layer_1/tile_data = PackedInt32Array(1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0
 
 [node name="Player" parent="." instance=ExtResource("2_b3lv6")]
 position = Vector2(550, 507)
+
+[node name="Log" parent="." instance=ExtResource("3_ffrkd")]
+position = Vector2(546, 349)

@@ -13,6 +13,7 @@ var dash_count = 1
 
 var jump_cooldown = 2
 var dash_cooldown = 2
+var closest_log: Log = null
 
 @onready var feet: = $Feet
 var is_facing_right: = true
@@ -24,6 +25,8 @@ func _process(delta):
 	_calculate_velocity()
 	reset_movement_mods()
 	move_and_slide()
+	if Input.is_action_just_pressed("interact"):
+		pickup_log()
 
 func _calculate_velocity():
 	#gravity
@@ -78,6 +81,10 @@ func start_dash_cooldown():
 	await get_tree().create_timer(dash_cooldown).timeout
 	dash_count = dash_count + 1
 
+func pickup_log():
+	closest_log.read()
+	closest_log = null
+
 #TODO
 func reset_movement_mods():
 	if not feet.get_overlapping_areas().is_empty():
@@ -87,3 +94,12 @@ func reset_movement_mods():
 			jump_count = 1
 		if is_dash_active:
 			dash_count = 1
+
+
+func _on_pickup_radius_body_entered(body):
+	closest_log = body
+
+
+func _on_pickup_radius_body_exited(body):
+	if closest_log == body:
+		closest_log = null

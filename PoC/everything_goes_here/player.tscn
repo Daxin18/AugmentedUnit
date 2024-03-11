@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7rhrku16kbwb"]
+[gd_scene load_steps=6 format=3 uid="uid://c7rhrku16kbwb"]
 
 [ext_resource type="Script" path="res://PoC/everything_goes_here/player.gd" id="1_o007p"]
 [ext_resource type="Texture2D" uid="uid://bp5lhurvh6cvh" path="res://PoC/everything_goes_here/augmented_unit_base.png" id="2_12bcu"]
@@ -9,6 +9,9 @@ height = 46.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rh2sp"]
 size = Vector2(28, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_knlmx"]
+radius = 49.0918
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -33,3 +36,13 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Feet"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_rh2sp")
+
+[node name="Pickup radius" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup radius"]
+shape = SubResource("CircleShape2D_knlmx")
+
+[connection signal="body_entered" from="Pickup radius" to="." method="_on_pickup_radius_body_entered"]
+[connection signal="body_exited" from="Pickup radius" to="." method="_on_pickup_radius_body_exited"]

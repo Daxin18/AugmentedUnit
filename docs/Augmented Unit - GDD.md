@@ -197,6 +197,15 @@ TODO
 
 Statek będzie jedną wielką mapą, na której każda [sekcja](#lokacje) będzie osobnym poziomem z "animacją" wygaszania ekranu przy przejściu między nimi (na czas ładowania poziomu).
 
+Gracz powinien w domyśle odwiedzić pokoje w następującej kolejności:
+1. Pokój treningowy (tutorial)
+2. Magazyn
+3. Kajuty
+4. Pokład statku
+5. Serwerownia
+
+Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początku będzie miał z Magazynu dostęp do Pokoju z łodzią podwodną, z Serwerowni będzie mógł dość łatwo dostać się do Reaktora, a po jego wyłączeniu cofnąć się i przez Magazyn wrócić do Zbrojowni.
+
 ![alt text](images/image-3.png)
 
 ## Assety
