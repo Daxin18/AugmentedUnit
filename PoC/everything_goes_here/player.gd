@@ -82,7 +82,8 @@ func start_dash_cooldown():
 	dash_count = dash_count + 1
 
 func pickup_log():
-	closest_log.read()
+	if closest_log != null:
+		closest_log.read()
 	closest_log = null
 
 #TODO
