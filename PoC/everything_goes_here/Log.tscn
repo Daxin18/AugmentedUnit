@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3jcbdf3ri0vt"]
+
+[ext_resource type="Script" path="res://PoC/everything_goes_here/Log.gd" id="1_2s361"]
+[ext_resource type="Texture2D" uid="uid://cw2y8k4nnk16s" path="res://PoC/everything_goes_here/Log.png" id="1_p0b4s"]
+[ext_resource type="AudioStream" uid="uid://jq8pxf3sc7y3" path="res://PoC/everything_goes_here/Dog single bark.wav" id="3_qvwxo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4aws"]
+radius = 16.0312
+
+[node name="Log" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_2s361")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+shape = SubResource("CircleShape2D_y4aws")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_p0b4s")
+
+[node name="LogAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qvwxo")

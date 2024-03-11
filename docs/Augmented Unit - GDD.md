@@ -20,9 +20,9 @@ Gra narracyjna, bo silny nacisk będzie kładzony na fabułę i narrację środo
 
 Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku około 16 do 30 lat, lub ludzie zainteresowani historiami opowiedzianymi nie wprost, z nutką niepokoju.
 
-### Plaforma i wwymagania sprzętowe
+### Plaforma i wymagania sprzętowe
 
-<!-- Wymagania pożyczone od gry dead cells - podobnej graficznie i konceptualnie do naszej gry -->
+<!-- Wymagania pożyczone z gry dead cells - podobnej graficznie i poniekąd gameplay'owo do naszej gry -->
 
 Aspekt | Minimalne: | Zalecane:
 ---|---|---
@@ -53,7 +53,7 @@ Magazyn | Y | dash | Kilka, pozwalające zapoznać się z postaciami | początko
 Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie - działkom blokującym inne opcjonalne pokoje i łodzi podwodnej
 Serwerownia | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
 Zbrojownia | N | - | Kilka, ostatni log Jack'a i kilka o tym, po co nam broń nuklearna | w nim, z użyciem kodów z serwerowni, można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
-Pokój z łodzią podwodną | N | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | dzięki niemu można uciec ze statku po tym, jak uruchomimy bombę, łódź potrzebuje zasilania i kodu bezpieczeństwa
+Pokój z łodzią podwodną (submarine) | N | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | dzięki niemu można uciec ze statku po tym, jak uruchomimy bombę, łódź potrzebuje zasilania i kodu bezpieczeństwa
 Pokój treningowy | Y | Narrator | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka, będzie początkowo pokojem developerskim, w którym później umieścimy samouczek
 
 
@@ -86,28 +86,28 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
         - CU pomaga AU poprzez powiedzenie, że dane są w serwerowni
         - CU generalnie będzie pojawiał się, gdy gracz spędzi za dużo czasu w jednym miejscu i nie będzie wiedział, co zrobić
     - John
-        - Martwy żołnierz zaraz przed wejściem do vaulta
-        - Jedyny nie walczy z AU, jest przerażony
+        - Martwy żołnierz zaraz przed wejściem do vaulta (pokoju startowego)
+        - Jedyny nie walczy z AU, jest przerażony,
         - Jego log mówi o tym, że coś się zbliża, po czym słychać krzyk
     - Aaron
         - Naukowiec na wejściu do serwerowni
         - Autor logów znajdowanych na mapie opisujących strukturę statku
         - Twórca DEM
         - Odizolowany od ludzi wizjoner, pasjonat postępu, który pragnie spokoju
-        - Nielubiany przez resztę załogi z uwagi na jego obsesję na punkcie DEM
+        - Nielubiany przez resztę załogi z uwagi na jego obsesję na punkcie DEM,
         - Statek istnieje, aby umożliwić mu pracę, wszyscy mieli go chronić
     - Admirał Connor
         - Główny dowódca wojsk
         - Opisuje w logach broń na statku, konflikt, przez który powstaje DEM i cel ich misji
         - Skupiony na pracy, stara się udawać, że nie ma życia poza statkiem
         - Zostaje zabity w walce w generatorze
-        - Zabicie Szeregowego Jack'a odbiło się na jego psychice i zaczął się po tym załamywać
+        - Zabicie Szeregowego Jack' odbiło się na jego psychice i zaczął się po tym załamywać
     - Szeregowy Jack
-        - Zwykły szary żołnierz
-        - Nie lubi być na tym statku i wierzy, że eksperymentalna broń w końcu ich zabije
-        - W logach opisuje to jak bardzo chce się wyrwać z tego statku
+        - Zwykły, szary żołnierz
+        - Nie lubi być na tym statku i wierzy, że eksperymentalna broń w końcu ich zabije,
+        - W logach opisuje to, jak bardzo chce się wyrwać z tego statku
         - Naprowadza gracza na wysadzenie statku i ucieczkę łodzią podwodną
-        - Próbował sam odpalić bombę nuklearną, ale został zabity przez Admirał Connora po kilku ostrzeżeniach
+        - Próbował sam odpalić bombę nuklearną, ale został zabity przez Admirała Connora po kilku ostrzeżeniach
 
 
 #### Logi 
@@ -115,7 +115,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
 Nazwa | Osoba | Id* | Lokacja | Log
 ---|---|---|---|---
 Ostatnie słowa | John | John_1 | Magazyn | Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie! Aaaaaaa!!!!
-Po co to tu jest? | Aaron | Aaron_1 | Magazyn | Augmented Unit... Nie rozumiem po co to trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej żeby ten robot odzyskał wszystkie dane, moja praca nie może przepaść!
+Po co to tu jest? | Aaron | Aaron_1 | Magazyn | Augmented Unit... Nie rozumiem, po co to tu trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej, żeby ten robot odzyskał wszystkie dane, moja praca nie może przepaść!
 Ci ludzie... | Aaron | Aaron_2 | Magazyn | To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!
 Chociaż nie jest tak źle | Jack | Jack_1 | Magazyn | Warta w magazynie nie jest taka zła, mogę usiąść gdzieś w rogu i próbować zapomnieć o tym szaleństwie po drugiej stronie statku!
 Podziw: bronie | Connor | Connor_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
@@ -123,6 +123,11 @@ Podziw: łódź podwodna | Connor | Connor_2 | Submarine | Ta łódź... to najc
 Na wszelki wypadek... | Jack | Jack_2 | Submarine | Ok... Jack... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został odpalony i generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz!
 Zrobiłem to... | Connor | Connor_3 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
 On musi z kimś porozmawiać | Connor | Connor_4 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
+Waga naszej misji | Connor | Connor_5 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie w przypadku ataku...
+Ostatnie życzenie | Jack | Jack_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i nie zdążyłem odpalić tej bomby... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
+Dlaczego statek? | Aaron | Aaron_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że woda... ona jest jak czas... płynie, pomaga zrozumieć tajniki jego działania... płynąć razem z nim, a może kiedyś... nawet pod prąd <!-- TODO: Czy to nie będzie zbyt wprost jak na to, że pokład to trzecia odwiedzana strefa? xd -->
+Ten szeregowy... | Aaron | Aaron_4 | Kajuty | Ten szeregowy, jak on miał... Janek? Nie ważne! Ostatnio zaczął się sporo koło mnie kręcić, podpytuje o postęp prac, próbuje dowiedzieć się czegoś o DEM... Zabiera mi tylko czas! Chociaż... Wydaje się faktycznie zainteresowany, może się jeszcze do czegoś przydać
+Nazywa to DEM | Jack | Jack_4 | Kajuty | Ostatnio wypytywałem Aarona o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej...
 ??? | ??? | ??? | ??? | ???
 
 *Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane
@@ -147,7 +152,7 @@ Cleanup Unit (CU) - mały robot, który pomaga graczowi, jeśli ten spędzi za d
 ### Cel gry (cele/wyzwania/questy)
 
 - __Głównym celem__ gracza będzie dostanie się do wspomnianej wcześniej __Serwerowni__. Po drodze napotka różne przeszkody w postaci poruszających się platform, systemów bezpieczeństwa na statku, czy zagrożeń środowiskowych (woda/ogień/prąd).
--  __Dodatkowo__ znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
+-  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
 - Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
 
 ### Interakcja/kontrolery (/sterowanie?)
@@ -155,8 +160,8 @@ Cleanup Unit (CU) - mały robot, który pomaga graczowi, jeśli ten spędzi za d
 Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy?) lub (opcjonalnie, nie w MVP) kontrolera.
 Podstawowe sterowanie zostało przedstawione poniżej:
 
-- __WSAD__ - poruszanie się
-- __Space__ - skok (opcjonalnie, obok W) [double-jump - modyfikacja]
+- __AD__ - poruszanie się lewo-prawo
+- __Space__ - skok [dodatkowo double-jump - modyfikacja]
 - __LShift__ - dash (modyfikacja)
 - __E__ - interakcja
 - __LPM__ - DEM (ostatnia modyfikacja, atak mieczem)
@@ -164,7 +169,7 @@ Podstawowe sterowanie zostało przedstawione poniżej:
 
 ### Multiplayer
 
-Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów
+Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów.
 
 ## Przebieg gry (flow)
 
@@ -172,22 +177,94 @@ Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowe
 
 ![initial splash screen with animation-transition to Menu](images/image-1.png)
 
-### cutscenki, narracja in-game'owa
+### Cutscenki, narracja in-game'owa
 
 - Cutscenki — nieliczne, w kluczowych momentach fabuły, renderowane w silniku, zabierając chwilowo kontrolę graczowi, lub opcjonalnie animowane (przy zakończeniach)
-- Narracja — narrator odczytujący logi znajdowane na statku
+- Narracja — narrator odczytujący logi znajdowane na statku (lista logów w sekcji [Fabuła/Logi](#logi))
 
-### menu, hud, mapa, eq itp
+### Menu
 
 Menu będzie animowanym przybliżeniem splashscreena z opcjami wyświetlanymi na monitorze (in-game hud)
 
 ![alt text](images/image-2.png)
 
-### mapy
+### HUD
 
-TODO - Lokacje są już wyżej w sekcji "Osadzenie gry", chodzi o Animacje przejść między poziomami?
+TODO
+<!-- TODO: chcemy cokolwiek? Jakieś liczniki na cooldown modyfikacji? -->
+
+### Mapy
+
+Statek będzie jedną wielką mapą, na której każda [sekcja](#lokacje) będzie osobnym poziomem z "animacją" wygaszania ekranu przy przejściu między nimi (na czas ładowania poziomu).
+
+Gracz powinien w domyśle odwiedzić pokoje w następującej kolejności:
+1. Pokój treningowy (tutorial)
+2. Magazyn
+3. Kajuty
+4. Pokład statku
+5. Serwerownia
+
+Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początku będzie miał z Magazynu dostęp do Pokoju z łodzią podwodną, z Serwerowni będzie mógł dość łatwo dostać się do Reaktora, a po jego wyłączeniu cofnąć się i przez Magazyn wrócić do Zbrojowni.
 
 ![alt text](images/image-3.png)
+
+## Assety
+
+### Styl graficzny
+
+Gra będzie tworzona jako pixelart o (podstawowych) rozmiarach 16x16px.
+Będą dominowały tutaj kolory raczej przyciemnione tak, aby postaci, logi, czy platformy wyróżniały się od otoczenia.
+Całość będzie wyglądała raczej mrocznie (klimat grafiki podobny do gry `Signalis`, a ogólny wygląd/feeling do gry `Dead Cells` albo `Hollow Knight`)
+
+### Concept-art
+
+TODO
+<!-- TODO: wkleić i opisać obrazki z OpenToonz -->
+
+### Spritesheety
+
+TODO
+<!-- TODO: wkleic i opisać spritesheety gdy powstaną, uwzględnić miejsca w folderze -->
+
+### Muzyka
+
+TODO
+<!-- TODO: wkleić i opisać + linki -->
+
+### Narracja
+
+Treść wszystkich logów (będących jedyną formą narracji w grze) znajduje się w sekcji [Fabuła/Logi](#logi)
+
+## PoC/prototyp
+
+Prototyp przedstawia podstawowe sterowanie w grze (surowa wersja — do dostosowania) oraz pokój.
+Został skonstruowany z użyciem starych assetów i nie reprezentuje finalnej wersji gry.
+
+Wszystkie sceny, assety i skrypty prototypu znajdują się bezpośrednio w folderze `res://PoC/everything_goes_here`.
+
+## Implementacja
+
+### Układ plików gry
+
+TODO
+
+### Byty (entity) i ich parametry
+
+TODO
+
+### Poziomy i ich specyficzne mechaniki
+
+TODO
+
+### Moyfikacje
+
+TODO
+
+### Common/utils/narzędzia
+
+TODO
+
+### TODO?
 
 ## Zakres projektu
 
@@ -207,19 +284,12 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(M)__ Research podobnych historii i inspiracji do napisania szczegółowej fabuły
     - __(K)__ Wstępne napisanie kilku logów
 - __Tydzień 2 (07.03.2024 - 14.03.2024)__
+    - __(K)__ Przygotowanie prototypu gry bazującego na starych assetach
+    - __(M)__ Przygotowanie oprogramowania do tworzenia pixelartu
+    - __(M)__ Stworzenie pierwszych projektów poziomów
+    - __(K)__ Przygotowanie repozytorium i projektu gry w silniku
+    - __(K)__ Kontynuowanie pracy nad fabułą i logami
+    - __(B)__ Aktualizowanie GDD
 - __Tydzień 3 (14.03.2024 - 21.03.2024)__
+- __Tydzień 4 (21.03.2024 - 28.03.2024)__
 - ...
-
-## Assety
-
-### concept-art, modele, skrypty, tekstury, animacje
-
-TODO
-
-### dźwięki, muzyka, narracje, dialogi
-
-TOOD
-
-## PoC/prototyp
-
-Mamy zrobić grę działającą przed "First Playable"? Jak to ma wyglądać?
