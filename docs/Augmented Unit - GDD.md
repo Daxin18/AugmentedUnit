@@ -290,6 +290,7 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(K)__ Przygotowanie repozytorium i projektu gry w silniku
     - __(K)__ Kontynuowanie pracy nad fabułą i logami
     - __(B)__ Aktualizowanie GDD
+    - __(M)__ Przygotowanie pierwszych wersji części assetów i animacji
 - __Tydzień 3 (14.03.2024 - 21.03.2024)__
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
 - ...

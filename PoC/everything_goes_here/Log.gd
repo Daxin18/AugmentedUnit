@@ -4,7 +4,7 @@ class_name Log
 var is_for_deletion: = false
 
 func _process(delta):
-	pass
+	_check_deletion()
 
 func read():
 	if not $LogAudio.playing:
