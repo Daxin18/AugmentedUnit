@@ -26,7 +26,7 @@ Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku oko�
 
 Aspekt | Minimalne: | Zalecane:
 ---|---|---
-OS * | Windows 7+ | Windows 7+
+OS | Windows 7+ | Windows 7+
 Procesor | Intel i5+ | Intel i5+
 Pamięć RAM | 2 GB RAM | 4 GB RAM
 Karta graficzna | Nvidia 450 GTS / Radeon HD 5750 lub lepsza | Nvidia GTX 460 / Radeon HD 7800 lub lepsza
@@ -309,5 +309,6 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(B)__ Aktualizowanie GDD
     - __(M)__ Przygotowanie pierwszych wersji części assetów i animacji
 - __Tydzień 3 (14.03.2024 - 21.03.2024)__
+    - __(K)__ Dopracowanie prototypu
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
 - ...
