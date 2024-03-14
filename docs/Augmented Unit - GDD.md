@@ -2,7 +2,7 @@
 
 ## Ogólne informacje
 
-### Audtorzy
+### Autorzy
 
 - Kamil Ciągło
 - Mateusz Balicki
@@ -211,7 +211,7 @@ Gracz powinien w domyśle odwiedzić pokoje w następującej kolejności:
 
 Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początku będzie miał z Magazynu dostęp do Pokoju z łodzią podwodną, z Serwerowni będzie mógł dość łatwo dostać się do Reaktora, a po jego wyłączeniu cofnąć się i przez Magazyn wrócić do Zbrojowni.
 
-![alt text](images/image-3.png)
+![Mapa statku](./images/ship-map.png)
 
 ## Assety
 
@@ -223,17 +223,29 @@ Całość będzie wyglądała raczej mrocznie (klimat grafiki podobny do gry `Si
 
 ### Concept-art
 
-TODO
-<!-- TODO: wkleić i opisać obrazki z OpenToonz -->
+Na poniższym zrzucie ekranu widać pierwsze concept-arty kilku pokoi (fragmentów sektorów/lokacji), które są istotne fabularnie. Są to:
+
+x | 1 | 2 | 3
+---|---|---|---
+1 | Zbrojownia - miejsce z bombami | Pokój startowy | Reaktor/generator
+2 | Pokój z łodzią podwodną | Kajuty | Ostatni pokój w serwerowni
+
+![Concept-art pomieszczeń kluczowych dla narracji](./images/concept-art-rooms.png)
+
+Warto zaznaczyć, że część pomieszczeń, ich plany, czy rozmieszczenie mogą ulec zmianie.
 
 ### Spritesheety
 
-TODO
+_W trakcie przygotowania_
+
+Jak opisano wyżej w sekcji [Assety/Styl graficzny](#styl-graficzny), wszystkie assety będą pixelartem, w tej sekcji pojawią się gotowe spritesheety, gdy zostaną one przygotowane.
 <!-- TODO: wkleic i opisać spritesheety gdy powstaną, uwzględnić miejsca w folderze -->
 
 ### Muzyka
 
-TODO
+_W trakcie przygotowania_
+
+Muzyka będzie służyć historii, postaramy się przygotować też dźwięki otoczenia, które pomogą wprowadzić gracza w nastrój.
 <!-- TODO: wkleić i opisać + linki -->
 
 ### Narracja
