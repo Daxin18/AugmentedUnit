@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpvk8s82bk4rf"]
+
+[ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
+[ext_resource type="Script" path="res://src/scripts/common/StateMachine/StateMachine.gd" id="2_nlji6"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_idle.gd" id="3_3m83i"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_moving.gd" id="4_dj7mp"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_jumping.gd" id="5_b4mjp"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_falling.gd" id="6_3es6h"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dashing.gd" id="7_tbkgv"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_screaming.gd" id="8_4a2sr"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dying.gd" id="9_yhsig"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_6wu35")
+
+[node name="animations" type="AnimatedSprite2D" parent="."]
+
+[node name="state_machine" type="Node" parent="."]
+script = ExtResource("2_nlji6")
+
+[node name="Idle" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "moving_state", "jumping_state", "dashing_state", "dying_state", "screaming_state")]
+script = ExtResource("3_3m83i")
+falling_state = NodePath("../Falling")
+moving_state = NodePath("../Moving")
+jumping_state = NodePath("../Jumping")
+dashing_state = NodePath("../Dashing")
+dying_state = NodePath("../Dying")
+screaming_state = NodePath("../Screaming")
+
+[node name="Moving" type="Node" parent="state_machine" node_paths=PackedStringArray("jumping_state", "falling_state", "dashing_state", "screaming_state", "idle_state", "dying_state")]
+script = ExtResource("4_dj7mp")
+jumping_state = NodePath("../Jumping")
+falling_state = NodePath("../Falling")
+dashing_state = NodePath("../Dashing")
+screaming_state = NodePath("../Screaming")
+idle_state = NodePath("../Idle")
+dying_state = NodePath("../Dying")
+
+[node name="Jumping" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "dashing_state", "screaming_state", "dying_state")]
+script = ExtResource("5_b4mjp")
+falling_state = NodePath("../Falling")
+dashing_state = NodePath("../Dashing")
+screaming_state = NodePath("../Screaming")
+dying_state = NodePath("../Dying")
+
+[node name="Falling" type="Node" parent="state_machine" node_paths=PackedStringArray("dashing_state", "screaming_state", "jumping_state", "dying_state")]
+script = ExtResource("6_3es6h")
+dashing_state = NodePath("../Dashing")
+screaming_state = NodePath("../Screaming")
+jumping_state = NodePath("../Jumping")
+dying_state = NodePath("../Dying")
+
+[node name="Dashing" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "dying_state")]
+script = ExtResource("7_tbkgv")
+falling_state = NodePath("../Falling")
+dying_state = NodePath("../Dying")
+
+[node name="Screaming" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "dying_state")]
+script = ExtResource("8_4a2sr")
+falling_state = NodePath("../Falling")
+dying_state = NodePath("../Dying")
+
+[node name="Dying" type="Node" parent="state_machine"]
+script = ExtResource("9_yhsig")

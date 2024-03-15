@@ -8,10 +8,8 @@ extends CharacterBody2D
 @export var is_double_jump_active: = true
 @export var is_dash_active: = true
 
-var jump_count = 2
 var dash_count = 1
 
-var jump_cooldown = 2
 var dash_cooldown = 2
 var closest_log: Log = null
 
@@ -44,10 +42,12 @@ func _calculate_velocity():
 		dash()
 
 func jump():
-	if jump_count > 0:
-		velocity.y = velocity.y - jump_strength
-		jump_count = jump_count - 1
-		start_jump_cooldown()
+	if is_on_floor():
+		velocity.y = - jump_strength
+	#if jump_count > 0:
+		#velocity.y = velocity.y - jump_strength
+		#jump_count = jump_count - 1
+		#start_jump_cooldown()
 
 func dash():
 	if is_dash_active and dash_count > 0:
@@ -73,10 +73,6 @@ func set_move_velocity():
 		else:
 			velocity.x = 0
 
-func start_jump_cooldown():
-	await get_tree().create_timer(jump_cooldown).timeout
-	jump_count = jump_count + 1
-
 func start_dash_cooldown():
 	await get_tree().create_timer(dash_cooldown).timeout
 	dash_count = dash_count + 1
@@ -86,13 +82,8 @@ func pickup_log():
 		closest_log.read()
 	closest_log = null
 
-#TODO
 func reset_movement_mods():
 	if not feet.get_overlapping_areas().is_empty():
-		if is_double_jump_active:
-			jump_count = 2
-		else:
-			jump_count = 1
 		if is_dash_active:
 			dash_count = 1
 

@@ -310,5 +310,6 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(M)__ Przygotowanie pierwszych wersji części assetów i animacji
 - __Tydzień 3 (14.03.2024 - 21.03.2024)__
     - __(K)__ Dopracowanie prototypu
+    - __(B)__ Aktualizowanie GDD 
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
 - ...

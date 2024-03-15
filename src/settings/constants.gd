@@ -1,7 +1,6 @@
-extends Node
 class_name Constants
+extends Node
 
-# this will evolve during development,
-# we might need to split the file into multiple files
-# we'll see what happens
-var random_constant: = true
+const gravity_strength: = 20
+const move_speed: = 400
+const jump_strength: = 900
