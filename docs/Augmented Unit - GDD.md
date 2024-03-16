@@ -274,7 +274,7 @@ Na potrzeby prototypu przygotowane zostaną:
     - ruch
     - spadanie
     - stanie w miejscu
-    - śmierć
+    - śmierć (kończąca grę)
 - Specjalny pokój (później przerobiony na pokój developerski i finalnie na tutorial)
 - Bazowy "prefab" logów z prostym dźwiękiem i tymczasową grafiką
 - Wyjście z pokoju (kończące grę, służące później jako drzwi między sekcjami — poziomami)

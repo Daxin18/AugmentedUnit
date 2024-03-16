@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn6qfmbx8bx6i"]
+[gd_scene load_steps=7 format=3 uid="uid://dn6qfmbx8bx6i"]
 
 [ext_resource type="Texture2D" uid="uid://cvm3tkwl5b4g4" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
+[ext_resource type="Script" path="res://PoC/everything_goes_here/random_experiment.gd" id="1_jj3s0"]
 [ext_resource type="PackedScene" uid="uid://b3jcbdf3ri0vt" path="res://PoC/everything_goes_here/Log.tscn" id="3_ffrkd"]
 [ext_resource type="PackedScene" uid="uid://bpvk8s82bk4rf" path="res://src/scenes/entities/Player.tscn" id="4_tp41g"]
 
@@ -65,6 +66,7 @@ physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_ca041")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_jj3s0")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_evfxc")

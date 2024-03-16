@@ -133,7 +133,7 @@ func is_dashing() -> bool:
 # ========================
 
 func can_scream() -> bool:
-	return (remaining_screams > 0) #and not has_recently_jumped
+	return (remaining_screams > 0)
 
 func scream() -> void:
 	parent.velocity = Vector2.ZERO
