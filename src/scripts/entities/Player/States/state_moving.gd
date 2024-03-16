@@ -9,18 +9,31 @@ extends State
 @export var dying_state: State
 
 func enter() -> void:
+	parent.sprite.flip_h = parent.is_facing_left
 	parent.animations.play(animation_name)
+	parent.logic.reset_skills()
 
 func exit() -> void:
 	pass
 
 func process_input(event: InputEvent) -> State:
-	return null
+	if parent.logic.handle_scream():
+		return screaming_state
+	if parent.logic.handle_dash():
+		return dashing_state
+	if parent.logic.handle_jump():
+		return jumping_state
+	if parent.logic.handle_horizontal_movement():
+		return null
+	return idle_state
 
 func process_frame(delta: float) -> State:
 	return null
 
 func process_physics(delta: float) -> State:
+	parent.move_and_slide()
 	if not parent.is_on_floor():
 		return falling_state
+	if parent.velocity == Vector2.ZERO:
+		return idle_state
 	return null

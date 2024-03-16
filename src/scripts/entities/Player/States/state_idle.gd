@@ -10,11 +10,19 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
+	parent.logic.reset_skills()
 
 func exit() -> void:
 	pass
 
 func process_input(event: InputEvent) -> State:
+	if parent.logic.handle_scream():
+		return screaming_state
+	if parent.logic.handle_horizontal_movement():
+		return moving_state
+	if parent.logic.handle_jump():
+		return jumping_state
+	parent.velocity.x = 0
 	return null
 
 func process_physics(delta: float) -> State:
