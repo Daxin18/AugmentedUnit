@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=23 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Script" path="res://src/scripts/common/StateMachine/StateMachine.gd" id="2_nlji6"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_idle.gd" id="3_3m83i"]
-[ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerStatesCommonLogic.gd" id="3_hejp5"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerCommonStateLogic.gd" id="3_42ijn"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerInteractionLogic.gd" id="3_ktivm"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_moving.gd" id="4_dj7mp"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_jumping.gd" id="5_b4mjp"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_falling.gd" id="6_3es6h"]
@@ -141,7 +142,11 @@ _data = {
 radius = 5.0
 height = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0mc3"]
+radius = 19.0263
+
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 15
 script = ExtResource("1_6wu35")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -159,12 +164,24 @@ libraries = {
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_2p2b1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="interact_radius" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="interact_radius_shape" type="CollisionShape2D" parent="interact_radius"]
+shape = SubResource("CircleShape2D_l0mc3")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="CommonStateLogicHolder" type="Node" parent="."]
-script = ExtResource("3_hejp5")
+[node name="InteractionLogicHolder" type="Node" parent="."]
+script = ExtResource("3_ktivm")
+
+[node name="StateLogicHolder" type="Node" parent="."]
+script = ExtResource("3_42ijn")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_nlji6")
@@ -224,3 +241,6 @@ animation_name = "player_screaming"
 [node name="Dying" type="Node" parent="state_machine"]
 script = ExtResource("9_yhsig")
 animation_name = "player_dying"
+
+[connection signal="body_entered" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_body_entered"]
+[connection signal="body_exited" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_body_exited"]

@@ -8,18 +8,18 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
-	parent.logic.jump()
+	parent.state_logic.jump()
 
 func exit() -> void:
 	pass
 
 func process_input(event: InputEvent) -> State:
-	parent.logic.handle_horizontal_movement()
-	if parent.logic.handle_scream():
+	parent.state_logic.handle_horizontal_movement()
+	if parent.state_logic.handle_scream():
 		return screaming_state
-	if parent.logic.handle_dash():
+	if parent.state_logic.handle_dash():
 		return dashing_state
-	if parent.logic.handle_jump():
+	if parent.state_logic.handle_jump():
 		return self #aka re-enter jumping state
 	return null
 
@@ -28,7 +28,7 @@ func process_frame(delta: float) -> State:
 
 func process_physics(delta: float) -> State:
 	parent.move_and_slide()
-	parent.logic.apply_gravity()
+	parent.state_logic.apply_gravity()
 	if parent.velocity.y > 0:
 		return falling_state
 	return null

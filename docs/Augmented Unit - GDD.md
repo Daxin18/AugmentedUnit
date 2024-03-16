@@ -285,9 +285,51 @@ Na potrzeby prototypu przygotowane zostaną:
 
 *prototyp nie jest jeszcze finalną wersją gry, nie warto więc zamieszczać tu szczegółów implementacyjnych
 
-### Byty (entity) i ich parametry
+### Byty (entity) + krótki opis
+
+#### Gracz
+
+Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana do maszyny stanów, która używa metod aktualnego stanu do obsługi tego ruchu.
+W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (`Node`) w scenie gracza.
+Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
+
+W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
+- `Jumping` --> skok
+- `Dashing` --> szryw 
+- `Screaming` --> skrzyk
+- `Moving` --> sruch
+- `Falling` --> sspadanie
+- `Idle` --> sstanie w miejscu
+- `Dying` --> sśmierć
+
+`X` oznacza dowolny stan, poza `Dying`.
+
+Aktualny stan | Następny stan | Warunek
+---|---|---
+X | Dying | Gracz otrzymał obrażenia
+X | Falling | Gracz nie stoi na żadnej platformie
+X | Screaming | Gracz użył krzyku
+Falling | Idle | Gracz wylądował na ziemi __nie__ poruszając się
+Falling | Moving | Gracz wylądował na ziemi poruszając się
+Falling | Jumping | Gracz posiada jeszcze dostępne skoki i nacisnął przycisk skoku
+Falling | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk zrywu
+Moving | Idle | Gracz przestał się ruszać
+Moving | Jumping | Gracz nacisnął przycisk skoku*
+Moving | Dashing | Gracz nacisnął przycisk zrywu*
+Idle | Jumping | Gracz nacisnął przycisk skoku*
+Idle | Dashing | Gracz nacisnął przycisk zrywu*
+Idle | Moving | Gracz nacisnął przyciski odpowiadające za chodzenie w prawo lub lewo
+Jumping | Jumping | Gracz posiada jeszcze dostępne skoki i nacisnął przycisk skoku**
+Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk zrywu
+
+_*Wejście do stanów `Moving` oraz `Idle` odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
+_**Przejście ze stanu `Jumping` do `Jumping` to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
+
+#### Logi
 
 TODO
+
+#### TODO
 
 ### Poziomy i ich specyficzne mechaniki
 

@@ -1,5 +1,5 @@
 extends Node2D
-class_name Log
+class_name OBSOLETE_Log
 
 var is_for_deletion: = false
 

@@ -11,19 +11,19 @@ extends State
 func enter() -> void:
 	parent.sprite.flip_h = parent.is_facing_left
 	parent.animations.play(animation_name)
-	parent.logic.reset_skills()
+	parent.state_logic.reset_skills()
 
 func exit() -> void:
 	pass
 
 func process_input(event: InputEvent) -> State:
-	if parent.logic.handle_scream():
+	if parent.state_logic.handle_scream():
 		return screaming_state
-	if parent.logic.handle_dash():
+	if parent.state_logic.handle_dash():
 		return dashing_state
-	if parent.logic.handle_jump():
+	if parent.state_logic.handle_jump():
 		return jumping_state
-	if parent.logic.handle_horizontal_movement():
+	if parent.state_logic.handle_horizontal_movement():
 		return null
 	return idle_state
 

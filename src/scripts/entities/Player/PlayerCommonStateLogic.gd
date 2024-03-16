@@ -1,10 +1,10 @@
 #
 # Separate script for logic instroduced so that the main player script
 # stays small and easy to read...
-# this one is not, may want to organize it later
+# this one is not, may want to reorganize it later
 #
 
-class_name PlayerStatesCommonLogic
+class_name PlayerCommonStateLogic
 extends Node
 
 var parent: Player
@@ -68,7 +68,7 @@ func jump() -> void:
 func handle_jump() -> bool:
 	if Input.is_action_just_pressed("jump") and can_jump():
 		remaining_jumps -= 1
-		jump()
+		#jump() #handle this on entering state, not here!
 		return true
 	return false
 
@@ -121,7 +121,7 @@ func start_dash_duration() -> void:
 func handle_dash() -> bool:
 	if Input.is_action_just_pressed("dash") and can_dash():
 		remaining_dashes -= 1
-		dash()
+		#dash()
 		return true
 	return false
 
@@ -143,7 +143,7 @@ func scream() -> void:
 func handle_scream() -> bool:
 	if Input.is_action_just_pressed("scream") and can_scream():
 		remaining_screams -= 1
-		scream()
+		#scream()
 		return true
 	return false
 

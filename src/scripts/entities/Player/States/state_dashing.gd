@@ -7,15 +7,15 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
-	#parent.velocity = Vector2(Constants.dash_strength, 0)
+	parent.state_logic.dash()
 
 func exit() -> void:
-	pass
+	parent.velocity = Vector2.ZERO # this prevents sliding bug
 
 func process_physics(delta: float) -> State:
 	parent.move_and_slide()
-	if parent.logic.handle_scream():
+	if parent.state_logic.handle_scream():
 		return screaming_state
-	if not parent.logic.is_dashing():
+	if not parent.state_logic.is_dashing():
 		return falling_state
 	return null

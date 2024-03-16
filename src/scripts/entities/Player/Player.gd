@@ -2,12 +2,16 @@ class_name Player
 extends Actor
 
 @onready var animations = $Sprite/AnimationPlayer
+@onready var audio_player = $AudioPlayer
+
 @onready var state_machine = $state_machine
-@onready var logic = $CommonStateLogicHolder
+@onready var state_logic = $StateLogicHolder
+@onready var interaction_logic = $InteractionLogicHolder
 
 func _ready() -> void:
 	state_machine.init(self)
-	logic.init(self)
+	state_logic.init(self)
+	interaction_logic.init(self)
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)
