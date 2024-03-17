@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5h3rg"]
 radius = 8.06226
 
-[node name="Log" type="StaticBody2D"]
+[node name="Log" type="Area2D"]
 collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_qnpux")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

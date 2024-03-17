@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=24 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Script" path="res://src/scripts/common/StateMachine/StateMachine.gd" id="2_nlji6"]
@@ -142,11 +142,14 @@ _data = {
 radius = 5.0
 height = 28.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ympx"]
+radius = 6.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0mc3"]
 radius = 19.0263
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 15
+collision_mask = 31
 script = ExtResource("1_6wu35")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -160,9 +163,17 @@ libraries = {
 "": SubResource("AnimationLibrary_nwa60")
 }
 
-[node name="hitbox" type="CollisionShape2D" parent="."]
+[node name="collisions" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_2p2b1")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_4ympx")
 
 [node name="interact_radius" type="Area2D" parent="."]
 collision_layer = 0
@@ -238,9 +249,11 @@ falling_state = NodePath("../Falling")
 dying_state = NodePath("../Dying")
 animation_name = "player_screaming"
 
-[node name="Dying" type="Node" parent="state_machine"]
+[node name="Dying" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state")]
 script = ExtResource("9_yhsig")
+falling_state = NodePath("../Falling")
 animation_name = "player_dying"
 
-[connection signal="body_entered" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_body_entered"]
-[connection signal="body_exited" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_body_exited"]
+[connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]
+[connection signal="area_entered" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_entered"]
+[connection signal="area_exited" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_exited"]

@@ -15,12 +15,12 @@ func _process(delta):
 	and can_interact():
 		current_interactable.interact(parent)
 
-func _on_interact_radius_body_entered(body):
-	if body is Interactable:
-		current_interactable = body
+func _on_interact_radius_area_entered(area):
+	if area is Interactable:
+		current_interactable = area
 
-func _on_interact_radius_body_exited(body):
-	if body == current_interactable:
+func _on_interact_radius_area_exited(area):
+	if area == current_interactable:
 		current_interactable = null
 
 func can_interact() -> bool:

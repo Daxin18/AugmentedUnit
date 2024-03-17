@@ -28,6 +28,8 @@ func process_frame(delta: float) -> State:
 
 func process_physics(delta: float) -> State:
 	parent.move_and_slide()
+	if parent.state_logic.check_for_death():
+		return dying_state
 	parent.state_logic.apply_gravity()
 	if parent.velocity.y > 0:
 		return falling_state

@@ -12,10 +12,15 @@ func enter() -> void:
 func exit() -> void:
 	parent.velocity = Vector2.ZERO # this prevents sliding bug
 
-func process_physics(delta: float) -> State:
-	parent.move_and_slide()
+func process_input(event: InputEvent) -> State:
 	if parent.state_logic.handle_scream():
 		return screaming_state
+	return null
+
+func process_physics(delta: float) -> State:
+	parent.move_and_slide()
+	if parent.state_logic.check_for_death():
+		return dying_state
 	if not parent.state_logic.is_dashing():
 		return falling_state
 	return null

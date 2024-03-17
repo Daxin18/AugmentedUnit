@@ -279,11 +279,10 @@ Na potrzeby prototypu przygotowane zostaną:
 - Bazowy "prefab" logów z prostym dźwiękiem i tymczasową grafiką
 - Wyjście z pokoju (kończące grę, służące później jako drzwi między sekcjami — poziomami)
 - Przeszkoda zabijająca gracza
+- Punkt kontrolny
 - (Opcjonalnie) ruchoma platforma
 
-## Implementacja - do uzupełnienia w późniejszych fazach*
-
-*prototyp nie jest jeszcze finalną wersją gry, nie warto więc zamieszczać tu szczegółów implementacyjnych
+## Implementacja - do uzupełnienia na bieżąco
 
 ### Byty (entity) + krótki opis
 
@@ -325,25 +324,41 @@ Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk 
 _*Wejście do stanów `Moving` oraz `Idle` odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
 _**Przejście ze stanu `Jumping` do `Jumping` to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
 
-#### Logi
+#### Logi (główne narzędzie narracji)
 
-TODO
+Logi dziedziczą z klasy `Interactable` i posiadają tylko `id` (typu `Logs.LogId`) oraz metodę `interact`.
+Klasa `Logs` znajduje się w folderze `res://src/scripts/common/utils` i posiada tylko enum `LogId`, stałą `logs` (słownik łączący LogId z wszystkimi potrzebnymi danymi logów — tytuł, treść i załadowany plik audio) oraz statyczne metody pomagające pracować z logami (`get_log_audio`, `record_log_pickup` i inne, jeśli zajdzie taka potrzeba).
 
-#### TODO
+#### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
 
 ### Poziomy i ich specyficzne mechaniki
 
-TODO
+Poziomy zostały opisane 
 
 ### Modyfikacje
 
+Zbierając modyfikacje, gracz będzie mógł dostać się do nowych stanów, bądź odblokować nowe przejścia między stanami
 - __Podwójny skok__ — pozwala wykonać jeden dodatkowy skok w powietrzu
 - __Zryw__ — pozwala bardzo szybko przemieścić się horyzontalnie i przejść przez miejsca niemożliwe do pokonania z użyciem samego skoku
 - __Krzyk__ — pozwala zatrzymać się w miejscu na jakiś czas (niezależnie od grawitacji, prędkości itp.), odnawia Zryw i podwójny skok bez potrzeby dotknięcia platformy.
 
 ### Common/utils/narzędzia
 
-TODO
+#### Maszyna stanów
+
+Klasa `StateMachine` oraz bazowa klasa `State`, za pomocą których można zbudować maszynę stanów opartą o Node'y.
+Klasy zakładają, że logika poruszająca postacią zostanie oddelegowana do stanów. Maszynę należy zainicjować, wstrzykując zależność — kontrolowaną postać (klasy `Actor`).
+
+__Przykład__ zaimplementowanej maszyny stanów w drzewie postaci gracza:
+
+![maszyna stanów](./images/state_machine.png)
+
+`state_machine` to Node z podpiętym skryptem maszyny stanów, z kolei każde dziecko to stan, z własnym skryptem rozszerzającym klasę `State` i posiadającym logikę specyficzną dla tego stanu.
+
+#### Interactable
+
+Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę `interact(entity: Actor) -> void`.
+Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
 
 ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
 

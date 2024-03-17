@@ -13,7 +13,7 @@ var parent: Player
 @export var max_remaining_dashes: = 1
 @export var max_remaining_screams: = 1 #not expected to be changed
 
-#these below are exported only for debugging
+# these below are exported only for debugging
 @export var remaining_jumps: = 1
 @export var remaining_dashes: = 1
 @export var remaining_screams: = 1
@@ -22,6 +22,8 @@ var has_recently_dashed: = false
 var has_recently_screamed: = false
 var is_in_dash: = false
 var is_in_scream: = false
+
+var spawnpoint: = Vector2.ZERO
 
 func init(player: Player) -> void:
 	parent = player
@@ -163,3 +165,40 @@ func skill_reset_on_scream() -> void:
 
 func is_screaming() -> bool:
 	return is_in_scream
+
+# ============================
+# 		Dying/Respawning
+# ============================
+
+func set_spawnpoint(new_spawnpoint: Vector2) -> void:
+	spawnpoint = new_spawnpoint
+
+func respawn() -> void:
+	parent.position = spawnpoint
+	lethal_collisions = []
+
+# temp implementation for PoC
+# I would ideally ddo this using signals from other entities
+# but let's stick with that
+func check_for_death() -> bool:
+	if not lethal_collisions.is_empty():
+		lethal_collisions = []
+		return true
+	return false
+
+# declaring variables here as this is a temp implementation
+var stay_dead_for_seconds: = 3
+var is_dying: = false
+var lethal_collisions: = []
+
+func die() -> void:
+	is_dying = true
+	await get_tree().create_timer(stay_dead_for_seconds).timeout
+	is_dying = false
+
+func can_respawn() -> bool:
+	return not is_dying
+
+func _on_hitbox_body_entered(body):
+	if body is Lethal:
+		lethal_collisions.append(body)

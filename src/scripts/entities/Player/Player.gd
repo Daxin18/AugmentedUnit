@@ -12,6 +12,7 @@ func _ready() -> void:
 	state_machine.init(self)
 	state_logic.init(self)
 	interaction_logic.init(self)
+	state_logic.set_spawnpoint(position)
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)

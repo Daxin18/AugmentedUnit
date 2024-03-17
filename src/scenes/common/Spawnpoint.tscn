@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8mpj6ntjn7kc"]
+
+[ext_resource type="Texture2D" uid="uid://bs3o7srygwtfx" path="res://src/assets/entities/spawnpoint/tmp_spawnpoint.png" id="1_3bdox"]
+[ext_resource type="Script" path="res://src/scripts/entities/Spawnpoint/Spawnpoint.gd" id="1_6js8s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmwsc"]
+radius = 15.0333
+
+[node name="Spawnpoint" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_6js8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3bdox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_nmwsc")
+
+[node name="Hardpoint" type="Node2D" parent="."]
+position = Vector2(0, -19)
