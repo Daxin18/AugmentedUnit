@@ -5,6 +5,7 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
+	parent.velocity = Vector2.ZERO
 	parent.state_logic.die()
 
 func exit() -> void:
