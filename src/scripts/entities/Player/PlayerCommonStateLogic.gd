@@ -9,14 +9,14 @@ extends Node
 
 var parent: Player
 
-@export var max_remaining_jumps: = 2
-@export var max_remaining_dashes: = 1
-@export var max_remaining_screams: = 1 #not expected to be changed
+@export var max_remaining_jumps: = 1
+@export var max_remaining_dashes: = 0
+@export var max_remaining_screams: = 0 #not expected to be changed
 
 # these below are exported only for debugging
-@export var remaining_jumps: = 1
-@export var remaining_dashes: = 1
-@export var remaining_screams: = 1
+@export var remaining_jumps: = 0
+@export var remaining_dashes: = 0
+@export var remaining_screams: = 0
 var has_recently_jumped: = false
 var has_recently_dashed: = false
 var has_recently_screamed: = false
@@ -165,6 +165,20 @@ func skill_reset_on_scream() -> void:
 
 func is_screaming() -> bool:
 	return is_in_scream
+
+# ============================
+# 		Modifications
+# ============================
+
+# may need some better tracking than this
+func unlock_modification(mod: Modifications.Mod) -> void:
+	match mod:
+		Modifications.Mod.double_jump:
+			max_remaining_jumps = 2
+		Modifications.Mod.dash:
+			max_remaining_dashes = 1
+		Modifications.Mod.scream:
+			max_remaining_screams = 1
 
 # ============================
 # 		Dying/Respawning
