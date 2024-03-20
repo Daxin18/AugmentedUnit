@@ -13,7 +13,7 @@ const test_audio = preload("res://src/assets/entities/log/sounds/test_log.wav")
 # this dict
 # id: name - text - audio_to_play
 # having them all here will make life easier
-const logs: Dictionary= {
+const logs: Dictionary = {
 	LogId.dog_log: ["dog", "DOG", dog_audio],
 	LogId.test_log: ["log_name", "log_text", test_audio],
 	LogId.Jan_1: ["Lorem", "Ipsum", test_audio],

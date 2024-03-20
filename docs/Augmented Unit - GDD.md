@@ -126,19 +126,20 @@ Ci ludzie... | Robert | Robert_2 | Magazyn | To niewiarygodne jak dużo trzeba g
 Chociaż nie jest tak źle | Jacek | Jacek_1 | Magazyn | Warta w magazynie nie jest taka zła, mogę usiąść gdzieś w rogu i próbować zapomnieć o tym szaleństwie po drugiej stronie statku!
 Podziw: bronie | Jabłonowski | Jab_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
 Podziw: łódź podwodna | Jabłonowski | Jab_2 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
-Na wszelki wypadek... | Jack | Jack_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz!
+Na wszelki wypadek... | Jacek | Jacek_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz!
 Zrobiłem to... | Jabłonowski | Jab_3 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
 On musi z kimś porozmawiać | Jabłonowski | Jab_4 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
 Waga naszej misji | Jabłonowski | Jab_5 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...
-Ostatnie życzenie | Jack | Jack_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
+Ostatnie życzenie | Jacek | Jacek_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
 Dlaczego statek? | Robert | Robert_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że pływając, dużo prościej jest pojąć naturę mojej pracy. Zrozumieć fenomen, który jest z nami cały czas, a którego nie dostrzegamy!
 Ten szeregowy... | Robert | Robert_4 | Kajuty | Ten szeregowy, jak on miał... Janek? Nie ważne! Ostatnio zaczął się sporo koło mnie kręcić, podpytuje o postęp prac, próbuje dowiedzieć się czegoś o DEM... Zabiera mi tylko czas! Chociaż... Wydaje się faktycznie zainteresowany, może się jeszcze do czegoś przydać.
-Nazywa to DEM | Jack | Jack_4 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej...
+Nazywa to DEM | Jacek | Jacek_4 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej...
 Zaczynam się do niego przekonywać... | Robert | Robert_5 | Kajuty | Ten Janek zdaje się być coraz bardziej zainteresowany moimi badaniami... Kręci się przy serwerowni, dopytuje, przygląda się DEM, gdy jesteśmy w laboratorium... Powoli zaczynam się do niego przekonywać... może być dobrym pomocnikiem
-Jest łatwo, ale trzeba czasu | Jack | Jack_5 | Kajuty | Robert... cały czas myli moje imię, ale bardzo łatwo wyciągnąć od niego informacje. Wystarczy rzucić kilka komplementów, zapytać o proste rzeczy i gość nie zamknie się na pół godziny! Nie podaje za dużo szczegółów o DEM, ale myślę, że będę mógł je wyciągnąć, jeśli trochę się koło niego pokręcę
+Jest łatwo, ale trzeba czasu | Jacek | Jacek_5 | Kajuty | Robert... cały czas myli moje imię, ale bardzo łatwo wyciągnąć od niego informacje. Wystarczy rzucić kilka komplementów, zapytać o proste rzeczy i gość nie zamknie się na pół godziny! Nie podaje za dużo szczegółów o DEM, ale myślę, że będę mógł je wyciągnąć, jeśli trochę się koło niego pokręcę
 Jest bystry... ale nadal głupi | Robert | Robert_6 | Serwerownia | Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny, a chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka! 
-Już wiem co robić! | Jack | Jack_6 | Serwerownia | Bingo! Walnąłem dziś to coś młotkiem i Robert wygadał się o słabości DEM! Broń nuklearna... mamy jej tu nawet sporo w Zbrojowni! Może jeśli wszystko wysadzę...
-Nie czuję się najlepiej | Jack | Jack_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
+Już wiem co robić! | Jacek | Jacek_6 | Serwerownia | Bingo! Walnąłem dziś to coś młotkiem i Robert wygadał się o słabości DEM! Broń nuklearna... mamy jej tu nawet sporo w Zbrojowni! Może jeśli wszystko wysadzę...
+Nie czuję się najlepiej | Jacek | Jacek_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
+
 ??? | ??? | ??? | ??? | ???
 
 *Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane
@@ -294,12 +295,12 @@ Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejsc
 
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
 - `Jumping` --> skok
-- `Dashing` --> szryw 
-- `Screaming` --> skrzyk
-- `Moving` --> sruch
-- `Falling` --> sspadanie
-- `Idle` --> sstanie w miejscu
-- `Dying` --> sśmierć
+- `Dashing` --> zryw 
+- `Screaming` --> krzyk
+- `Moving` --> ruch
+- `Falling` --> spadanie
+- `Idle` --> stanie w miejscu
+- `Dying` --> śmierć
 
 `X` oznacza dowolny stan, poza `Dying`.
 
@@ -322,6 +323,7 @@ Jumping | Jumping | Gracz posiada jeszcze dostępne skoki i nacisnął przycisk 
 Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk zrywu
 
 _*Wejście do stanów `Moving` oraz `Idle` odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
+
 _**Przejście ze stanu `Jumping` do `Jumping` to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
 
 #### Logi (główne narzędzie narracji)

@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cvm3tkwl5b4g4" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
 [ext_resource type="Script" path="res://PoC/everything_goes_here/random_experiment.gd" id="1_jj3s0"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="3_qx6gr"]
-[ext_resource type="PackedScene" uid="uid://bpvk8s82bk4rf" path="res://src/scenes/entities/Player.tscn" id="4_tp41g"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="5_bin8i"]
 [ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/Spawnpoint.tscn" id="5_o20g3"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Exit.tscn" id="6_0lufr"]
+[ext_resource type="PackedScene" uid="uid://c7rhrku16kbwb" path="res://PoC/everything_goes_here/player.tscn" id="7_rkqeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca041"]
 texture = ExtResource("1_jhkw7")
@@ -106,5 +106,5 @@ scale = Vector2(-1, -1)
 [node name="Exit" parent="." instance=ExtResource("6_0lufr")]
 position = Vector2(1116, 576)
 
-[node name="Player" parent="." instance=ExtResource("4_tp41g")]
-position = Vector2(540, 597)
+[node name="Player" parent="." instance=ExtResource("7_rkqeo")]
+position = Vector2(548, 522)
