@@ -23,7 +23,7 @@ Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku oko�
 
 ### Plaforma i wymagania sprzętowe
 
-<!-- Wymagania pożyczone z gry dead cells - podobnej graficznie i poniekąd gameplay'owo do naszej gry -->
+<!-- Wymagania pożyczone z gry Dead Cells - podobnej graficznie i poniekąd gameplay'owo do naszej gry -->
 Przewidywane wymagania sprzętowe, na podstawie wymagań podobnych tytułów:
 
 Aspekt | Minimalne: | Zalecane:
@@ -34,6 +34,8 @@ Pamięć RAM | 2 GB RAM | 4 GB RAM
 Karta graficzna | Nvidia 450 GTS / Radeon HD 5750 lub lepsza | Nvidia GTX 460 / Radeon HD 7800 lub lepsza
 Miejsce na dysku | 500 MB dostępnego miejsca | 500 MB dostępnego miejsca
 Dodatkowe uwagi | DirectX 9.1+ lub OpenGL 3.2+ | DirectX 9.1+ lub OpenGL 3.2+
+
+<div style="page-break-after: always;"></div>
 
 ### Monetyzacja
 
@@ -74,7 +76,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
     - dryfuje zniszczony na środku oceanu,
     - jest jednostką transportowo-badawczą,
     - przewozi broń nuklearną, tajne wojskowe dane oraz eksperymentalną broń, nad którą prowadzone są badania,
-    - jest napędzany reaktorem, który zasila również jego systemy obronne
+    - jest napędzany reaktorem, który zasila również jego systemy obronne <div style="page-break-after: always;"></div>
 - AU,
     - AU — Augmented Unit,
     - AU jest robotem zdolnym do modyfikowania samego siebie, aby mógł wykonać swój cel,
@@ -89,57 +91,71 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
     - Robot Porządkowy (RP)
         - RP to mały robot, który pojawia się chwilę za pokojem, w którym AU się budzi,
         - RP pomaga AU poprzez powiedzenie, że dane są w serwerowni,
-        - RP będzie pojawiał się, gdy gracz spędzi za dużo czasu w jednym miejscu i nie będzie wiedział, co zrobić
+        - RP będzie pojawiał się i oferował pomoc, gdy gracz spędzi za dużo czasu w jednym miejscu i nie będzie wiedział, co zrobić
     - Jan
         - Martwy żołnierz zaraz przed wejściem do pokoju startowego,
         - Jedyny nie walczy z AU, jest przerażony,
         - Jego log mówi o tym, że coś się zbliża, po czym słychać krzyk,
         - Nie ma większego znaczenia dla fabuły w późniejszych etapach
-    - Robert
-        - Naukowiec na wejściu do serwerowni,
-        - Autor logów znajdowanych na mapie opisujących jego pracę,
-        - Twórca DEM,
+    - Robert (__autor logów__)
+        - Naukowiec, twórca DEM
         - Odizolowany od ludzi wizjoner, pasjonat postępu, który pragnie tylko spokoju w swoim laboratorium,
         - Nielubiany przez resztę załogi z uwagi na jego obsesję na punkcie DEM,
-        - Statek istnieje, aby umożliwić mu pracę, wszyscy obecni mieli go chronić
-    - Admirał Jabłonowski
+        - Statek istnieje, aby umożliwić mu pracę, wszyscy obecni mieli go chronić,
+        - Na początku uczy Szeregowego Jacka, jak działa jego praca, bo to jedyna osoba zainteresowana tym, co robi,
+        - Współpraca z Szeregowym prowadzi do konfliktu między Robertem a Admirałem Jabłonowskim,
+    - Admirał Jabłonowski (__autor logów__)
         - Główny dowódca wojsk,
-        - Opisuje w logach broń na statku, konflikt, przez który powstaje DEM i cel ich misji,
-        - Skupiony na pracy, stara się udawać, że nie ma życia poza statkiem, dba o swoich żołnierzy,
-        - Zostaje zabity w walce w reaktorze,
-        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczął się po tym załamywać
-    - Szeregowy Jacek
+        - Skupiony na pracy, stara się udawać, że nie ma życia poza statkiem, ale dba o swoich żołnierzy jak o rodzinę,
+        - Zostaje zabity w reaktorze,
+        - Wchodzi w konflikt z Robertem, gdyż nie podoba mu się to, że Szeregowy Jacek zaczyna się dziwnie zachowywać przez pomoc w pracy przy DEM,
+        - Zabija Szeregowego Jacka, gdy ten próbuje wysadzić statek i nie chce odpuścić,
+        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczyna się po tym załamywać <div style="page-break-after: always;"></div>
+    - Szeregowy Jacek (__autor logów__)
         - Zwykły, szary żołnierz,
-        - Nie lubi być na tym statku i wierzy, że eksperymentalna broń w końcu ich zabije,
-        - W logach opisuje to, jak bardzo chce się wyrwać z tego statku,
-        - Naprowadza gracza na wysadzenie statku i ucieczkę łodzią podwodną,
+        - Nie lubi być na tym statku jako żołnierz, więc zaczyna wchodzić w interakcję z Robertem w laboratorium,
+        - Podczas jednego z eksperymentów uderza DEM młotkiem, bez zabezpieczeń, co wpływa na jego psychikę,
+            - Jacek zaczyna widzieć swoje wspomnienia z różnych momentów w czasie, w tym te, których jeszcze nie przeżył,
+            - Dobija go to i sprawia, że chce zniszczyć DEM,
+        - Jacek w logach naprowadza gracza na możliwość wysadzenia statku i ucieczki łodzią podwodną,
         - Próbował sam odpalić bombę nuklearną, ale został zabity przez Admirała Jabłonowskiego po kilku ostrzeżeniach
 
+Postacie drugoplanowe oznaczone jako "__autor logów__" będą miały własną kategorię logów.
+Będą oni przedstawiali historię opisaną wyżej w faktach z własnego punktu widzenia, w postaci nagrań głosowych.
+Kategorie logów będą potem wyświetlane w jednym z ekranów menu i będą mogły być odsłuchane ponownie.
+Wszystkie logi, które nie będą pochodzić od trzech autorów logów, będą miały swoją osobną, wspólną kategorię.
+Spis logów znajduje się poniżej. Treść logów może jeszcze ulec zmianie.
 
 #### Logi 
 
 Nazwa | Osoba | Id* | Lokacja | Log
 ---|---|---|---|---
 Ostatnie słowa | Jan | Jan_1 | Magazyn | Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie! Aaaaaaa!!!!
-Po co to tu jest? | Robert | Robert_1 | Magazyn | Augmented Unit... Nie rozumiem, po co to tu trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej, żeby ten robot odzyskał wszystkie dane, moja praca nie może przepaść!
+Po co to tu jest? | Robert | Robert_1 | Magazyn | Augmented Unit... Nie rozumiem, po co to tu trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej, żeby ten robot odzyskał wszystkie dane, moja praca nie może pójść na marnę!
 Ci ludzie... | Robert | Robert_2 | Magazyn | To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!
-Chociaż nie jest tak źle | Jacek | Jacek_1 | Magazyn | Warta w magazynie nie jest taka zła, mogę usiąść gdzieś w rogu i próbować zapomnieć o tym szaleństwie po drugiej stronie statku!
+Początek znajomości | Jacek | Jacek_1 | Magazyn | Warta w magazynie nie jest taka zła, dzięki niej mogę czasem porozmawiać z Robertem. Chciałbym kiedyś pomóc mu z eksperymentami, zamiast tylko siedzieć w różnych częściach statku.
 Podziw: bronie | Jabłonowski | Jab_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
 Podziw: łódź podwodna | Jabłonowski | Jab_2 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
-Na wszelki wypadek... | Jacek | Jacek_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz!
+Na wszelki wypadek... | Jacek | Jacek_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!
 Zrobiłem to... | Jabłonowski | Jab_3 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
 On musi z kimś porozmawiać | Jabłonowski | Jab_4 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
 Waga naszej misji | Jabłonowski | Jab_5 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...
 Ostatnie życzenie | Jacek | Jacek_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
-Dlaczego statek? | Robert | Robert_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że pływając, dużo prościej jest pojąć naturę mojej pracy. Zrozumieć fenomen, który jest z nami cały czas, a którego nie dostrzegamy!
+Dlaczego statek? | Robert | Robert_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że pływając, dużo prościej jest pojąć naturę mojej pracy. Zrozumieć fenomen, który jest z nami non-stop, a którego nie dostrzegamy!
 Ten szeregowy... | Robert | Robert_4 | Kajuty | Ten szeregowy, jak on miał... Janek? Nie ważne! Ostatnio zaczął się sporo koło mnie kręcić, podpytuje o postęp prac, próbuje dowiedzieć się czegoś o DEM... Zabiera mi tylko czas! Chociaż... Wydaje się faktycznie zainteresowany, może się jeszcze do czegoś przydać.
-Nazywa to DEM | Jacek | Jacek_4 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej...
+Nazywa to DEM | Jacek | Jacek_4 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej!
 Zaczynam się do niego przekonywać... | Robert | Robert_5 | Kajuty | Ten Janek zdaje się być coraz bardziej zainteresowany moimi badaniami... Kręci się przy serwerowni, dopytuje, przygląda się DEM, gdy jesteśmy w laboratorium... Powoli zaczynam się do niego przekonywać... może być dobrym pomocnikiem
-Jest łatwo, ale trzeba czasu | Jacek | Jacek_5 | Kajuty | Robert... cały czas myli moje imię, ale bardzo łatwo wyciągnąć od niego informacje. Wystarczy rzucić kilka komplementów, zapytać o proste rzeczy i gość nie zamknie się na pół godziny! Nie podaje za dużo szczegółów o DEM, ale myślę, że będę mógł je wyciągnąć, jeśli trochę się koło niego pokręcę
-Jest bystry... ale nadal głupi | Robert | Robert_6 | Serwerownia | Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny, a chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka! 
-Już wiem co robić! | Jacek | Jacek_6 | Serwerownia | Bingo! Walnąłem dziś to coś młotkiem i Robert wygadał się o słabości DEM! Broń nuklearna... mamy jej tu nawet sporo w Zbrojowni! Może jeśli wszystko wysadzę...
+W końcu jest ciekawie | Jacek | Jacek_5 | Kajuty | Robert... cały czas myli moje imię, ale całkiem przyjemnie się z nim pracuje. Można dużo się od niego dowiedzieć, a chociaż nie muszę nudzić się na statku. Chciałbym kiedyś zrobić coś przy DEM!
+Cieszę się, że jest szczęśliwy | Jabłonowski | Jab_6 | Kajuty | Jacek ostatnio spędza bardzo dużo czasu z Robertem, cieszę się, że w końcu ma co robić, widać było, że nie przepada za wartami, a w ten sposób może chociaż uda im się skończyć te badania szybciej.
+Jest bystry... ale nadal głupi | Robert | Robert_6 | Serwerownia | Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny... potem chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka! 
+To było dziwne | Jacek | Jacek_6 | Serwerownia | Walnąłem dziś DEM młotkiem, chciałem sprawdzić, czy naprawdę jest tak wytrzymałe, jak Robert mówił... Po uderzeniu poczułem się dziwnie, a Robert zaczął krzyczeć, że nie powinienem się do tego zbliżać bez ochrony i mówił coś o broni nuklearnej.
 Nie czuję się najlepiej | Jacek | Jacek_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
-
+Tym razem przesadził | Jabłonowski | Jab_7 | Kajuty | Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!
+Za kogo on się uważa?! | Robert | Robert_7 | Serwerownia | Za kogo on się uważa?! Ten Admirał twierdzi, że Janek ma problemy przeze mnie! Sam uderzył młotkiem w DEM, nie słuchał moich ostrzeżeń i to on sobie coś zrobił... Wróci do siebie za dzień czy dwa i powinien dalej mi pomagać, nic mu się nie stanie, jeśli będzie się słuchał!
+Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad nim pracować!
+Jest z nim gorzej | Jabłonowski | Jab_8 | Serwerownia | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas siedzi tu tylko, jakby ostatni wypadek tylko go bardziej zmotywował...
+Muszę to zbadać | Robert | Robert_8 | Serwerownia | Udało mi się dzisiaj porozmawiać krótko z Jankiem w kajutach... Mówił o DEM, o tym, że od wypadku widzi dziwne rzeczy... Czy to możliwe, że DEM zaczyna działać, jak powinien? Muszę to sprawdzić!
+Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... On tylko bardziej chce pracować nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
 ??? | ??? | ??? | ??? | ???
 
 *Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane
@@ -167,9 +183,11 @@ Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi
 -  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
 - Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
 
-### Interakcja/kontrolery (/sterowanie?)
+<div style="page-break-after: always;"></div>
 
-Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy?) lub (opcjonalnie, nie w MVP) kontrolera.
+### Interakcja/kontrolery/sterowanie
+
+Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy*) lub (opcjonalnie, nie w MVP) kontrolera.
 Podstawowe sterowanie zostało przedstawione poniżej:
 
 - __AD__ - poruszanie się lewo-prawo
@@ -178,6 +196,8 @@ Podstawowe sterowanie zostało przedstawione poniżej:
 - __E__ - interakcja
 - __LPM__ - DEM (ostatnia modyfikacja, atak mieczem)
 - __Q__ - krzyk (modyfikacja)
+
+_*może to jeszcze ulec zmianie, gracz niekoniecznie musi korzystać z myszy na koniec, jeśli nie jest ona potrzebna w całej reszcie gry (poza menu)_
 
 ### Multiplayer
 
@@ -190,6 +210,8 @@ Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowe
 Na tym etapie jedynie jako Concept-art
 
 ![podstawowy splashscreen](images/image-1.png)
+
+<div style="page-break-after: always;"></div>
 
 ### Cutscenki, narracja in-game'owa
 
@@ -210,6 +232,8 @@ Prawdopodobnie ograniczymy go co najwyżej do ikonek reprezentujących dostępne
 
 Nic konkretnego nie zostało ustalone, założenia co do HUDu mogą się zmienić
 <!-- TODO: chcemy cokolwiek? Jakieś liczniki na cooldown modyfikacji? -->
+
+<div style="page-break-after: always;"></div>
 
 ### Mapy
 
@@ -233,6 +257,8 @@ Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początk
 Gra będzie tworzona jako pixelart o (podstawowych) rozmiarach 16x16px.
 Będą dominowały tutaj kolory raczej przyciemnione, tak aby postaci, logi, czy platformy wyróżniały się od otoczenia.
 Całość będzie wyglądała raczej mrocznie (klimat grafiki podobny do gry `Signalis`, a ogólny wygląd/feeling do gry jak w `Dead Cells` albo `Hollow Knight`)
+
+<div style="page-break-after: always;"></div>
 
 ### Concept-art
 
@@ -290,19 +316,21 @@ Na potrzeby prototypu przygotowane zostaną:
 #### Gracz
 
 Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana do maszyny stanów, która używa metod aktualnego stanu do obsługi tego ruchu.
-W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (`Node`) w scenie gracza.
+W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (Node) w scenie gracza.
 Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
 
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
-- `Jumping` --> skok
-- `Dashing` --> zryw 
-- `Screaming` --> krzyk
-- `Moving` --> ruch
-- `Falling` --> spadanie
-- `Idle` --> stanie w miejscu
-- `Dying` --> śmierć
+- Jumping --> skok
+- Dashing --> zryw 
+- Screaming --> krzyk
+- Moving --> ruch
+- Falling --> spadanie
+- Idle --> stanie w miejscu
+- Dying --> śmierć
 
-`X` oznacza dowolny stan, poza `Dying`.
+X oznacza dowolny stan, poza _Dying_.
+
+<div style="page-break-after: always;"></div>
 
 Aktualny stan | Następny stan | Warunek
 ---|---|---
@@ -322,16 +350,18 @@ Idle | Moving | Gracz nacisnął przyciski odpowiadające za chodzenie w prawo l
 Jumping | Jumping | Gracz posiada jeszcze dostępne skoki i nacisnął przycisk skoku**
 Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk zrywu
 
-_*Wejście do stanów `Moving` oraz `Idle` odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
+_*Wejście do stanów Moving oraz Idle odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
 
-_**Przejście ze stanu `Jumping` do `Jumping` to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
+_**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
 
 #### Logi (główne narzędzie narracji)
 
-Logi dziedziczą z klasy `Interactable` i posiadają tylko `id` (typu `Logs.LogId`) oraz metodę `interact`.
-Klasa `Logs` znajduje się w folderze `res://src/scripts/common/utils` i posiada tylko enum `LogId`, stałą `logs` (słownik łączący LogId z wszystkimi potrzebnymi danymi logów — tytuł, treść i załadowany plik audio) oraz statyczne metody pomagające pracować z logami (`get_log_audio`, `record_log_pickup` i inne, jeśli zajdzie taka potrzeba).
+Logi dziedziczą z klasy Interactable i posiadają tylko id (typu Logs.LogId) oraz metodę interact.
+Klasa Logs znajduje się w folderze res://src/scripts/common/utils i posiada tylko enum LogId, stałą logs (słownik łączący LogId z wszystkimi potrzebnymi danymi logów — tytuł, treść i załadowany plik audio) oraz statyczne metody pomagające pracować z logami (get_log_audio, record_log_pickup i inne, jeśli zajdzie taka potrzeba).
 
 #### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
+
+<div style="page-break-after: always;"></div>
 
 ### Poziomy i ich specyficzne mechaniki
 
@@ -344,25 +374,27 @@ Zbierając modyfikacje, gracz będzie mógł dostać się do nowych stanów, bą
 - __Zryw__ — pozwala bardzo szybko przemieścić się horyzontalnie i przejść przez miejsca niemożliwe do pokonania z użyciem samego skoku
 - __Krzyk__ — pozwala zatrzymać się w miejscu na jakiś czas (niezależnie od grawitacji, prędkości itp.), odnawia Zryw i podwójny skok bez potrzeby dotknięcia platformy.
 
-### Common/utils/narzędzia
+### Ogólne, reużywalne skrypty/narzędzia
 
 #### Maszyna stanów
 
-Klasa `StateMachine` oraz bazowa klasa `State`, za pomocą których można zbudować maszynę stanów opartą o Node'y.
-Klasy zakładają, że logika poruszająca postacią zostanie oddelegowana do stanów. Maszynę należy zainicjować, wstrzykując zależność — kontrolowaną postać (klasy `Actor`).
+Klasa StateMachine oraz bazowa klasa State, za pomocą których można zbudować maszynę stanów opartą o Node'y.
+Klasy zakładają, że logika poruszająca postacią zostanie oddelegowana do stanów. Maszynę należy zainicjować, wstrzykując zależność — kontrolowaną postać (klasy Actor).
 
 __Przykład__ zaimplementowanej maszyny stanów w drzewie postaci gracza:
 
 ![maszyna stanów](./images/state_machine.png)
 
-`state_machine` to Node z podpiętym skryptem maszyny stanów, z kolei każde dziecko to stan, z własnym skryptem rozszerzającym klasę `State` i posiadającym logikę specyficzną dla tego stanu.
+_state_machine_ to Node z podpiętym skryptem maszyny stanów, z kolei każde dziecko to stan, z własnym skryptem rozszerzającym klasę _State_ i posiadającym logikę specyficzną dla tego stanu.
 
 #### Interactable
 
-Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę `interact(entity: Actor) -> void`.
+Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę _interact(entity: Actor) -> void_.
 Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
 
 ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
+
+<div style="page-break-after: always;"></div>
 
 ## Zakres projektu
 
