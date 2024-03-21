@@ -19,7 +19,7 @@ Z metroidvanii zapożyczony zostanie sposób postępu — cała mapa będzie w t
 
 ### Odbiorcy
 
-Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku około 16 do 30 lat, zainteresowani historiami opowiedzianymi nie wprost, z nutką niepokoju.
+Docelową grupą odbiorców gry będą ludzie zaznajomieni z grami, w wieku od około 16 lat, zainteresowani historiami opowiedzianymi nie wprost, z nutką niepokoju.
 
 ### Plaforma i wymagania sprzętowe
 
@@ -407,7 +407,7 @@ Przy każdym zadaniu znajdzie się jedna z trzech liter, która oznacza, przez k
 - K — Kamil
 - M — Mateusz
 
-Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w poniższej liście
+Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w poniższej liście, tygodnie po aktualnym to jedynie przewidywane prace, prawdopodobnie ulegną zmianie.
 
 - __Tydzień 1 (29.02.2024 - 07.03.2024)__
     - __(O)__ Przygotowanie wstępnej wersji GDD i ogólnej wizji gry
@@ -429,6 +429,44 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(M)__ Kontynuowanie prac nad assetami i animacjami
     - __(K)__ Kontynuowanie prac nad fabułą i logami
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Kontynuowanie prac nad assetami i animacjami (stany gracza)
+    - __(K)__ Implementacja systemu poziomów
 - __Tydzień 5 (28.03.2024 - 04.04.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(K)__ Implementacja systemów pomagających w obsłudze gry (np. manager audio, manager poziomów itp.)
+    - __(M)__ Implementacja efektu śmierci gracza w silniku gry
+    - __(M)__ Kontynuowanie prac nad assetami i animacjami (inne postaci w grze)
 - __Tydzień 6 (04.04.2024 - 11.04.2024)__
-- ...
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Tworzenie pozostałych assetów (poziomy, środowisko itp.) <div style="page-break-after: always;"></div>
+- __Tydzień 7 (11.04.2024 - 18.04.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Projektowanie poziomów
+    - __(K)__ Implementacja poziomów
+- __Tydzień 8 (18.04.2024 - 25.04.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Projektowanie HUD i menu
+    - __(K)__ Implementacja HUD i menu
+- __Tydzień 9 (25.04.2024 - 02.05.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Implementacja systemu loa/save
+    - __(K)__ Implementacja systemów umożliwiających mierzenie czasu gracza
+- __Tydzień 10 (02.05.2024 - 09.05.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Tworzenie cutscenek
+    - __(K)__ Wprowadzanie poprawek i dokończenie brakujących systemów
+- __Tydzień 11 (09.05.2024 - 16.05.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(M)__ Implementacja samouczka
+    - __(K)__ Implementacja easter-eggów, minigierek i alternatywnych trybów sterowania
+- __Tydzień 12 (16.05.2024 - 23.05.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Poprawki ewentualnych błędów
+    - __(O)__ Przeprowadzenie playtestów
+- __Tydzień 13 (23.05.2024 - 30.05.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Wprowadzanie poprawek po playtestach
+- __Tydzień 14 (29.05.2024 - 06.06.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Build i zgłoszenie gry do gamejamu
