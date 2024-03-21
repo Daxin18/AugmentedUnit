@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn6qfmbx8bx6i"]
 
-[ext_resource type="Texture2D" uid="uid://cvm3tkwl5b4g4" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
+[ext_resource type="Texture2D" uid="uid://c2w8n4pcgnyid" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
 [ext_resource type="Script" path="res://PoC/everything_goes_here/random_experiment.gd" id="1_jj3s0"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="3_qx6gr"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="5_bin8i"]
