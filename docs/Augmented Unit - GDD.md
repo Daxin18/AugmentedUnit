@@ -89,7 +89,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
     - AU jest w stanie dowiedzieć się, co stało się na statku poprzez logi i rozmowy z RP
 - Postaci drugoplanowe,
     - Robot Porządkowy (RP)
-        - RP to mały robot, który pojawia się chwilę za pokojem, w którym AU się budzi,
+        - RP to mały robot, który pojawia się kawałek za pokojem, w którym AU się budzi,
         - RP pomaga AU poprzez powiedzenie, że dane są w serwerowni,
         - RP będzie pojawiał się i oferował pomoc, gdy gracz spędzi za dużo czasu w jednym miejscu i nie będzie wiedział, co zrobić
     - Jan
@@ -120,13 +120,15 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
         - Jacek w logach naprowadza gracza na możliwość wysadzenia statku i ucieczki łodzią podwodną,
         - Próbował sam odpalić bombę nuklearną, ale został zabity przez Admirała Jabłonowskiego po kilku ostrzeżeniach
 
-Postacie drugoplanowe oznaczone jako "__autor logów__" będą miały własną kategorię logów.
+Postaci drugoplanowe oznaczone jako "__autor logów__" będą miały własną kategorię logów.
 Będą oni przedstawiali historię opisaną wyżej w faktach z własnego punktu widzenia, w postaci nagrań głosowych.
 Kategorie logów będą potem wyświetlane w jednym z ekranów menu i będą mogły być odsłuchane ponownie.
 Wszystkie logi, które nie będą pochodzić od trzech autorów logów, będą miały swoją osobną, wspólną kategorię.
-Spis logów znajduje się poniżej. Treść logów może jeszcze ulec zmianie.
+Spis logów znajduje się poniżej*. Treść logów może jeszcze ulec zmianie.
 
-#### Logi 
+_*Logi są jedynie sposobem reprezentacji fabuły i wraz z rozwojem gry będą ulegały zmianie (w odróżnieniu od powyższych faktów i samej fabuły). Poniższa lista jest jedynie wstępnym pomysłem na większość z nich._
+
+#### Logi
 
 Nazwa | Osoba | Id* | Lokacja | Log
 ---|---|---|---|---
@@ -158,7 +160,7 @@ Muszę to zbadać | Robert | Robert_8 | Serwerownia | Udało mi się dzisiaj por
 Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... On tylko bardziej chce pracować nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
 ??? | ??? | ??? | ??? | ???
 
-*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane
+_*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
 
 ### Postaci
 
@@ -359,13 +361,13 @@ _**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie 
 Logi dziedziczą z klasy Interactable i posiadają tylko id (typu Logs.LogId) oraz metodę interact.
 Klasa Logs znajduje się w folderze res://src/scripts/common/utils i posiada tylko enum LogId, stałą logs (słownik łączący LogId z wszystkimi potrzebnymi danymi logów — tytuł, treść i załadowany plik audio) oraz statyczne metody pomagające pracować z logami (get_log_audio, record_log_pickup i inne, jeśli zajdzie taka potrzeba).
 
-#### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
+<!-- #### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
 <div style="page-break-after: always;"></div>
 
 ### Poziomy i ich specyficzne mechaniki
 
-Poziomy zostały opisane 
+Poziomy zostały ogólnie opisane w sekcji [Tematyka i osadzenie gry/Lokacje](#lokacje). Więcej informacji pojawi się w tej sekcji, gdy będą one implementowane.
 
 ### Modyfikacje
 
@@ -392,7 +394,7 @@ _state_machine_ to Node z podpiętym skryptem maszyny stanów, z kolei każde dz
 Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę _interact(entity: Actor) -> void_.
 Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
 
-### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania
+<!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
 <div style="page-break-after: always;"></div>
 
@@ -424,7 +426,8 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 3 (14.03.2024 - 21.03.2024)__
     - __(K)__ Dopracowanie prototypu
     - __(O)__ Aktualizowanie GDD 
-    - __(M)__ Kontynuacja prac nad assetami
+    - __(M)__ Kontynuowanie prac nad assetami i animacjami
+    - __(K)__ Kontynuowanie prac nad fabułą i logami
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
 - __Tydzień 5 (28.03.2024 - 04.04.2024)__
 - __Tydzień 6 (04.04.2024 - 11.04.2024)__
