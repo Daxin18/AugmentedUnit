@@ -1,4 +1,4 @@
-class_name Spawnpoint
+class_name RespawnStation
 extends Interactable
 
 @onready var hardpoint: Node2D = $Hardpoint

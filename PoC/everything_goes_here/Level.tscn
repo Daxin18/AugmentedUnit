@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn6qfmbx8bx6i"]
 
+[ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Level.gd" id="1_gl3ke"]
 [ext_resource type="Texture2D" uid="uid://c2w8n4pcgnyid" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
-[ext_resource type="Script" path="res://PoC/everything_goes_here/random_experiment.gd" id="1_jj3s0"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="3_qx6gr"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="5_bin8i"]
-[ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/Spawnpoint.tscn" id="5_o20g3"]
-[ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Exit.tscn" id="6_0lufr"]
-[ext_resource type="PackedScene" uid="uid://c7rhrku16kbwb" path="res://PoC/everything_goes_here/player.tscn" id="7_rkqeo"]
+[ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="5_o20g3"]
+[ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="6_0lufr"]
+[ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="8_c5cw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca041"]
 texture = ExtResource("1_jhkw7")
@@ -68,8 +68,9 @@ physics_layer_0/collision_layer = 7
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_ca041")
 
-[node name="Level" type="Node2D"]
-script = ExtResource("1_jj3s0")
+[node name="Level" type="Node2D" node_paths=PackedStringArray("default_spawn")]
+script = ExtResource("1_gl3ke")
+default_spawn = NodePath("Hardpoint")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_evfxc")
@@ -105,6 +106,11 @@ scale = Vector2(-1, -1)
 
 [node name="Exit" parent="." instance=ExtResource("6_0lufr")]
 position = Vector2(1116, 576)
+next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
+next_level_hardpoint = 2
+hardpoint_id = 1
+hardpoint_on_left = true
 
-[node name="Player" parent="." instance=ExtResource("7_rkqeo")]
-position = Vector2(548, 522)
+[node name="Hardpoint" parent="." instance=ExtResource("8_c5cw3")]
+position = Vector2(81, 481)
+id = 2

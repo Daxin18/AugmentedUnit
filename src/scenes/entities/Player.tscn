@@ -149,6 +149,7 @@ radius = 6.0
 radius = 19.0263
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1000
 collision_mask = 31
 script = ExtResource("1_6wu35")
 
@@ -196,7 +197,7 @@ script = ExtResource("3_42ijn")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_nlji6")
-starting_state = NodePath("Idle")
+starting_state = NodePath("Falling")
 
 [node name="Idle" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "moving_state", "jumping_state", "dashing_state", "dying_state", "screaming_state")]
 script = ExtResource("3_3m83i")
