@@ -44,13 +44,11 @@ func apply_gravity() -> void:
 # 	Horizontal movement
 # ===========================
 func handle_horizontal_movement() -> bool:
-	if Input.is_action_pressed("move_left"):
-		parent.velocity.x = - Constants.move_speed
-		parent._set_facing_left(true)
-		return true
-	elif Input.is_action_pressed("move_right"):
-		parent.velocity.x = Constants.move_speed
-		parent._set_facing_left(false)
+	var direction = Input.get_axis("move_left", "move_right")
+	parent.velocity.x = direction * Constants.move_speed
+	
+	if direction != 0:
+		parent._set_facing_left(direction < 0)
 		return true
 	else:
 		parent.velocity.x = 0
