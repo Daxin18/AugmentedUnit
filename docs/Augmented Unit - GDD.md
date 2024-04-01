@@ -154,10 +154,10 @@ To było dziwne | Jacek | Jacek_6 | Serwerownia | Walnąłem dziś DEM młotkiem
 Nie czuję się najlepiej | Jacek | Jacek_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
 Tym razem przesadził | Jabłonowski | Jab_7 | Kajuty | Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!
 Za kogo on się uważa?! | Robert | Robert_7 | Serwerownia | Za kogo on się uważa?! Ten Admirał twierdzi, że Janek ma problemy przeze mnie! Sam uderzył młotkiem w DEM, nie słuchał moich ostrzeżeń i to on sobie coś zrobił... Wróci do siebie za dzień czy dwa i powinien dalej mi pomagać, nic mu się nie stanie, jeśli będzie się słuchał!
-Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad nim pracować!
-Jest z nim gorzej | Jabłonowski | Jab_8 | Serwerownia | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas siedzi tu tylko, jakby ostatni wypadek tylko go bardziej zmotywował...
+Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad tym pracować!
+Jest z nim gorzej | Jabłonowski | Jab_8 | Serwerownia | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas tylko tam siedzi, jakby ostatni wypadek tylko bardziej go zmotywował...
 Muszę to zbadać | Robert | Robert_8 | Serwerownia | Udało mi się dzisiaj porozmawiać krótko z Jankiem w kajutach... Mówił o DEM, o tym, że od wypadku widzi dziwne rzeczy... Czy to możliwe, że DEM zaczyna działać, jak powinien? Muszę to sprawdzić!
-Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... On tylko bardziej chce pracować nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
+Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... Tylko bardziej go to zmotywowało do prowadzenia prac nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
 ??? | ??? | ??? | ??? | ???
 
 _*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
@@ -431,9 +431,10 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Kontynuowanie prac nad assetami i animacjami (stany gracza)
-    - __(K)__ Implementacja systemu poziomów
+    - __(K)__ Dokończenie prac nad logami i nagranie ich pierwszych wersji
 - __Tydzień 5 (28.03.2024 - 04.04.2024)__
     - __(O)__ Aktualizowanie GDD
+    - __(K)__ Implementacja systemu poziomów
     - __(K)__ Implementacja systemów pomagających w obsłudze gry (np. manager audio, manager poziomów itp.)
     - __(M)__ Implementacja efektu śmierci gracza w silniku gry
     - __(M)__ Kontynuowanie prac nad assetami i animacjami (inne postaci w grze)
