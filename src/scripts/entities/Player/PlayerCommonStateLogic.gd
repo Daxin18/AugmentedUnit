@@ -204,6 +204,8 @@ var is_dying: = false
 var lethal_collisions: = []
 
 func die() -> void:
+	var bodypart_manager = get_tree().get_root().get_node("Main").find_child("BodypartManager")
+	bodypart_manager.spawn_parts(parent.global_position)
 	is_dying = true
 	await get_tree().create_timer(stay_dead_for_seconds).timeout
 	is_dying = false
