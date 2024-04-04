@@ -2,7 +2,9 @@ class_name PlayerInteractionLogic
 extends Node
 
 # yes, this implementation assumes the interactables are spread out
-# aka there is no place where 2+ interactables can be in interact_radius at the same time
+# aka there is no place where 2 or more interactables can be in interact_radius at the same time
+# it will still work, but only once, only for the furthest interactable as they are assigned on entry
+# player will have to move back and into interactable again to interact with it
 var current_interactable: Interactable
 var parent: Player
 
@@ -24,7 +26,7 @@ func _on_interact_radius_area_exited(area):
 		current_interactable = null
 
 func can_interact() -> bool:
-	return not parent.audio_player.playing
+	return not parent.log_player.playing
 
 #===========================
 # 		Log-specific
@@ -33,6 +35,6 @@ func can_interact() -> bool:
 func play_log(log_id: Logs.LogId) -> void:
 	var log_audio = Logs.get_log_audio(log_id)
 	if log_audio:
-		parent.audio_player.stream = log_audio
-		parent.audio_player.play()
+		parent.log_player.stream = log_audio
+		parent.log_player.play()
 		Logs.record_log_pickup(log_id)

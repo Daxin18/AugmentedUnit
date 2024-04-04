@@ -2,7 +2,7 @@ class_name Player
 extends Actor
 
 @onready var animations = $Sprite/AnimationPlayer
-@onready var audio_player = $AudioPlayer
+@onready var log_player = $LogPlayer
 
 @onready var state_machine = $state_machine
 @onready var state_logic = $StateLogicHolder
