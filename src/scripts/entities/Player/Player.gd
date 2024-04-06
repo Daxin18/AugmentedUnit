@@ -7,6 +7,7 @@ extends Actor
 @onready var state_machine = $state_machine
 @onready var state_logic = $StateLogicHolder
 @onready var interaction_logic = $InteractionLogicHolder
+@onready var audio_manager = $AudioManager
 
 func _ready() -> void:
 	state_machine.init(self)

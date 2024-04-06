@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=26 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Texture2D" uid="uid://qt7mnbqfldky" path="res://src/assets/entities/player/next_player.png" id="2_k3ycr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerCommonStateLogic.gd" id="3_42ijn"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerInteractionLogic.gd" id="3_ktivm"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_moving.gd" id="4_dj7mp"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerAudioManager.gd" id="5_8ceya"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_jumping.gd" id="5_b4mjp"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_falling.gd" id="6_3es6h"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dashing.gd" id="7_tbkgv"]
@@ -184,19 +185,23 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_2p2b1")
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_4ympx")
+debug_color = Color(0.996078, 0, 0.227451, 0.419608)
 
 [node name="interact_radius" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="interact_radius_shape" type="CollisionShape2D" parent="interact_radius"]
 shape = SubResource("CircleShape2D_l0mc3")
+debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
 [node name="LogPlayer" type="AudioStreamPlayer2D" parent="."]
 
@@ -209,6 +214,11 @@ script = ExtResource("3_ktivm")
 
 [node name="StateLogicHolder" type="Node" parent="."]
 script = ExtResource("3_42ijn")
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("5_8ceya")
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="AudioManager"]
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_nlji6")

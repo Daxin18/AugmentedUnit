@@ -5,7 +5,7 @@ var bodypart_scene: = "res://src/scenes/entities/Bodypart.tscn"
 
 func spawn_parts(global_position: Vector2) -> void:
 	var bodypart
-	for i in range(5):
+	for i in range(6):
 		bodypart = load(bodypart_scene).instantiate()
 		bodypart.set("part", i)
 		add_child(bodypart)

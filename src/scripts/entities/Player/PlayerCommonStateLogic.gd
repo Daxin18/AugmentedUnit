@@ -204,6 +204,7 @@ var is_dying: = false
 var lethal_collisions: = []
 
 func die() -> void:
+	parent.audio_manager.play_sfx(PlayerAudioManager.Sounds.Death)
 	var bodypart_manager = get_tree().get_root().get_node("Main").find_child("BodypartManager")
 	bodypart_manager.spawn_parts(parent.global_position)
 	is_dying = true

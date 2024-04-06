@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dn6qfmbx8bx6i"]
+[gd_scene load_steps=13 format=3 uid="uid://dn6qfmbx8bx6i"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Level.gd" id="1_gl3ke"]
 [ext_resource type="Texture2D" uid="uid://c2w8n4pcgnyid" path="res://PoC/everything_goes_here/test_wall_tiles.png" id="1_jhkw7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="5_o20g3"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="6_0lufr"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="8_c5cw3"]
+[ext_resource type="PackedScene" uid="uid://c1ogy1btt54o7" path="res://src/scenes/common/MovingPlaform.tscn" id="8_ricij"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca041"]
 texture = ExtResource("1_jhkw7")
@@ -68,6 +69,18 @@ physics_layer_0/collision_layer = 7
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_ca041")
 
+[sub_resource type="Curve2D" id="Curve2D_uobnr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, -242)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_vk4ta"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 119, -27, 0, 0, 0, 0, 214, -68, 0, 0, 0, 0, 280, -106, 0, 0, 0, 0, 280, -159, 0, 0, 0, 0, 258, -199, 0, 0, 0, 0, 182, -247, 0, 0, 0, 0, 102, -275, 0, 0, 0, 0, -29, -254, 0, 0, 0, 0, -127, -223, 0, 0, 0, 0, -209, -182, 0, 0, 0, 0, -245, -133, 0, 0, 0, 0, -221, -89, 0, 0, 0, 0, -126, -31, 0, 0, 0, 0, 3, 0)
+}
+point_count = 15
+
 [node name="Level" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_gl3ke")
 default_spawn = NodePath("Hardpoint")
@@ -89,7 +102,7 @@ position = Vector2(945, 125)
 id = 1
 
 [node name="Spawnpoint" parent="." instance=ExtResource("5_o20g3")]
-position = Vector2(-230, 273)
+position = Vector2(-240, 264)
 
 [node name="SpikeTrap" parent="." instance=ExtResource("5_bin8i")]
 position = Vector2(-50, 272)
@@ -112,5 +125,14 @@ hardpoint_id = 1
 hardpoint_on_left = true
 
 [node name="Hardpoint" parent="." instance=ExtResource("8_c5cw3")]
-position = Vector2(81, 481)
+position = Vector2(51, 579)
 id = 2
+
+[node name="MovingPlafform" parent="." instance=ExtResource("8_ricij")]
+position = Vector2(69, 530)
+curve = SubResource("Curve2D_uobnr")
+is_closed = false
+
+[node name="MovingPlafform2" parent="." instance=ExtResource("8_ricij")]
+position = Vector2(541, 530)
+curve = SubResource("Curve2D_vk4ta")
