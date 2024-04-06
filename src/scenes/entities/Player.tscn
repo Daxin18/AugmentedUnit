@@ -215,7 +215,7 @@ script = ExtResource("3_ktivm")
 [node name="StateLogicHolder" type="Node" parent="."]
 script = ExtResource("3_42ijn")
 
-[node name="AudioManager" type="Node" parent="."]
+[node name="AudioManager" type="Node2D" parent="."]
 script = ExtResource("5_8ceya")
 
 [node name="SFXPlayer" type="AudioStreamPlayer2D" parent="AudioManager"]
