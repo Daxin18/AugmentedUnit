@@ -184,6 +184,7 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 
 func set_spawnpoint(new_spawnpoint: Vector2) -> void:
 	spawnpoint = new_spawnpoint
+	var allNodes = get_tree().get_root().get_node("Main").find_child("LevelManager").reset_spawnpoint_textures()
 
 func respawn() -> void:
 	parent.position = spawnpoint

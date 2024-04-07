@@ -17,3 +17,7 @@ func change_level(new_level: String, hardpoint_id: Hardpoints.Id) -> void:
 	add_child(current_level)
 	current_level.spawn_player(hardpoint_id, player)
 
+func reset_spawnpoint_textures() -> void:
+	var level: Level = get_child(0)
+	if level:
+		level.reset_spawnpoint_textures()

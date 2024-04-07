@@ -18,11 +18,17 @@ func set_hardpoints() -> void:
 		if child is Hardpoint:
 			hardpoints.append(child)
 
-# override it
+func reset_spawnpoint_textures() -> void:
+	var spawnpoints = $Respawnpoints
+	var children = spawnpoints.get_children(true)
+	for child in children:
+		if child is RespawnStation:
+			child.set_current_spawnpoint(false)
+
 func spawn_player(spawnpoint_id: Hardpoints.Id, player: Player) -> void:
 	for point in hardpoints:
 		if point.id == spawnpoint_id:
 			point.spawn(player)
 			return
-	# no spawnpoint found - spawning player on the default one
+	print("No spawnpoint found, spawning on default")
 	default_spawn.spawn(player)

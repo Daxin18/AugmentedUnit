@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://o6irawrqkjiu"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Modification/Modification.gd" id="1_n6ufb"]
-[ext_resource type="Texture2D" uid="uid://b6y2w6wa5vgqe" path="res://src/assets/entities/modification/tmp_mod.png" id="2_1lc1w"]
+[ext_resource type="Texture2D" uid="uid://bqi60twj6gbm1" path="res://src/assets/entities/modification/mods.png" id="2_yl47j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vb8n1"]
 radius = 7.0
@@ -12,7 +12,8 @@ collision_mask = 0
 script = ExtResource("1_n6ufb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_1lc1w")
+texture = ExtResource("2_yl47j")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vb8n1")
