@@ -13,5 +13,5 @@ script = ExtResource("2_c0xjy")
 
 [node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("1_v7pol")
-initial_level = "res://src/scenes/levels/Cargo.tscn"
+initial_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
 player = NodePath("../Player")

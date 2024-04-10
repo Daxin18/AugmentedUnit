@@ -101,9 +101,6 @@ position = Vector2(-238, -78)
 position = Vector2(945, 125)
 id = 1
 
-[node name="Spawnpoint" parent="." instance=ExtResource("5_o20g3")]
-position = Vector2(-240, 264)
-
 [node name="SpikeTrap" parent="." instance=ExtResource("5_bin8i")]
 position = Vector2(-50, 272)
 
@@ -117,13 +114,6 @@ position = Vector2(14, 272)
 position = Vector2(-16, 145)
 scale = Vector2(-1, -1)
 
-[node name="Exit" parent="." instance=ExtResource("6_0lufr")]
-position = Vector2(1116, 576)
-next_level = "res://src/scenes/levels/Cargo.tscn"
-next_level_hardpoint = 6
-hardpoint_id = 1
-hardpoint_on_left = true
-
 [node name="Hardpoint" parent="." instance=ExtResource("8_c5cw3")]
 position = Vector2(51, 579)
 id = 2
@@ -136,3 +126,17 @@ is_closed = false
 [node name="MovingPlafform2" parent="." instance=ExtResource("8_ricij")]
 position = Vector2(541, 530)
 curve = SubResource("Curve2D_vk4ta")
+
+[node name="Respawnpoints" type="Node" parent="."]
+
+[node name="Spawnpoint" parent="Respawnpoints" instance=ExtResource("5_o20g3")]
+position = Vector2(-240, 264)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Exit" parent="Doors" instance=ExtResource("6_0lufr")]
+position = Vector2(1116, 576)
+next_level = "res://src/scenes/levels/Cargo.tscn"
+next_level_hardpoint = 6
+hardpoint_id = 1
+hardpoint_on_left = true

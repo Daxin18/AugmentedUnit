@@ -70,16 +70,6 @@ modulate = Color(0.454902, 0.282353, 0.286275, 1)
 position = Vector2(156, 49)
 texture = ExtResource("5_gungt")
 
-[node name="Exit" parent="." instance=ExtResource("2_voa4h")]
-position = Vector2(924, -320)
-next_level = "res://src/scenes/levels/Cargo.tscn"
-next_level_hardpoint = 7
-hardpoint_id = 1
-hardpoint_on_left = true
-
-[node name="Spawnpoint" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(456, -312)
-
 [node name="SpikeTrap" parent="." instance=ExtResource("4_4ec7r")]
 position = Vector2(576, -124)
 
@@ -118,12 +108,26 @@ mod = 1
 position = Vector2(708, 64)
 mod = 2
 
-[node name="Spawnpoint2" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(95, 56)
-
-[node name="Spawnpoint3" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(674, -136)
-
 [node name="Hardpoint" parent="." instance=ExtResource("12_t2iti")]
 position = Vector2(-244, 37)
 id = 2
+
+[node name="Respawnpoints" type="Node" parent="."]
+
+[node name="Spawnpoint3" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(674, -136)
+
+[node name="Spawnpoint2" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(95, 56)
+
+[node name="Spawnpoint" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(456, -312)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Exit" parent="Doors" instance=ExtResource("2_voa4h")]
+position = Vector2(924, -320)
+next_level = "res://src/scenes/levels/Cargo.tscn"
+next_level_hardpoint = 7
+hardpoint_id = 1
+hardpoint_on_left = true
