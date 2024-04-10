@@ -173,10 +173,13 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 	match mod:
 		Modifications.Mod.double_jump:
 			max_remaining_jumps = 2
+			remaining_jumps = max_remaining_jumps
 		Modifications.Mod.dash:
 			max_remaining_dashes = 1
+			remaining_dashes = max_remaining_dashes
 		Modifications.Mod.scream:
 			max_remaining_screams = 1
+			remaining_screams = max_remaining_screams
 
 # ============================
 # 		Dying/Respawning

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ck4beiy5pakp2"]
+[gd_scene load_steps=21 format=3 uid="uid://ck4beiy5pakp2"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Cargo.gd" id="1_tqtm1"]
 [ext_resource type="Texture2D" uid="uid://bfln5ouo1x0on" path="res://src/assets/levels/cargo_hold/tilemap.png" id="2_2ss33"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="7_ksml0"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="8_dy1ij"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="9_ukxvb"]
+[ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="10_j21nl"]
 [ext_resource type="Texture2D" uid="uid://cc4dm5gql30ld" path="res://src/assets/levels/tmp_helpers/tmp_dash.png" id="11_hpy0s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38wld"]
@@ -155,8 +156,9 @@ _data = {
 }
 point_count = 2
 
-[node name="Cargo" type="Node2D"]
+[node name="Cargo" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_tqtm1")
+default_spawn = NodePath("Hardpoint")
 
 [node name="Hardpoint" parent="." instance=ExtResource("2_r28gf")]
 position = Vector2(-844, 15)
@@ -292,6 +294,28 @@ frame = 33
 [node name="CargoDecoration10" parent="Decorations/BigRoom/CargoDecoration8" instance=ExtResource("5_trplk")]
 position = Vector2(0, -62)
 frame = 33
+
+[node name="Upper part" type="Node" parent="Decorations/BigRoom"]
+
+[node name="CargoDecoration9" parent="Decorations/BigRoom/Upper part" instance=ExtResource("5_trplk")]
+position = Vector2(-553, 246)
+frame = 13
+
+[node name="CargoDecoration10" parent="Decorations/BigRoom/Upper part" instance=ExtResource("5_trplk")]
+position = Vector2(-654, 221)
+frame = 33
+
+[node name="CargoDecoration11" parent="Decorations/BigRoom/Upper part" instance=ExtResource("5_trplk")]
+position = Vector2(-688, 242)
+frame = 32
+
+[node name="CargoDecoration12" parent="Decorations/BigRoom/Upper part" instance=ExtResource("5_trplk")]
+position = Vector2(-750, 221)
+frame = 28
+
+[node name="CargoDecoration13" parent="Decorations/BigRoom/Upper part" instance=ExtResource("5_trplk")]
+position = Vector2(-762, 244)
+frame = 20
 
 [node name="FirstRoom" type="Node" parent="Decorations"]
 
@@ -441,6 +465,40 @@ id = 5
 position = Vector2(-685, 424)
 id = 3
 
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door" parent="Doors" instance=ExtResource("10_j21nl")]
+position = Vector2(-904, -312)
+next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
+next_level_hardpoint = 1
+hardpoint_id = 3
+
+[node name="Door2" parent="Doors" instance=ExtResource("10_j21nl")]
+position = Vector2(-893, 423)
+next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
+next_level_hardpoint = 1
+hardpoint_id = 3
+
+[node name="Door3" parent="Doors" instance=ExtResource("10_j21nl")]
+position = Vector2(-92, -632)
+next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
+next_level_hardpoint = 1
+hardpoint_id = 5
+
+[node name="Door4" parent="Doors" instance=ExtResource("10_j21nl")]
+position = Vector2(1694, -778)
+next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
+next_level_hardpoint = 1
+hardpoint_id = 7
+hardpoint_on_left = true
+
+[node name="Door5" parent="Doors" instance=ExtResource("10_j21nl")]
+position = Vector2(1006, 425)
+next_level = "res://PoC/everything_goes_here/Level.tscn"
+next_level_hardpoint = 1
+hardpoint_id = 6
+hardpoint_on_left = true
+
 [node name="Traps" type="Node" parent="."]
 
 [node name="SpikeTrap" parent="Traps" instance=ExtResource("8_dy1ij")]
@@ -509,3 +567,8 @@ mod = 1
 
 [node name="DJump" parent="DEV_ITEMS" instance=ExtResource("9_ukxvb")]
 position = Vector2(-451, 29)
+
+[node name="scream" parent="DEV_ITEMS" instance=ExtResource("9_ukxvb")]
+position = Vector2(-401, -46)
+scale = Vector2(1.00803, 1)
+mod = 2

@@ -1,3 +1,5 @@
+<!-- <div style="page-break-after: always;"></div>  //page break  -->
+
 # Game Design Document
 
 ## Ogólne informacje
@@ -35,8 +37,6 @@ Karta graficzna | Nvidia 450 GTS / Radeon HD 5750 lub lepsza | Nvidia GTX 460 / 
 Miejsce na dysku | 500 MB dostępnego miejsca | 500 MB dostępnego miejsca
 Dodatkowe uwagi | DirectX 9.1+ lub OpenGL 3.2+ | DirectX 9.1+ lub OpenGL 3.2+
 
-<div style="page-break-after: always;"></div>
-
 ### Monetyzacja
 
 Gra zostanie wypuszczona w modelu free-to-play (darmowa), aby zachęcić graczy do zagrania w nią i aby zdobyć odrobinę rozgłosu na rynku. Później mogą zostać wydane płatne dodatki do gry, które rozwiną ją o opcjonalne poziomy i poszerzą historię świata.
@@ -57,7 +57,7 @@ Nazwa | Obowiązkowy | Modyfikacja | Logi | Opis
 ---|---|---|---|---
 Pokład statku | Y | krzyk | Znikome | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
 Kajuty załogi | Y | podwójny skok | DUŻO, przybliżające historię postaci | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
-Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne
+Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne, czy kolce/pożar
 Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie działkom blokującym inne opcjonalne pokoje
 Serwerownia | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
 Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
@@ -76,7 +76,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
     - dryfuje zniszczony na środku oceanu,
     - jest jednostką transportowo-badawczą,
     - przewozi broń nuklearną, tajne wojskowe dane oraz eksperymentalną broń, nad którą prowadzone są badania,
-    - jest napędzany reaktorem, który zasila również jego systemy obronne <div style="page-break-after: always;"></div>
+    - jest napędzany reaktorem, który zasila również jego systemy obronne 
 - AU,
     - AU — Augmented Unit,
     - AU jest robotem zdolnym do modyfikowania samego siebie, aby mógł wykonać swój cel,
@@ -110,7 +110,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
         - Zostaje zabity w reaktorze,
         - Wchodzi w konflikt z Robertem, gdyż nie podoba mu się to, że Szeregowy Jacek zaczyna się dziwnie zachowywać przez pomoc w pracy przy DEM,
         - Zabija Szeregowego Jacka, gdy ten próbuje wysadzić statek i nie chce odpuścić,
-        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczyna się po tym załamywać <div style="page-break-after: always;"></div>
+        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczyna się po tym załamywać 
     - Szeregowy Jacek (__autor logów__)
         - Zwykły, szary żołnierz,
         - Nie lubi być na tym statku jako żołnierz, więc zaczyna wchodzić w interakcję z Robertem w laboratorium,
@@ -185,8 +185,6 @@ Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi
 -  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
 - Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
 
-<div style="page-break-after: always;"></div>
-
 ### Interakcja/kontrolery/sterowanie
 
 Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy*) lub (opcjonalnie, nie w MVP) kontrolera.
@@ -213,8 +211,6 @@ Na tym etapie jedynie jako Concept-art
 
 ![podstawowy splashscreen](images/image-1.png)
 
-<div style="page-break-after: always;"></div>
-
 ### Cutscenki, narracja in-game'owa
 
 - Cutscenki — nieliczne, w kluczowych momentach fabuły, renderowane w silniku, zabierając chwilowo kontrolę graczowi, lub opcjonalnie animowane (przy zakończeniach)
@@ -234,8 +230,6 @@ Prawdopodobnie ograniczymy go co najwyżej do ikonek reprezentujących dostępne
 
 Nic konkretnego nie zostało ustalone, założenia co do HUDu mogą się zmienić
 <!-- TODO: chcemy cokolwiek? Jakieś liczniki na cooldown modyfikacji? -->
-
-<div style="page-break-after: always;"></div>
 
 ### Mapy
 
@@ -259,8 +253,6 @@ Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początk
 Gra będzie tworzona jako pixelart o (podstawowych) rozmiarach 16x16px.
 Będą dominowały tutaj kolory raczej przyciemnione, tak aby postaci, logi, czy platformy wyróżniały się od otoczenia.
 Całość będzie wyglądała raczej mrocznie (klimat grafiki podobny do gry `Signalis`, a ogólny wygląd/feeling do gry jak w `Dead Cells` albo `Hollow Knight`)
-
-<div style="page-break-after: always;"></div>
 
 ### Concept-art
 
@@ -332,7 +324,7 @@ W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy s
 
 X oznacza dowolny stan, poza _Dying_.
 
-<div style="page-break-after: always;"></div>
+
 
 Aktualny stan | Następny stan | Warunek
 ---|---|---
@@ -363,11 +355,21 @@ Klasa Logs znajduje się w folderze res://src/scripts/common/utils i posiada tyl
 
 <!-- #### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
-<div style="page-break-after: always;"></div>
+#### Punkty odrodzeń
+
+Dziedziczą z klasy Interactable, posiadają Hardpoint służący do odradzania gracza.
+Po wejściu w interakcję z punktem odrodzeń gra on krótki dźwięk i staje się aktywny, zmieniając kolor na zielony (z niebieskiego). Tylko jeden punkt może być aktywny w danym momencie, więc przy wejściu w interakcję z następnym punktem, ten aktywny wcześniej wyłącza się.
 
 ### Poziomy i ich specyficzne mechaniki
 
 Poziomy zostały ogólnie opisane w sekcji [Tematyka i osadzenie gry/Lokacje](#lokacje). Więcej informacji pojawi się w tej sekcji, gdy będą one implementowane.
+
+#### Poziom 1 - Magazyn
+
+Mechaniką specyficzną dla tego poziomu są poruszające się platformy. Jedna scena (prefab) platformy może być skonfigurowana, dodając odpowiednią ścieżkę i zaznaczając czy jest ona zamknięta (początek to ten sam punkt co koniec), czy otwarta. Platformy mają domyślne prędkości, ale mogą być one zmieniane (osobno dla ścieżek otwartych i zamkniętych).
+
+Na poziomie zostały też ustawione pułapki w postaci kolców i płomieni, które pozwalają zablokować postęp gracza, zanim odblokuje on zryw, umieszczony przy końcu poziomu.
+Do ułatwienia gry, na tle obecne są strzałki, wskazujące kierunek ewentualnego przechodzenia poziomu. Mimo to gracz może pójść w innym kierunku niż ten wskazany i spróbować przejść grę odblokowując rzeczy w innej kolejności.
 
 ### Modyfikacje
 
@@ -394,9 +396,14 @@ _state_machine_ to Node z podpiętym skryptem maszyny stanów, z kolei każde dz
 Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę _interact(entity: Actor) -> void_.
 Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
 
+#### Hardpoint
+
+Klasa odpowiedzialna za reprezentację niewidzialnych punktów na stałę ustawionych na mapie.
+Każdy hardpoint ma swoje Id, aktualnie hardpointy używane są tylko przez managera poziomów do odradzania albo ładowania do poziomu postaci gracza.
+
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
-<div style="page-break-after: always;"></div>
+
 
 ## Zakres projektu
 
@@ -440,7 +447,8 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
     - __(M)__ Kontynuowanie prac nad assetami i animacjami (inne postaci w grze)
 - __Tydzień 6 (04.04.2024 - 11.04.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Tworzenie pozostałych assetów (poziomy, środowisko itp.) <div style="page-break-after: always;"></div>
+    - __(O)__ Tworzenie pozostałych assetów (poziomy, środowisko itp.) 
+    - __(K)__ Przygotowanie pierwszego poziomu w silniku (potrzebne zmienne, sceny itp.)
 - __Tydzień 7 (11.04.2024 - 18.04.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Projektowanie poziomów

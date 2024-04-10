@@ -72,9 +72,10 @@ texture = ExtResource("5_gungt")
 
 [node name="Exit" parent="." instance=ExtResource("2_voa4h")]
 position = Vector2(924, -320)
-next_level = "res://PoC/everything_goes_here/Level.tscn"
-next_level_hardpoint = 1
+next_level = "res://src/scenes/levels/Cargo.tscn"
+next_level_hardpoint = 7
 hardpoint_id = 1
+hardpoint_on_left = true
 
 [node name="Spawnpoint" parent="." instance=ExtResource("3_k53dq")]
 position = Vector2(456, -312)

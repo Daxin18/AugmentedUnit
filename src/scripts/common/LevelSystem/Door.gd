@@ -10,11 +10,9 @@ extends Interactable
 @onready var hardpoint = $Hardpoint
 
 func _ready() -> void:
+	hardpoint.set_id(hardpoint_id)
 	if hardpoint_on_left:
 		hardpoint.position.x = -hardpoint.position.x
-
-func init() -> void:
-	hardpoint.set_id(hardpoint_id)
 
 func interact(entity: Actor) -> void:
 	var manager = get_tree().get_root().get_node("Main").find_child("LevelManager")

@@ -119,8 +119,8 @@ scale = Vector2(-1, -1)
 
 [node name="Exit" parent="." instance=ExtResource("6_0lufr")]
 position = Vector2(1116, 576)
-next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
-next_level_hardpoint = 2
+next_level = "res://src/scenes/levels/Cargo.tscn"
+next_level_hardpoint = 6
 hardpoint_id = 1
 hardpoint_on_left = true
 
