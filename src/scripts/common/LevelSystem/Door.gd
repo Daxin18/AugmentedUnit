@@ -10,6 +10,7 @@ extends Interactable
 @onready var hardpoint = $Hardpoint
 
 func _ready() -> void:
+	log_blocks_interaction = true
 	hardpoint.set_id(hardpoint_id)
 	if hardpoint_on_left:
 		hardpoint.position.x = -hardpoint.position.x

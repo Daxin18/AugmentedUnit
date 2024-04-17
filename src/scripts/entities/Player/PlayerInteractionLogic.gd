@@ -14,7 +14,7 @@ func init(player: Player) -> void:
 func _process(delta):
 	if Input.is_action_just_pressed("interact") \
 	and current_interactable \
-	and can_interact():
+	and can_interact(current_interactable):
 		current_interactable.interact(parent)
 
 func _on_interact_radius_area_entered(area):
@@ -25,8 +25,10 @@ func _on_interact_radius_area_exited(area):
 	if area == current_interactable:
 		current_interactable = null
 
-func can_interact() -> bool:
-	return not parent.log_player.playing
+func can_interact(interactable: Interactable) -> bool:
+	if interactable.log_blocks_interaction:
+		return not parent.log_player.playing
+	return true
 
 #===========================
 # 		Log-specific
