@@ -9,14 +9,17 @@ func play_sfx(sound: Sounds) -> void:
 
 enum Sounds {
 	Death,
-	Jump
+	Jump,
+	Dash
 }
 
 const death_sound = preload("res://src/assets/entities/player/sounds/death_sound.wav")
 const jump_sound = preload("res://src/assets/entities/player/sounds/jump_sound.wav")
+const dash_sound = preload("res://src/assets/entities/player/sounds/dash_sound_alt.wav")
 
 const mapping: Dictionary = {
 	Sounds.Death: death_sound,
-	Sounds.Jump: jump_sound
+	Sounds.Jump: jump_sound,
+	Sounds.Dash: dash_sound
 }
 

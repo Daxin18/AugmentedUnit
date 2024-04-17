@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
-[ext_resource type="Texture2D" uid="uid://qt7mnbqfldky" path="res://src/assets/entities/player/next_player.png" id="2_k3ycr"]
+[ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
 [ext_resource type="Script" path="res://src/scripts/common/StateMachine/StateMachine.gd" id="2_nlji6"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_idle.gd" id="3_3m83i"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerCommonStateLogic.gd" id="3_42ijn"]
@@ -170,7 +170,7 @@ collision_mask = 31
 script = ExtResource("1_6wu35")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_k3ycr")
+texture = ExtResource("2_k6fly")
 hframes = 5
 vframes = 5
 frame = 21

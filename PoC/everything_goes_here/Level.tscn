@@ -137,6 +137,6 @@ position = Vector2(-240, 264)
 [node name="Exit" parent="Doors" instance=ExtResource("6_0lufr")]
 position = Vector2(1116, 576)
 next_level = "res://src/scenes/levels/Cargo.tscn"
-next_level_hardpoint = 6
+next_level_hardpoint = 4
 hardpoint_id = 1
 hardpoint_on_left = true

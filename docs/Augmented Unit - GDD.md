@@ -37,6 +37,8 @@ Karta graficzna | Nvidia 450 GTS / Radeon HD 5750 lub lepsza | Nvidia GTX 460 / 
 Miejsce na dysku | 500 MB dostępnego miejsca | 500 MB dostępnego miejsca
 Dodatkowe uwagi | DirectX 9.1+ lub OpenGL 3.2+ | DirectX 9.1+ lub OpenGL 3.2+
 
+<div style="page-break-after: always;"></div>
+
 ### Monetyzacja
 
 Gra zostanie wypuszczona w modelu free-to-play (darmowa), aby zachęcić graczy do zagrania w nią i aby zdobyć odrobinę rozgłosu na rynku. Później mogą zostać wydane płatne dodatki do gry, które rozwiną ją o opcjonalne poziomy i poszerzą historię świata.
@@ -168,6 +170,8 @@ _*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
 
 Augmented Unit — uniwersalny robot odpowiedzialny za przechowywanie sekretów statku w sytuacjach kryzysowych i odzyskiwanie danych. Może się modyfikować, aby ułatwić wykonanie swojego celu.
 
+<div style="page-break-after: always;"></div>
+
 #### Przeciwnicy
 
 - Działka automatyczne na statku blokujące dostęp do niektórych rejonów, wymagają zasilania, aby działać.
@@ -203,6 +207,8 @@ _*może to jeszcze ulec zmianie, gracz niekoniecznie musi korzystać z myszy na 
 
 Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów.
 
+<div style="page-break-after: always;"></div>
+
 ## Przebieg gry (flow)
 
 ### Główny splashscreen
@@ -215,6 +221,8 @@ Na tym etapie jedynie jako Concept-art
 
 - Cutscenki — nieliczne, w kluczowych momentach fabuły, renderowane w silniku, zabierając chwilowo kontrolę graczowi, lub opcjonalnie animowane (przy zakończeniach)
 - Narracja — narrator odczytujący logi znajdowane na statku (lista logów w sekcji [Fabuła/Logi](#logi))
+
+<div style="page-break-after: always;"></div>
 
 ### Menu
 
@@ -269,10 +277,25 @@ Warto zaznaczyć, że część pomieszczeń, ich plany, czy rozmieszczenie mogą
 
 ### Spritesheety
 
-_W trakcie przygotowania_
+Postać gracza:
 
-Jak opisano wyżej w sekcji [Assety/Styl graficzny](#styl-graficzny), wszystkie assety będą pixelartem, w tej sekcji pojawią się gotowe spritesheety, gdy zostaną one przygotowane.
-<!-- TODO: wkleic i opisać spritesheety gdy powstaną, uwzględnić miejsca w folderze -->
+![Postać gracza](../src/assets/entities/player/player.png)
+[plik](../src/assets/entities/player/player.png)
+
+![Części ciała](../src/assets/entities/player/bodyparts.png)
+[plik](../src/assets/entities/player/bodyparts.png)
+
+Punkt odrodzeń:
+
+![Punkt odrodzeń](../src/assets/entities/spawnpoint/spawnpoint.png)
+[plik](../src/assets/entities/spawnpoint/spawnpoint.png)
+
+Magazyn:
+
+![Magazyn](../src/assets/levels/cargo_hold/tilemap.png)
+[plik](../src/assets/levels/cargo_hold/tilemap.png)
+
+[Plik z ozdobami poziomu](../src/assets/levels/cargo_hold/decorations.png) musi jeszcze zostać przerobiony, aby mógł się zmieścić w GDD
 
 ### Muzyka
 
@@ -313,6 +336,8 @@ Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana d
 W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (Node) w scenie gracza.
 Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
 
+<div style="page-break-after: always;"></div>
+
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
 - Jumping --> skok
 - Dashing --> zryw 
@@ -323,8 +348,6 @@ W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy s
 - Dying --> śmierć
 
 X oznacza dowolny stan, poza _Dying_.
-
-
 
 Aktualny stan | Następny stan | Warunek
 ---|---|---
@@ -347,6 +370,12 @@ Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk 
 _*Wejście do stanów Moving oraz Idle odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
 
 _**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
+
+<div style="page-break-after: always;"></div>
+
+Postać gracza ma też dwa różne źródła dźwięków, aby uniknąć problemów z kolejkowaniem albo przerywaniem dźwięku.
+Jedno służy do odtwarzania logów, drugie (zarządzane przez specjalnego menadżera audio) odtwarza inne dźwięki takie jak skok, śmierć czy zryw.
+Aby odegrać dźwięk za pomocą menadżer audio, należy najpierw dodać odpowiednią wartość do enuma _Sound_ i mapować go na plik z dźwiękiem w słowniku _mapping_.
 
 #### Logi (główne narzędzie narracji)
 
@@ -378,6 +407,8 @@ Zbierając modyfikacje, gracz będzie mógł dostać się do nowych stanów, bą
 - __Zryw__ — pozwala bardzo szybko przemieścić się horyzontalnie i przejść przez miejsca niemożliwe do pokonania z użyciem samego skoku
 - __Krzyk__ — pozwala zatrzymać się w miejscu na jakiś czas (niezależnie od grawitacji, prędkości itp.), odnawia Zryw i podwójny skok bez potrzeby dotknięcia platformy.
 
+<div style="page-break-after: always;"></div>
+
 ### Ogólne, reużywalne skrypty/narzędzia
 
 #### Maszyna stanów
@@ -403,7 +434,7 @@ Każdy hardpoint ma swoje Id, aktualnie hardpointy używane są tylko przez mana
 
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
-
+<div style="page-break-after: always;"></div>
 
 ## Zakres projektu
 
