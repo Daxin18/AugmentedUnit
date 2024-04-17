@@ -15,3 +15,5 @@ const dash_duration: = 0.15
 const skill_spam_cooldown: = 0.2
 
 const scream_duration: = 1
+
+const bodypart_lifetime: = 3

@@ -8,6 +8,7 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
+	parent.audio_manager.play_sfx(PlayerAudioManager.Sounds.Jump)
 	parent.state_logic.jump()
 
 func exit() -> void:

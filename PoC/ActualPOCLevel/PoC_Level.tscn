@@ -1,16 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1yvh0k400owj"]
+[gd_scene load_steps=15 format=3 uid="uid://b1yvh0k400owj"]
 
+[ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Level.gd" id="1_d0mrj"]
 [ext_resource type="Texture2D" uid="uid://b7ttamnkhofle" path="res://src/assets/levels/tmp_poc_level.png" id="1_hb8l0"]
 [ext_resource type="Texture2D" uid="uid://cpvqon7isynb0" path="res://src/assets/levels/tmp_helpers/tmp_double_jump.png" id="2_6xgl0"]
-[ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Exit.tscn" id="2_voa4h"]
+[ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="2_voa4h"]
 [ext_resource type="Texture2D" uid="uid://cc4dm5gql30ld" path="res://src/assets/levels/tmp_helpers/tmp_dash.png" id="3_b5uwj"]
-[ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/Spawnpoint.tscn" id="3_k53dq"]
+[ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="3_k53dq"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="4_4ec7r"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="5_1ytwm"]
 [ext_resource type="Texture2D" uid="uid://bk53mhd5m4j23" path="res://src/assets/levels/tmp_helpers/tmp_respawn.png" id="5_gungt"]
-[ext_resource type="PackedScene" uid="uid://bpvk8s82bk4rf" path="res://src/scenes/entities/Player.tscn" id="5_qbm1w"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="6_i1kxi"]
 [ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="10_w2mdx"]
+[ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="12_t2iti"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wuk2d"]
 texture = ExtResource("1_hb8l0")
@@ -35,7 +36,9 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 8
 sources/0 = SubResource("TileSetAtlasSource_wuk2d")
 
-[node name="PoCLevel" type="Node2D"]
+[node name="PoCLevel" type="Node2D" node_paths=PackedStringArray("default_spawn")]
+script = ExtResource("1_d0mrj")
+default_spawn = NodePath("Hardpoint")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_g4wow")
@@ -66,12 +69,6 @@ texture = ExtResource("10_w2mdx")
 modulate = Color(0.454902, 0.282353, 0.286275, 1)
 position = Vector2(156, 49)
 texture = ExtResource("5_gungt")
-
-[node name="Exit" parent="." instance=ExtResource("2_voa4h")]
-position = Vector2(924, -320)
-
-[node name="Spawnpoint" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(455, -304)
 
 [node name="SpikeTrap" parent="." instance=ExtResource("4_4ec7r")]
 position = Vector2(576, -124)
@@ -111,11 +108,26 @@ mod = 1
 position = Vector2(708, 64)
 mod = 2
 
-[node name="Spawnpoint2" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(93, 64)
+[node name="Hardpoint" parent="." instance=ExtResource("12_t2iti")]
+position = Vector2(-244, 37)
+id = 2
 
-[node name="Spawnpoint3" parent="." instance=ExtResource("3_k53dq")]
-position = Vector2(672, -128)
+[node name="Respawnpoints" type="Node" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("5_qbm1w")]
-position = Vector2(-245, 49)
+[node name="Spawnpoint3" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(674, -136)
+
+[node name="Spawnpoint2" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(95, 56)
+
+[node name="Spawnpoint" parent="Respawnpoints" instance=ExtResource("3_k53dq")]
+position = Vector2(456, -312)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Exit" parent="Doors" instance=ExtResource("2_voa4h")]
+position = Vector2(924, -320)
+next_level = "res://src/scenes/levels/Cargo.tscn"
+next_level_hardpoint = 7
+hardpoint_id = 1
+hardpoint_on_left = true

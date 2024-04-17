@@ -1,17 +1,33 @@
-[gd_scene load_steps=24 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=26 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
+[ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
 [ext_resource type="Script" path="res://src/scripts/common/StateMachine/StateMachine.gd" id="2_nlji6"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_idle.gd" id="3_3m83i"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerCommonStateLogic.gd" id="3_42ijn"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerInteractionLogic.gd" id="3_ktivm"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_moving.gd" id="4_dj7mp"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/PlayerAudioManager.gd" id="5_8ceya"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_jumping.gd" id="5_b4mjp"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_falling.gd" id="6_3es6h"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dashing.gd" id="7_tbkgv"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_screaming.gd" id="8_4a2sr"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dying.gd" id="9_yhsig"]
-[ext_resource type="Texture2D" uid="uid://cx6xlbkd70aiy" path="res://src/assets/entities/player/tmp_player.png" id="10_6rv4k"]
+
+[sub_resource type="Animation" id="Animation_s75ks"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [21]
+}
 
 [sub_resource type="Animation" id="Animation_vvsqn"]
 resource_name = "player_dashing"
@@ -26,7 +42,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 16]
+"values": [0, 11]
 }
 
 [sub_resource type="Animation" id="Animation_7wkqf"]
@@ -42,7 +58,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 19]
+"values": [12, 19]
 }
 
 [sub_resource type="Animation" id="Animation_e2hv3"]
@@ -55,10 +71,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 12, 13, 14, 15]
+"values": [0, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_el33y"]
@@ -72,10 +88,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 0.9, 1.6),
+"times": PackedFloat32Array(0, 0.7, 1.1, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 21, 22, 23]
 }
 
 [sub_resource type="Animation" id="Animation_jeagk"]
@@ -88,16 +104,15 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [8, 9, 10, 11]
+"values": [16, 17, 18]
 }
 
 [sub_resource type="Animation" id="Animation_mv4w8"]
 resource_name = "player_moving"
 length = 0.8
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -105,10 +120,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [4, 5, 6, 7]
+"values": [16, 17, 18]
 }
 
 [sub_resource type="Animation" id="Animation_hq0e8"]
@@ -124,11 +139,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 17, 18]
+"values": [1, 2, 4]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nwa60"]
 _data = {
+"RESET": SubResource("Animation_s75ks"),
 "player_dashing": SubResource("Animation_vvsqn"),
 "player_dying": SubResource("Animation_7wkqf"),
 "player_falling": SubResource("Animation_e2hv3"),
@@ -149,14 +165,15 @@ radius = 6.0
 radius = 19.0263
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1000
 collision_mask = 31
 script = ExtResource("1_6wu35")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("10_6rv4k")
-hframes = 4
+texture = ExtResource("2_k6fly")
+hframes = 5
 vframes = 5
-frame = 8
+frame = 21
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 libraries = {
@@ -168,21 +185,25 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_2p2b1")
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_4ympx")
+debug_color = Color(0.996078, 0, 0.227451, 0.419608)
 
 [node name="interact_radius" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="interact_radius_shape" type="CollisionShape2D" parent="interact_radius"]
 shape = SubResource("CircleShape2D_l0mc3")
+debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
-[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="LogPlayer" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -194,9 +215,14 @@ script = ExtResource("3_ktivm")
 [node name="StateLogicHolder" type="Node" parent="."]
 script = ExtResource("3_42ijn")
 
+[node name="AudioManager" type="Node2D" parent="."]
+script = ExtResource("5_8ceya")
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="AudioManager"]
+
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("2_nlji6")
-starting_state = NodePath("Idle")
+starting_state = NodePath("Falling")
 
 [node name="Idle" type="Node" parent="state_machine" node_paths=PackedStringArray("falling_state", "moving_state", "jumping_state", "dashing_state", "dying_state", "screaming_state")]
 script = ExtResource("3_3m83i")

@@ -44,13 +44,11 @@ func apply_gravity() -> void:
 # 	Horizontal movement
 # ===========================
 func handle_horizontal_movement() -> bool:
-	if Input.is_action_pressed("move_left"):
-		parent.velocity.x = - Constants.move_speed
-		parent._set_facing_left(true)
-		return true
-	elif Input.is_action_pressed("move_right"):
-		parent.velocity.x = Constants.move_speed
-		parent._set_facing_left(false)
+	var direction = Input.get_axis("move_left", "move_right")
+	parent.velocity.x = direction * Constants.move_speed
+	
+	if direction != 0:
+		parent._set_facing_left(direction < 0)
 		return true
 	else:
 		parent.velocity.x = 0
@@ -175,10 +173,13 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 	match mod:
 		Modifications.Mod.double_jump:
 			max_remaining_jumps = 2
+			remaining_jumps = max_remaining_jumps
 		Modifications.Mod.dash:
 			max_remaining_dashes = 1
+			remaining_dashes = max_remaining_dashes
 		Modifications.Mod.scream:
 			max_remaining_screams = 1
+			remaining_screams = max_remaining_screams
 
 # ============================
 # 		Dying/Respawning
@@ -186,6 +187,7 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 
 func set_spawnpoint(new_spawnpoint: Vector2) -> void:
 	spawnpoint = new_spawnpoint
+	var allNodes = get_tree().get_root().get_node("Main").find_child("LevelManager").reset_spawnpoint_textures()
 
 func respawn() -> void:
 	parent.position = spawnpoint
@@ -206,6 +208,9 @@ var is_dying: = false
 var lethal_collisions: = []
 
 func die() -> void:
+	parent.audio_manager.play_sfx(PlayerAudioManager.Sounds.Death)
+	var bodypart_manager = get_tree().get_root().get_node("Main").find_child("BodypartManager")
+	bodypart_manager.spawn_parts(parent.global_position)
 	is_dying = true
 	await get_tree().create_timer(stay_dead_for_seconds).timeout
 	is_dying = false

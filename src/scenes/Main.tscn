@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dipjbaccc7bll"]
+
+[ext_resource type="Script" path="res://src/scripts/common/LevelSystem/LevelManager.gd" id="1_v7pol"]
+[ext_resource type="Script" path="res://src/scripts/entities/Bodypart/BodypartManager.gd" id="2_c0xjy"]
+[ext_resource type="PackedScene" uid="uid://bpvk8s82bk4rf" path="res://src/scenes/entities/Player.tscn" id="2_d5val"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_d5val")]
+
+[node name="BodypartManager" type="Node" parent="."]
+script = ExtResource("2_c0xjy")
+
+[node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_v7pol")
+initial_level = "res://src/scenes/levels/Cargo.tscn"
+player = NodePath("../Player")

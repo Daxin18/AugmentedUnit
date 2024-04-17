@@ -1,3 +1,5 @@
+<!-- <div style="page-break-after: always;"></div>  //page break  -->
+
 # Game Design Document
 
 ## Ogólne informacje
@@ -57,7 +59,7 @@ Nazwa | Obowiązkowy | Modyfikacja | Logi | Opis
 ---|---|---|---|---
 Pokład statku | Y | krzyk | Znikome | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
 Kajuty załogi | Y | podwójny skok | DUŻO, przybliżające historię postaci | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
-Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne
+Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne, czy kolce/pożar
 Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie działkom blokującym inne opcjonalne pokoje
 Serwerownia | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
 Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
@@ -76,7 +78,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
     - dryfuje zniszczony na środku oceanu,
     - jest jednostką transportowo-badawczą,
     - przewozi broń nuklearną, tajne wojskowe dane oraz eksperymentalną broń, nad którą prowadzone są badania,
-    - jest napędzany reaktorem, który zasila również jego systemy obronne <div style="page-break-after: always;"></div>
+    - jest napędzany reaktorem, który zasila również jego systemy obronne 
 - AU,
     - AU — Augmented Unit,
     - AU jest robotem zdolnym do modyfikowania samego siebie, aby mógł wykonać swój cel,
@@ -110,7 +112,7 @@ Gracz jest robotem (AU - Augmented Unit), który aktywuje się (wychodząc z kap
         - Zostaje zabity w reaktorze,
         - Wchodzi w konflikt z Robertem, gdyż nie podoba mu się to, że Szeregowy Jacek zaczyna się dziwnie zachowywać przez pomoc w pracy przy DEM,
         - Zabija Szeregowego Jacka, gdy ten próbuje wysadzić statek i nie chce odpuścić,
-        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczyna się po tym załamywać <div style="page-break-after: always;"></div>
+        - Zabicie Szeregowego Jacka odbiło się na jego psychice i zaczyna się po tym załamywać 
     - Szeregowy Jacek (__autor logów__)
         - Zwykły, szary żołnierz,
         - Nie lubi być na tym statku jako żołnierz, więc zaczyna wchodzić w interakcję z Robertem w laboratorium,
@@ -137,10 +139,10 @@ Po co to tu jest? | Robert | Robert_1 | Magazyn | Augmented Unit... Nie rozumiem
 Ci ludzie... | Robert | Robert_2 | Magazyn | To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!
 Początek znajomości | Jacek | Jacek_1 | Magazyn | Warta w magazynie nie jest taka zła, dzięki niej mogę czasem porozmawiać z Robertem. Chciałbym kiedyś pomóc mu z eksperymentami, zamiast tylko siedzieć w różnych częściach statku.
 Podziw: bronie | Jabłonowski | Jab_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
-Podziw: łódź podwodna | Jabłonowski | Jab_2 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
+On musi z kimś porozmawiać | Jabłonowski | Jab_2 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
+Podziw: łódź podwodna | Jabłonowski | Jab_3 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
 Na wszelki wypadek... | Jacek | Jacek_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!
-Zrobiłem to... | Jabłonowski | Jab_3 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
-On musi z kimś porozmawiać | Jabłonowski | Jab_4 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
+Zrobiłem to... | Jabłonowski | Jab_4 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
 Waga naszej misji | Jabłonowski | Jab_5 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...
 Ostatnie życzenie | Jacek | Jacek_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
 Dlaczego statek? | Robert | Robert_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że pływając, dużo prościej jest pojąć naturę mojej pracy. Zrozumieć fenomen, który jest z nami non-stop, a którego nie dostrzegamy!
@@ -154,10 +156,10 @@ To było dziwne | Jacek | Jacek_6 | Serwerownia | Walnąłem dziś DEM młotkiem
 Nie czuję się najlepiej | Jacek | Jacek_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
 Tym razem przesadził | Jabłonowski | Jab_7 | Kajuty | Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!
 Za kogo on się uważa?! | Robert | Robert_7 | Serwerownia | Za kogo on się uważa?! Ten Admirał twierdzi, że Janek ma problemy przeze mnie! Sam uderzył młotkiem w DEM, nie słuchał moich ostrzeżeń i to on sobie coś zrobił... Wróci do siebie za dzień czy dwa i powinien dalej mi pomagać, nic mu się nie stanie, jeśli będzie się słuchał!
-Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad nim pracować!
-Jest z nim gorzej | Jabłonowski | Jab_8 | Serwerownia | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas siedzi tu tylko, jakby ostatni wypadek tylko go bardziej zmotywował...
+Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad tym pracować!
+Jest z nim gorzej | Jabłonowski | Jab_8 | Serwerownia | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas tylko tam siedzi, jakby ostatni wypadek tylko bardziej go zmotywował...
 Muszę to zbadać | Robert | Robert_8 | Serwerownia | Udało mi się dzisiaj porozmawiać krótko z Jankiem w kajutach... Mówił o DEM, o tym, że od wypadku widzi dziwne rzeczy... Czy to możliwe, że DEM zaczyna działać, jak powinien? Muszę to sprawdzić!
-Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... On tylko bardziej chce pracować nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
+Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... Tylko bardziej go to zmotywowało do prowadzenia prac nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
 ??? | ??? | ??? | ??? | ???
 
 _*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
@@ -167,6 +169,8 @@ _*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
 #### Gracz
 
 Augmented Unit — uniwersalny robot odpowiedzialny za przechowywanie sekretów statku w sytuacjach kryzysowych i odzyskiwanie danych. Może się modyfikować, aby ułatwić wykonanie swojego celu.
+
+<div style="page-break-after: always;"></div>
 
 #### Przeciwnicy
 
@@ -184,8 +188,6 @@ Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi
 - __Głównym celem__ gracza będzie dostanie się do wspomnianej wcześniej __Serwerowni__. Po drodze napotka różne przeszkody w postaci poruszających się platform, systemów bezpieczeństwa na statku, czy zagrożeń środowiskowych (woda/ogień/prąd).
 -  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
 - Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
-
-<div style="page-break-after: always;"></div>
 
 ### Interakcja/kontrolery/sterowanie
 
@@ -205,6 +207,8 @@ _*może to jeszcze ulec zmianie, gracz niekoniecznie musi korzystać z myszy na 
 
 Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów.
 
+<div style="page-break-after: always;"></div>
+
 ## Przebieg gry (flow)
 
 ### Główny splashscreen
@@ -213,12 +217,12 @@ Na tym etapie jedynie jako Concept-art
 
 ![podstawowy splashscreen](images/image-1.png)
 
-<div style="page-break-after: always;"></div>
-
 ### Cutscenki, narracja in-game'owa
 
 - Cutscenki — nieliczne, w kluczowych momentach fabuły, renderowane w silniku, zabierając chwilowo kontrolę graczowi, lub opcjonalnie animowane (przy zakończeniach)
 - Narracja — narrator odczytujący logi znajdowane na statku (lista logów w sekcji [Fabuła/Logi](#logi))
+
+<div style="page-break-after: always;"></div>
 
 ### Menu
 
@@ -234,8 +238,6 @@ Prawdopodobnie ograniczymy go co najwyżej do ikonek reprezentujących dostępne
 
 Nic konkretnego nie zostało ustalone, założenia co do HUDu mogą się zmienić
 <!-- TODO: chcemy cokolwiek? Jakieś liczniki na cooldown modyfikacji? -->
-
-<div style="page-break-after: always;"></div>
 
 ### Mapy
 
@@ -260,8 +262,6 @@ Gra będzie tworzona jako pixelart o (podstawowych) rozmiarach 16x16px.
 Będą dominowały tutaj kolory raczej przyciemnione, tak aby postaci, logi, czy platformy wyróżniały się od otoczenia.
 Całość będzie wyglądała raczej mrocznie (klimat grafiki podobny do gry `Signalis`, a ogólny wygląd/feeling do gry jak w `Dead Cells` albo `Hollow Knight`)
 
-<div style="page-break-after: always;"></div>
-
 ### Concept-art
 
 Na poniższym zrzucie ekranu widać pierwsze concept-arty kilku pokoi (fragmentów sektorów/lokacji), które są istotne fabularnie. Są to:
@@ -277,10 +277,25 @@ Warto zaznaczyć, że część pomieszczeń, ich plany, czy rozmieszczenie mogą
 
 ### Spritesheety
 
-_W trakcie przygotowania_
+Postać gracza:
 
-Jak opisano wyżej w sekcji [Assety/Styl graficzny](#styl-graficzny), wszystkie assety będą pixelartem, w tej sekcji pojawią się gotowe spritesheety, gdy zostaną one przygotowane.
-<!-- TODO: wkleic i opisać spritesheety gdy powstaną, uwzględnić miejsca w folderze -->
+![Postać gracza](../src/assets/entities/player/player.png)
+[plik](../src/assets/entities/player/player.png)
+
+![Części ciała](../src/assets/entities/player/bodyparts.png)
+[plik](../src/assets/entities/player/bodyparts.png)
+
+Punkt odrodzeń:
+
+![Punkt odrodzeń](../src/assets/entities/spawnpoint/spawnpoint.png)
+[plik](../src/assets/entities/spawnpoint/spawnpoint.png)
+
+Magazyn:
+
+![Magazyn](../src/assets/levels/cargo_hold/tilemap.png)
+[plik](../src/assets/levels/cargo_hold/tilemap.png)
+
+[Plik z ozdobami poziomu](../src/assets/levels/cargo_hold/decorations.png) musi jeszcze zostać przerobiony, aby mógł się zmieścić w GDD
 
 ### Muzyka
 
@@ -321,6 +336,8 @@ Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana d
 W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (Node) w scenie gracza.
 Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
 
+<div style="page-break-after: always;"></div>
+
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
 - Jumping --> skok
 - Dashing --> zryw 
@@ -331,8 +348,6 @@ W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy s
 - Dying --> śmierć
 
 X oznacza dowolny stan, poza _Dying_.
-
-<div style="page-break-after: always;"></div>
 
 Aktualny stan | Następny stan | Warunek
 ---|---|---
@@ -356,6 +371,12 @@ _*Wejście do stanów Moving oraz Idle odnawia skoki, zrywy i krzyki gracza, wi�
 
 _**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
 
+<div style="page-break-after: always;"></div>
+
+Postać gracza ma też dwa różne źródła dźwięków, aby uniknąć problemów z kolejkowaniem albo przerywaniem dźwięku.
+Jedno służy do odtwarzania logów, drugie (zarządzane przez specjalnego menadżera audio) odtwarza inne dźwięki takie jak skok, śmierć czy zryw.
+Aby odegrać dźwięk za pomocą menadżer audio, należy najpierw dodać odpowiednią wartość do enuma _Sound_ i mapować go na plik z dźwiękiem w słowniku _mapping_.
+
 #### Logi (główne narzędzie narracji)
 
 Logi dziedziczą z klasy Interactable i posiadają tylko id (typu Logs.LogId) oraz metodę interact.
@@ -363,11 +384,21 @@ Klasa Logs znajduje się w folderze res://src/scripts/common/utils i posiada tyl
 
 <!-- #### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
-<div style="page-break-after: always;"></div>
+#### Punkty odrodzeń
+
+Dziedziczą z klasy Interactable, posiadają Hardpoint służący do odradzania gracza.
+Po wejściu w interakcję z punktem odrodzeń gra on krótki dźwięk i staje się aktywny, zmieniając kolor na zielony (z niebieskiego). Tylko jeden punkt może być aktywny w danym momencie, więc przy wejściu w interakcję z następnym punktem, ten aktywny wcześniej wyłącza się.
 
 ### Poziomy i ich specyficzne mechaniki
 
 Poziomy zostały ogólnie opisane w sekcji [Tematyka i osadzenie gry/Lokacje](#lokacje). Więcej informacji pojawi się w tej sekcji, gdy będą one implementowane.
+
+#### Poziom 1 - Magazyn
+
+Mechaniką specyficzną dla tego poziomu są poruszające się platformy. Jedna scena (prefab) platformy może być skonfigurowana, dodając odpowiednią ścieżkę i zaznaczając czy jest ona zamknięta (początek to ten sam punkt co koniec), czy otwarta. Platformy mają domyślne prędkości, ale mogą być one zmieniane (osobno dla ścieżek otwartych i zamkniętych).
+
+Na poziomie zostały też ustawione pułapki w postaci kolców i płomieni, które pozwalają zablokować postęp gracza, zanim odblokuje on zryw, umieszczony przy końcu poziomu.
+Do ułatwienia gry, na tle obecne są strzałki, wskazujące kierunek ewentualnego przechodzenia poziomu. Mimo to gracz może pójść w innym kierunku niż ten wskazany i spróbować przejść grę odblokowując rzeczy w innej kolejności.
 
 ### Modyfikacje
 
@@ -375,6 +406,8 @@ Zbierając modyfikacje, gracz będzie mógł dostać się do nowych stanów, bą
 - __Podwójny skok__ — pozwala wykonać jeden dodatkowy skok w powietrzu
 - __Zryw__ — pozwala bardzo szybko przemieścić się horyzontalnie i przejść przez miejsca niemożliwe do pokonania z użyciem samego skoku
 - __Krzyk__ — pozwala zatrzymać się w miejscu na jakiś czas (niezależnie od grawitacji, prędkości itp.), odnawia Zryw i podwójny skok bez potrzeby dotknięcia platformy.
+
+<div style="page-break-after: always;"></div>
 
 ### Ogólne, reużywalne skrypty/narzędzia
 
@@ -393,6 +426,11 @@ _state_machine_ to Node z podpiętym skryptem maszyny stanów, z kolei każde dz
 
 Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę _interact(entity: Actor) -> void_.
 Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
+
+#### Hardpoint
+
+Klasa odpowiedzialna za reprezentację niewidzialnych punktów na stałę ustawionych na mapie.
+Każdy hardpoint ma swoje Id, aktualnie hardpointy używane są tylko przez managera poziomów do odradzania albo ładowania do poziomu postaci gracza.
 
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
@@ -431,15 +469,17 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 4 (21.03.2024 - 28.03.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Kontynuowanie prac nad assetami i animacjami (stany gracza)
-    - __(K)__ Implementacja systemu poziomów
+    - __(K)__ Dokończenie prac nad logami i nagranie ich pierwszych wersji
 - __Tydzień 5 (28.03.2024 - 04.04.2024)__
     - __(O)__ Aktualizowanie GDD
+    - __(K)__ Implementacja systemu poziomów
     - __(K)__ Implementacja systemów pomagających w obsłudze gry (np. manager audio, manager poziomów itp.)
     - __(M)__ Implementacja efektu śmierci gracza w silniku gry
     - __(M)__ Kontynuowanie prac nad assetami i animacjami (inne postaci w grze)
 - __Tydzień 6 (04.04.2024 - 11.04.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Tworzenie pozostałych assetów (poziomy, środowisko itp.) <div style="page-break-after: always;"></div>
+    - __(O)__ Tworzenie pozostałych assetów (poziomy, środowisko itp.) 
+    - __(K)__ Przygotowanie pierwszego poziomu w silniku (potrzebne zmienne, sceny itp.)
 - __Tydzień 7 (11.04.2024 - 18.04.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Projektowanie poziomów

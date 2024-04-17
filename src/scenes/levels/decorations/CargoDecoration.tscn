@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://diiumshhhhlm5"]
+
+[ext_resource type="Texture2D" uid="uid://8etfhpjc0gr1" path="res://src/assets/levels/cargo_hold/decorations.png" id="1_tmwis"]
+
+[node name="CargoDecoration" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0.356863)
+texture = ExtResource("1_tmwis")
+vframes = 58

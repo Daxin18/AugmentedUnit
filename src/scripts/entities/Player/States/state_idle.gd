@@ -26,6 +26,7 @@ func process_input(event: InputEvent) -> State:
 	return null
 
 func process_physics(delta: float) -> State:
+	parent.move_and_slide()
 	if parent.state_logic.check_for_death():
 		return dying_state
 	if not parent.is_on_floor():

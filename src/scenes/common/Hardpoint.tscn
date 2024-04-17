@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3sq75v6h6wcc"]
+
+[ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Hardpoint.gd" id="1_t0rfn"]
+
+[node name="Hardpoint" type="Node2D"]
+script = ExtResource("1_t0rfn")

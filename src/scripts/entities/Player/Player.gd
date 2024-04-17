@@ -2,11 +2,12 @@ class_name Player
 extends Actor
 
 @onready var animations = $Sprite/AnimationPlayer
-@onready var audio_player = $AudioPlayer
+@onready var log_player = $LogPlayer
 
 @onready var state_machine = $state_machine
 @onready var state_logic = $StateLogicHolder
 @onready var interaction_logic = $InteractionLogicHolder
+@onready var audio_manager = $AudioManager
 
 func _ready() -> void:
 	state_machine.init(self)

@@ -7,6 +7,7 @@ extends State
 
 func enter() -> void:
 	parent.animations.play(animation_name)
+	parent.audio_manager.play_sfx(PlayerAudioManager.Sounds.Dash)
 	parent.state_logic.dash()
 
 func exit() -> void:
