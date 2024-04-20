@@ -8,7 +8,8 @@ extends Interactable
 var mod_frame: Dictionary = {
 	Modifications.Mod.dash: 0,
 	Modifications.Mod.double_jump: 1,
-	Modifications.Mod.scream: 2
+	Modifications.Mod.scream: 2,
+	Modifications.Mod.DEM: 3,
 }
 
 func _ready():

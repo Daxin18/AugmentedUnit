@@ -9,5 +9,8 @@ enum Id {
 	Cargo_Submarine,
 	Cargo_Deck,
 	Cargo_Cabins_low,
-	Cargo_Cabins_high
+	Cargo_Cabins_high,
+	Cabins_Labo,
+	Labo_Deck,
+	Labo_Reactor
 }

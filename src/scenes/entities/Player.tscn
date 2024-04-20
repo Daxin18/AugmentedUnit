@@ -165,7 +165,7 @@ radius = 6.0
 radius = 19.0263
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 1000
+z_index = 100
 collision_mask = 31
 script = ExtResource("1_6wu35")
 
@@ -280,6 +280,7 @@ script = ExtResource("9_yhsig")
 falling_state = NodePath("../Falling")
 animation_name = "player_dying"
 
+[connection signal="area_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_entered"]
 [connection signal="area_exited" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_exited"]

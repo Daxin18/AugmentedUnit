@@ -224,3 +224,7 @@ func can_respawn() -> bool:
 func _on_hitbox_body_entered(body):
 	if body is Lethal:
 		lethal_collisions.append(body)
+
+func _on_hitbox_area_entered(area):
+	if area is Lethal:
+		lethal_collisions.append(area)

@@ -14,6 +14,8 @@ func record_log_pickup(item: Logs.LogId) -> void:
 func record_mod_pickup(item: Modifications.Mod) -> void:
 	if not collected_mods.has(item):
 		collected_mods.append(item)
+		if item == Modifications.Mod.DEM:
+			start_endgame()
 	print("Modification " + str(Modifications.Mod.keys()[item]) + " collected")
 
 func get_collected_logs() -> Array[Logs.LogId]:
@@ -21,3 +23,7 @@ func get_collected_logs() -> Array[Logs.LogId]:
 
 func get_collected_mods() -> Array[Modifications.Mod]:
 	return collected_mods
+
+# this will make everything alive and activate the timer
+func start_endgame():
+	pass
