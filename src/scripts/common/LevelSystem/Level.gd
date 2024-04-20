@@ -8,6 +8,7 @@ var hardpoints: Array[Hardpoint] = []
 func _ready():
 	set_hardpoints()
 	clear_collected()
+	init_level_mechanics()
 
 func set_hardpoints() -> void:
 	var doors = $Doors
@@ -52,3 +53,6 @@ func clear_mods() -> void:
 		for mod: Modification in mods_node.get_children():
 			if mod.mod in progression_manager.get_collected_mods():
 				mod.queue_free()
+
+func init_level_mechanics() -> void:
+	pass

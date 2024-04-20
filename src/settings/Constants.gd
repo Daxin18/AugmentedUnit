@@ -19,3 +19,9 @@ const scream_duration: = 1
 const bodypart_lifetime: = 3
 
 const fading_time_in_seconds: = 1
+
+const deck_min_lightning_time: = 1
+const deck_max_lightning_time: = 8
+
+const lightning_lifetime: = .75
+const lightning_delay: = 1.5

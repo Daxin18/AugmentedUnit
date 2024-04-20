@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://brv02by2gwwhl"]
+
+[ext_resource type="Script" path="res://src/scripts/entities/Lightning/Lightning.gd" id="1_74skq"]
+[ext_resource type="Texture2D" uid="uid://4tlxrfp30hpl" path="res://src/assets/entities/lightning/Lightning.png" id="2_8nrhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dx8io"]
+size = Vector2(32, 800)
+
+[node name="Lightning" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_74skq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dx8io")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8nrhp")
+hframes = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
