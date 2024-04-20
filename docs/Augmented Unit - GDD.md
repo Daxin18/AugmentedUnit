@@ -424,13 +424,22 @@ _state_machine_ to Node z podpiętym skryptem maszyny stanów, z kolei każde dz
 
 #### Interactable
 
-Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję. Posiada jedynie metodę _interact(entity: Actor) -> void_.
+Klasa bazowa dla wszystkich rzeczy, z którymi gracz może wejść w interakcję.
+Posiada jedynie zmienną log_blocks_interaction: boolean, oraz metodę _interact(entity: Actor) -> void_.
+Zmienna decyduje o tym, czy gracz może wejść w interakcję z danym przedmiotem, jeśli log jest odtwarzany.
+Domyślną wartością jest _false_ (odtwarzanie logów nie blokuje interakcji), jednak niektóre klasy (_Log_ oraz _Door_) nadpisują tą wartość w metodzie _ready()_, gdyż w ich przypadku wejście w interakcję mogłoby spowodować przerwanie odtwarzania logu na rzecz odtworzenia następnego, bądź z powodu zmiany pozycji gracza między poziomami.
 Jeśli byt nie rozszerza tej klasy, gracz nie będzie w stanie wejść z nim w interakcję (klikając "E")!
 
 #### Hardpoint
 
 Klasa odpowiedzialna za reprezentację niewidzialnych punktów na stałę ustawionych na mapie.
 Każdy hardpoint ma swoje Id, aktualnie hardpointy używane są tylko przez managera poziomów do odradzania albo ładowania do poziomu postaci gracza.
+
+#### ProgressionManager
+
+Klasa zajmująca się zbieraniem informacji o postępach gracza.
+Aktualnie zapisywane tam są tylko informacje o zebranych logach i modyfikacjach, jednak z czasem może ona zostać rozbudowana.
+Informacje te są aktualnie wykorzystywane przy przejściach między poziomami, tak, aby zebrane wcześniej przedmioty nie pojawiały się drugi raz na mapie po powrocie do tej samej strefy.
 
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
@@ -483,14 +492,16 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 7 (11.04.2024 - 18.04.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Projektowanie poziomów
-    - __(K)__ Implementacja poziomów
+    - __(K)__ Implementacja systemów wspomagających przejścia między poziomami
+    - __(K)__ Początek implementacji kolejnego poziomu
 - __Tydzień 8 (18.04.2024 - 25.04.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(M)__ Projektowanie HUD i menu
+    - __(K)__ Implementacja kolejnych poziomów
     - __(K)__ Implementacja HUD i menu
 - __Tydzień 9 (25.04.2024 - 02.05.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(M)__ Implementacja systemu loa/save
+    - __(M)__ Implementacja systemu load/save
     - __(K)__ Implementacja systemów umożliwiających mierzenie czasu gracza
 - __Tydzień 10 (02.05.2024 - 09.05.2024)__
     - __(O)__ Aktualizowanie GDD

@@ -7,9 +7,11 @@ extends Node
 # player will have to move back and into interactable again to interact with it
 var current_interactable: Interactable
 var parent: Player
+var progression_manager: ProgressionManager
 
 func init(player: Player) -> void:
 	parent = player
+	progression_manager = get_tree().get_root().get_node("Main").find_child("ProgressionManager")
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact") \
@@ -39,4 +41,4 @@ func play_log(log_id: Logs.LogId) -> void:
 	if log_audio:
 		parent.log_player.stream = log_audio
 		parent.log_player.play()
-		Logs.record_log_pickup(log_id)
+		Logs.record_log_pickup(log_id, progression_manager)

@@ -22,11 +22,13 @@ var has_recently_dashed: = false
 var has_recently_screamed: = false
 var is_in_dash: = false
 var is_in_scream: = false
+var progression_manager: ProgressionManager
 
 var spawnpoint: = Vector2.ZERO
 
 func init(player: Player) -> void:
 	parent = player
+	progression_manager = get_tree().get_root().get_node("Main").find_child("ProgressionManager")
 
 # ===========================
 # 		Universal
@@ -180,6 +182,7 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 		Modifications.Mod.scream:
 			max_remaining_screams = 1
 			remaining_screams = max_remaining_screams
+	progression_manager.record_mod_pickup(mod)
 
 # ============================
 # 		Dying/Respawning

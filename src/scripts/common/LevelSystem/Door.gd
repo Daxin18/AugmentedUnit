@@ -9,6 +9,9 @@ extends Interactable
 
 @onready var hardpoint = $Hardpoint
 
+# this prevents player from loading TOO MANY levels when spam-clicking during fading animation
+var can_transition: = true
+
 func _ready() -> void:
 	log_blocks_interaction = true
 	hardpoint.set_id(hardpoint_id)
@@ -17,4 +20,6 @@ func _ready() -> void:
 
 func interact(entity: Actor) -> void:
 	var manager = get_tree().get_root().get_node("Main").find_child("LevelManager")
-	manager.change_level(next_level, next_level_hardpoint)
+	if can_transition: 
+		can_transition = false
+		manager.change_level(next_level, next_level_hardpoint)

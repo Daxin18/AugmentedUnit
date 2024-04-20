@@ -4,21 +4,67 @@ extends Node
 enum LogId {
 	dog_log,
 	test_log,
+	# Cargo
 	Jan_1,
 	Jacek_1,
 	Robert_1,
 	Robert_2,
 	Jab_1,
-	Jab_2
+	Jab_2,
+	# Cabins
+	Jab_4,
+	Robert_4,
+	Jacek_4,
+	Robert_5,
+	Jacek_5,
+	Jab_6,
+	Jacek_7,
+	Jab_7,
+	Jacek_8,
+	Jacek_9,
+	# Submarine
+	Jab_3,
+	Jacek_2,
+	# Zbrojownia
+	Jab_5,
+	Jacek_3,
+	# Deck
+	Robert_3,
+	# Lab
+	Robert_6,
+	Jacek_6,
+	Robert_7,
+	Jab_8,
+	Robert_8
 }
 const dog_audio = preload("res://PoC/everything_goes_here/Dog single bark.wav")
 const test_audio = preload("res://src/assets/entities/log/sounds/test_log.wav")
 const jan_1_audio = preload("res://src/assets/entities/log/sounds/uncategorized/Jan_1.wav")
 const jacek_1_audio = preload("res://src/assets/entities/log/sounds/Jacek/Początek znajomości.wav")
+const jacek_2_audio = preload("res://src/assets/entities/log/sounds/Jacek/Na wszelki wypadek....wav")
+const jacek_3_audio = preload("res://src/assets/entities/log/sounds/Jacek/Ostatnie życzenie.wav")
+const jacek_4_audio = preload("res://src/assets/entities/log/sounds/Jacek/Nazywa to DEM.wav")
+const jacek_5_audio = preload("res://src/assets/entities/log/sounds/Jacek/W końcu jest ciekawie.wav")
+const jacek_6_audio = preload("res://src/assets/entities/log/sounds/Jacek/To było dziwne.wav")
+const jacek_7_audio = preload("res://src/assets/entities/log/sounds/Jacek/Nie czuje się najlepiej.wav")
+const jacek_8_audio = preload("res://src/assets/entities/log/sounds/Jacek/Trzeba go ostrzec.wav")
+const jacek_9_audio = preload("res://src/assets/entities/log/sounds/Jacek/Nie mogę tak dłużej.wav")
 const robert_1_audio = preload("res://src/assets/entities/log/sounds/Robert/Po co to tu jest.wav")
 const robert_2_audio = preload("res://src/assets/entities/log/sounds/Robert/Ci ludzie....wav")
+const robert_3_audio = preload("res://src/assets/entities/log/sounds/Robert/Dlaczego statek.wav")
+const robert_4_audio = preload("res://src/assets/entities/log/sounds/Robert/Ten szeregowy....wav")
+const robert_5_audio = preload("res://src/assets/entities/log/sounds/Robert/Zaczynam się do niego przekonywać....wav")
+const robert_6_audio = preload("res://src/assets/entities/log/sounds/Robert/Jest bystry... ale nadal głupi.wav")
+const robert_7_audio = preload("res://src/assets/entities/log/sounds/Robert/Za kogo on się uważa.wav")
+const robert_8_audio = preload("res://src/assets/entities/log/sounds/Robert/Muszę to zbadać.wav")
 const jab_1_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Podziw bronie.wav")
 const jab_2_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/On musi z kimś porozmawiać.wav")
+const jab_3_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Podziw łódź podwodna.wav")
+const jab_4_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Zrobiłem to....wav")
+const jab_5_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Waga naszej misji.wav")
+const jab_6_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Cieszę się że jest szczęśliwy.wav")
+const jab_7_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Tym razem przesadził.wav")
+const jab_8_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Jest z nim gorzej.wav")
 
 # this dict
 # id: name - text - audio_to_play
@@ -64,6 +110,5 @@ static func get_log_audio(log_id: LogId) -> AudioStream:
 		return log_data[2]
 	return null
 
-# this will be needed later
-static func record_log_pickup(logId: LogId) -> void:
-	pass
+static func record_log_pickup(logId: LogId, manager: ProgressionManager) -> void:
+	manager.record_log_pickup(logId)
