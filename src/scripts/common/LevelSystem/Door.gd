@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func interact(entity: Actor) -> void:
 	var manager = get_tree().get_root().get_node("Main").find_child("LevelManager")
-	#=======Deeck lightning issue fix?
+	#=======Deck lightning issue fix
 	for child in manager.get_children():
 		if child is Deck:
 			child.exit()

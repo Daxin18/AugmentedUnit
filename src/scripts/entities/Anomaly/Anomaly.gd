@@ -11,6 +11,7 @@ var audio_active: = preload("res://src/assets/entities/anomaly/sounds/anomaly_ac
 var is_active: = false
 var is_activating: = false
 var rng: = RandomNumberGenerator.new()
+var exists: = true
 
 const anomaly_active_time: = 5
 const anomaly_idle_time: = 3.6
@@ -30,11 +31,16 @@ func _process(delta: float) -> void:
 		var time = rng.randf_range(min_idle_time, max_idle_time)
 		activate_after(time)
 
+func _exit_tree() -> void:
+	exists = false
+
 func activate_after(time: float) -> void:
 	is_activating = true
-	await get_tree().create_timer(time).timeout
+	if exists:
+		await get_tree().create_timer(time).timeout
 	go_active()
-	await get_tree().create_timer(anomaly_active_time).timeout
+	if exists:
+		await get_tree().create_timer(anomaly_active_time).timeout
 	is_activating = false
 	is_active = false
 

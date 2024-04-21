@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c7cqaqnfv0yxh"]
+[gd_scene load_steps=16 format=3 uid="uid://c7cqaqnfv0yxh"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Deck.gd" id="1_mqg0k"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="2_5icbx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="5_v7soy"]
 [ext_resource type="Script" path="res://src/scripts/common/Entities/Lethal.gd" id="6_tt04w"]
 [ext_resource type="Texture2D" uid="uid://bj6nlrvbkksbc" path="res://src/assets/levels/deck/tmb_bckgrd.png" id="7_u6irk"]
+[ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="8_orjuu"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_x756p"]
 tile_data = PackedInt32Array(0, 0, 3, 65536, 0, 4, 1, 65536, 3, 65537, 65536, 4)
@@ -275,7 +276,7 @@ hardpoint_id = 9
 [node name="Mods" type="Node" parent="."]
 
 [node name="Modification" parent="Mods" instance=ExtResource("2_5icbx")]
-position = Vector2(4727, -1307)
+position = Vector2(4107, -1310)
 mod = 2
 
 [node name="DEV_ITEMS" type="Node2D" parent="."]
@@ -314,3 +315,8 @@ modulate = Color(0.298039, 0.611765, 0.643137, 1)
 z_index = -100
 position = Vector2(2763, -1411)
 texture = ExtResource("7_u6irk")
+
+[node name="TmpScream" type="Sprite2D" parent="."]
+z_index = 30
+position = Vector2(4112, -1230)
+texture = ExtResource("8_orjuu")

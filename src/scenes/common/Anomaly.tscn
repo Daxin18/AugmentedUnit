@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://beii4xboemkwr"]
+[gd_scene load_steps=9 format=3 uid="uid://beii4xboemkwr"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Anomaly/Anomaly.gd" id="1_314wi"]
 [ext_resource type="Texture2D" uid="uid://brrfkba2vqumy" path="res://src/assets/entities/anomaly/anomaly.png" id="1_fhjar"]
@@ -61,6 +61,9 @@ _data = {
 "anomaly_idle": SubResource("Animation_a2qkj")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jpyv"]
+radius = 6.0
+
 [node name="Anomaly" type="Node2D"]
 script = ExtResource("1_314wi")
 
@@ -85,5 +88,9 @@ libraries = {
 
 [node name="tp_point" type="Node2D" parent="."]
 position = Vector2(64, 0)
+
+[node name="debug_only" type="CollisionShape2D" parent="tp_point"]
+shape = SubResource("CircleShape2D_1jpyv")
+debug_color = Color(0.819608, 0.360784, 0.470588, 0.419608)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
