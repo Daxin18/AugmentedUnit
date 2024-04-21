@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=27 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dashing.gd" id="7_tbkgv"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_screaming.gd" id="8_4a2sr"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dying.gd" id="9_yhsig"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_trampolined.gd" id="14_gv6ud"]
 
 [sub_resource type="Animation" id="Animation_s75ks"]
 length = 0.001
@@ -207,7 +208,7 @@ debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
+position_smoothing_speed = 7.0
 
 [node name="InteractionLogicHolder" type="Node" parent="."]
 script = ExtResource("3_ktivm")
@@ -279,6 +280,16 @@ animation_name = "player_screaming"
 script = ExtResource("9_yhsig")
 falling_state = NodePath("../Falling")
 animation_name = "player_dying"
+
+[node name="Trampolined" type="Node" parent="state_machine" node_paths=PackedStringArray("jumping_state", "falling_state", "dashing_state", "screaming_state", "dying_state", "idle_state")]
+script = ExtResource("14_gv6ud")
+jumping_state = NodePath("../Jumping")
+falling_state = NodePath("../Falling")
+dashing_state = NodePath("../Dashing")
+screaming_state = NodePath("../Screaming")
+dying_state = NodePath("../Dying")
+idle_state = NodePath("../Idle")
+animation_name = "player_jumping"
 
 [connection signal="area_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]

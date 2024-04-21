@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpvs0cklll8yp"]
+[gd_scene load_steps=13 format=3 uid="uid://bpvs0cklll8yp"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Cabins.gd" id="1_2bovc"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_6vilx"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="4_0yfcu"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="4_5qh27"]
 [ext_resource type="Texture2D" uid="uid://cpvqon7isynb0" path="res://src/assets/levels/tmp_helpers/tmp_double_jump.png" id="6_jbjca"]
+[ext_resource type="PackedScene" uid="uid://cupq5nbenij27" path="res://src/scenes/common/Trampoline.tscn" id="7_wm4nq"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_m1glg"]
 tile_data = PackedInt32Array(0, 327680, 4, 1, 393216, 4)
@@ -205,6 +206,19 @@ position = Vector2(2235, -867)
 z_index = 11
 position = Vector2(2241, -959)
 texture = ExtResource("6_jbjca")
+
+[node name="Trampolines" type="Node2D" parent="."]
+position = Vector2(3215, -31)
+
+[node name="Trampoline" parent="Trampolines" instance=ExtResource("7_wm4nq")]
+position = Vector2(1486, 463)
+
+[node name="Trampoline2" parent="Trampolines" instance=ExtResource("7_wm4nq")]
+position = Vector2(1575, 197)
+rotation = -0.817779
+
+[node name="Trampoline3" parent="Trampolines" instance=ExtResource("7_wm4nq")]
+position = Vector2(1331, 157)
 
 [node name="DEV_ITEMS" type="Node2D" parent="."]
 position = Vector2(4326, 364)

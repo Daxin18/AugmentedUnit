@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://cupq5nbenij27"]
+
+[ext_resource type="Script" path="res://src/scripts/entities/Trampoline/Trampoline.gd" id="1_sul8t"]
+[ext_resource type="Texture2D" uid="uid://nmenb7q81vrn" path="res://src/assets/entities/trampoline/trampoline.png" id="1_wxusf"]
+
+[sub_resource type="Animation" id="Animation_gh6sw"]
+resource_name = "anim"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_7eas8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dxjj7"]
+_data = {
+"RESET": SubResource("Animation_7eas8"),
+"anim": SubResource("Animation_gh6sw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpbk8"]
+size = Vector2(46, 10)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct2rl"]
+radius = 5.0
+height = 40.0
+
+[node name="Trampoline" type="StaticBody2D"]
+collision_layer = 8
+script = ExtResource("1_sul8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wxusf")
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_dxjj7")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_mpbk8")
+debug_color = Color(0, 0.643137, 0.294118, 0.419608)
+
+[node name="Jumper" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jumper"]
+position = Vector2(0, 7)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_ct2rl")
+debug_color = Color(0.960784, 0.184314, 0.219608, 0.419608)
+
+[connection signal="body_entered" from="Jumper" to="." method="_on_jumper_body_entered"]

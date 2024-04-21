@@ -70,7 +70,6 @@ func jump() -> void:
 func handle_jump() -> bool:
 	if Input.is_action_just_pressed("jump") and can_jump():
 		remaining_jumps -= 1
-		#jump() #handle this on entering state, not here!
 		return true
 	return false
 
@@ -183,6 +182,25 @@ func unlock_modification(mod: Modifications.Mod) -> void:
 			max_remaining_screams = 1
 			remaining_screams = max_remaining_screams
 	progression_manager.record_mod_pickup(mod)
+
+# ============================
+# 		Trampoline
+# ============================
+
+# dirty way of doing things, but I'm tired
+@onready var TrampolineState = $"../state_machine/Trampolined"
+
+var movement_locked: = false
+
+func trampoline_player(force: Vector2, movement_lock_duration: float) -> void:
+	movement_locked = true
+	parent.state_machine.change_state(TrampolineState)
+	parent.velocity = force
+	await get_tree().create_timer(movement_lock_duration).timeout
+	movement_locked = false
+
+func trampoline_can_move() -> bool:
+	return not movement_locked
 
 # ============================
 # 		Dying/Respawning
