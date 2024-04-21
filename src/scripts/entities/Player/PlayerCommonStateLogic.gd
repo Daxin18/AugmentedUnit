@@ -45,9 +45,11 @@ func apply_gravity() -> void:
 # ===========================
 # 	Horizontal movement
 # ===========================
+var confusion_moifier: = 1
+
 func handle_horizontal_movement() -> bool:
 	var direction = Input.get_axis("move_left", "move_right")
-	parent.velocity.x = direction * Constants.move_speed
+	parent.velocity.x = direction * Constants.move_speed * confusion_moifier
 	
 	if direction != 0:
 		parent._set_facing_left(direction < 0)
@@ -55,6 +57,11 @@ func handle_horizontal_movement() -> bool:
 	else:
 		parent.velocity.x = 0
 	return false
+
+func apply_confusion(time: float) -> void:
+	confusion_moifier = -1
+	await get_tree().create_timer(time).timeout
+	confusion_moifier = 1
 
 # ===========================
 # 			Jumping
