@@ -210,6 +210,18 @@ func trampoline_can_move() -> bool:
 	return not movement_locked
 
 # ============================
+# 			Menu
+# ============================
+@onready var BlockedState = $"../state_machine/BLOCKED"
+@onready var FallingState = $"../state_machine/Falling"
+
+func block_player() -> void:
+	parent.state_machine.change_state(BlockedState)
+
+func unlock_player() -> void:
+	parent.state_machine.change_state(FallingState)
+
+# ============================
 # 		Dying/Respawning
 # ============================
 

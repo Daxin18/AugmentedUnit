@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=28 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_screaming.gd" id="8_4a2sr"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dying.gd" id="9_yhsig"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_trampolined.gd" id="14_gv6ud"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_blocked.gd" id="15_i52eo"]
 
 [sub_resource type="Animation" id="Animation_s75ks"]
 length = 0.001
@@ -290,6 +291,9 @@ screaming_state = NodePath("../Screaming")
 dying_state = NodePath("../Dying")
 idle_state = NodePath("../Idle")
 animation_name = "player_jumping"
+
+[node name="BLOCKED" type="Node" parent="state_machine"]
+script = ExtResource("15_i52eo")
 
 [connection signal="area_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]

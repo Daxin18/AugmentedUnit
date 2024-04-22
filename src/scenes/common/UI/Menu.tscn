@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8lcit32mbhiv"]
+
+[ext_resource type="Texture2D" uid="uid://ba3sn3bdlk1bv" path="res://src/assets/UI/Menu.png" id="1_mf5s4"]
+[ext_resource type="Script" path="res://src/scripts/common/UI/Menu.gd" id="1_xsarh"]
+[ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="2_tljkw"]
+[ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="3_tm61q"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -320.0
+offset_top = -180.0
+offset_right = -120.0
+offset_bottom = -45.0
+scale = Vector2(3.18969, 2.64432)
+script = ExtResource("1_xsarh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+self_modulate = Color(0.290196, 0.529412, 0.909804, 1)
+z_index = 4001
+layout_mode = 0
+offset_left = 34.7997
+offset_top = 33.657
+offset_right = 172.8
+offset_bottom = 88.657
+theme_override_fonts/normal_font = ExtResource("3_tm61q")
+theme_override_font_sizes/normal_font_size = 24
+text = "Augmented
+		Unit"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RichTextLabel"]
+self_modulate = Color(0.823529, 0.905882, 0.960784, 1)
+z_index = 4001
+offset_left = 0.627023
+offset_top = 0.756341
+offset_right = 138.627
+offset_bottom = 55.7563
+theme_override_fonts/normal_font = ExtResource("3_tm61q")
+theme_override_font_sizes/normal_font_size = 24
+text = "Augmented
+		Unit"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 4000
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+scale = Vector2(0.313548, 0.378673)
+texture = ExtResource("1_mf5s4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 4001
+offset_left = 78.6911
+offset_top = 86.2224
+offset_right = 148.691
+offset_bottom = 184.222
+scale = Vector2(0.604822, 0.487334)
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_tljkw")
+text = "	Graj	"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_tljkw")
+disabled = true
+text = "	Opcje	"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_tljkw")
+text = "	Koniec	"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -543,8 +543,8 @@ hardpoint_id = 3
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(-893, 423)
-next_level = "res://PoC/everything_goes_here/Level.tscn"
-next_level_hardpoint = 1
+next_level = "res://src/scenes/levels/Labo.tscn"
+next_level_hardpoint = 10
 hardpoint_id = 4
 
 [node name="Door3" parent="Doors" instance=ExtResource("10_j21nl")]

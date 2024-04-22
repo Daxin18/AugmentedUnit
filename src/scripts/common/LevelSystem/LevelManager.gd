@@ -9,9 +9,17 @@ extends Node
 var current_level: Level
 
 func _ready():
+	fade_in()
 	current_level = load(initial_level).instantiate()
 	add_child(current_level)
 	current_level.spawn_player(Hardpoints.Id.Default_Id, player)
+
+func start_game():
+	fade_in()
+	current_level = load(initial_level).instantiate()
+	add_child(current_level)
+	current_level.spawn_player(Hardpoints.Id.Default_Id, player)
+	player.state_logic.unlock_player()
 
 func change_level(new_level: String, hardpoint_id: Hardpoints.Id) -> void:
 	fading.speed_scale = 1/Constants.fading_time_in_seconds
