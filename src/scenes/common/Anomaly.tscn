@@ -6,23 +6,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsdj3"]
 radius = 33.0151
 
-[sub_resource type="Animation" id="Animation_a2qkj"]
-resource_name = "anomaly_idle"
-length = 3.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 1, 2, 3, 4]
-}
-
 [sub_resource type="Animation" id="Animation_8lh80"]
 length = 0.001
 tracks/0/type = "value"
@@ -52,6 +35,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 5, 6, 7, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 7, 6, 5, 0]
+}
+
+[sub_resource type="Animation" id="Animation_a2qkj"]
+resource_name = "anomaly_idle"
+length = 3.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 1, 2, 3, 4]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2ho73"]
