@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=33 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
@@ -13,6 +13,13 @@
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dashing.gd" id="7_tbkgv"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_screaming.gd" id="8_4a2sr"]
 [ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_dying.gd" id="9_yhsig"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_trampolined.gd" id="14_gv6ud"]
+[ext_resource type="Script" path="res://src/scripts/entities/Player/States/state_blocked.gd" id="15_i52eo"]
+[ext_resource type="FontFile" uid="uid://ddckps1108f3l" path="res://src/assets/UI/pixelart.ttf" id="16_v1562"]
+[ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="17_drslc"]
+[ext_resource type="Texture2D" uid="uid://cq2d56fboonxf" path="res://src/assets/UI/dash.png" id="18_ckvg2"]
+[ext_resource type="Texture2D" uid="uid://daijh2djjgmtt" path="res://src/assets/UI/djump.png" id="19_txq1w"]
+[ext_resource type="Texture2D" uid="uid://2o6wb0jjvxs1" path="res://src/assets/UI/scream.png" id="20_c314c"]
 
 [sub_resource type="Animation" id="Animation_s75ks"]
 length = 0.001
@@ -165,7 +172,7 @@ radius = 6.0
 radius = 19.0263
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 1000
+z_index = 100
 collision_mask = 31
 script = ExtResource("1_6wu35")
 
@@ -207,7 +214,7 @@ debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
+position_smoothing_speed = 7.0
 
 [node name="InteractionLogicHolder" type="Node" parent="."]
 script = ExtResource("3_ktivm")
@@ -280,6 +287,103 @@ script = ExtResource("9_yhsig")
 falling_state = NodePath("../Falling")
 animation_name = "player_dying"
 
+[node name="Trampolined" type="Node" parent="state_machine" node_paths=PackedStringArray("jumping_state", "falling_state", "dashing_state", "screaming_state", "dying_state", "idle_state")]
+script = ExtResource("14_gv6ud")
+jumping_state = NodePath("../Jumping")
+falling_state = NodePath("../Falling")
+dashing_state = NodePath("../Dashing")
+screaming_state = NodePath("../Screaming")
+dying_state = NodePath("../Dying")
+idle_state = NodePath("../Idle")
+animation_name = "player_jumping"
+
+[node name="BLOCKED" type="Node" parent="state_machine"]
+script = ExtResource("15_i52eo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 639.0
+offset_bottom = 359.0
+
+[node name="LevelName" type="RichTextLabel" parent="CanvasLayer/HUD"]
+self_modulate = Color(0.243137, 0.337255, 0.498039, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 214.0
+offset_bottom = 50.0
+theme_override_fonts/normal_font = ExtResource("16_v1562")
+text = "Laboratorium"
+
+[node name="LevelName" type="RichTextLabel" parent="CanvasLayer/HUD/LevelName"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 203.0
+offset_bottom = 42.0
+theme_override_fonts/normal_font = ExtResource("16_v1562")
+text = "Laboratorium"
+
+[node name="Timer" type="RichTextLabel" parent="CanvasLayer/HUD"]
+visible = false
+layout_mode = 0
+offset_left = 583.0
+offset_top = 10.0
+offset_right = 641.0
+offset_bottom = 49.0
+theme_override_fonts/normal_font = ExtResource("17_drslc")
+text = "12:37"
+
+[node name="CurrentLog" type="HBoxContainer" parent="CanvasLayer/HUD"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 0
+offset_left = 433.0
+offset_top = 299.0
+offset_right = 640.0
+offset_bottom = 358.0
+alignment = 1
+
+[node name="audio" type="TextureRect" parent="CanvasLayer/HUD/CurrentLog"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="logTitle" type="RichTextLabel" parent="CanvasLayer/HUD/CurrentLog"]
+layout_mode = 2
+bbcode_enabled = true
+text = "LogTitle"
+autowrap_mode = 2
+shortcut_keys_enabled = false
+
+[node name="Skills" type="HBoxContainer" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 328.0
+offset_right = 126.0
+offset_bottom = 360.0
+
+[node name="Dash" type="TextureRect" parent="CanvasLayer/HUD/Skills"]
+visible = false
+layout_mode = 2
+texture = ExtResource("18_ckvg2")
+expand_mode = 2
+
+[node name="DJump" type="TextureRect" parent="CanvasLayer/HUD/Skills"]
+visible = false
+layout_mode = 2
+texture = ExtResource("19_txq1w")
+expand_mode = 3
+
+[node name="Scream" type="TextureRect" parent="CanvasLayer/HUD/Skills"]
+visible = false
+layout_mode = 2
+texture = ExtResource("20_c314c")
+expand_mode = 2
+
+[connection signal="area_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]
 [connection signal="area_entered" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_entered"]
 [connection signal="area_exited" from="interact_radius" to="InteractionLogicHolder" method="_on_interact_radius_area_exited"]

@@ -7,14 +7,16 @@ extends Node
 # player will have to move back and into interactable again to interact with it
 var current_interactable: Interactable
 var parent: Player
+var progression_manager: ProgressionManager
 
 func init(player: Player) -> void:
 	parent = player
+	progression_manager = get_tree().get_root().get_node("Main").find_child("ProgressionManager")
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact") \
 	and current_interactable \
-	and can_interact():
+	and can_interact(current_interactable):
 		current_interactable.interact(parent)
 
 func _on_interact_radius_area_entered(area):
@@ -25,8 +27,10 @@ func _on_interact_radius_area_exited(area):
 	if area == current_interactable:
 		current_interactable = null
 
-func can_interact() -> bool:
-	return not parent.log_player.playing
+func can_interact(interactable: Interactable) -> bool:
+	if interactable.log_blocks_interaction:
+		return not parent.log_player.playing
+	return true
 
 #===========================
 # 		Log-specific
@@ -37,4 +41,4 @@ func play_log(log_id: Logs.LogId) -> void:
 	if log_audio:
 		parent.log_player.stream = log_audio
 		parent.log_player.play()
-		Logs.record_log_pickup(log_id)
+		Logs.record_log_pickup(log_id, progression_manager)
