@@ -1,7 +1,7 @@
 class_name LevelManager
 extends Node
 
-@export_file("*.tscn") var initial_level: String
+@export var initial_level: Levels.LevelId
 @export var player: Player
 
 @onready var fading: = $CanvasLayer/fading
@@ -10,13 +10,13 @@ var current_level: Level
 
 func _ready():
 	fade_in()
-	current_level = load(initial_level).instantiate()
+	current_level = load(Levels.get_level_scene_name(initial_level)).instantiate()
 	add_child(current_level)
 	current_level.spawn_player(Hardpoints.Id.Default_Id, player)
 
 func start_game():
 	fade_in()
-	current_level = load(initial_level).instantiate()
+	current_level = load(Levels.get_level_scene_name(initial_level)).instantiate()
 	add_child(current_level)
 	current_level.spawn_player(Hardpoints.Id.Default_Id, player)
 	player.state_logic.unlock_player()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://bpvs0cklll8yp"]
+[gd_scene load_steps=18 format=3 uid="uid://bpvs0cklll8yp"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Cabins.gd" id="1_2bovc"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_6vilx"]
 [ext_resource type="Texture2D" uid="uid://buule56hbhs54" path="res://src/assets/levels/cabins/tilemap.png" id="3_onawk"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="4_0yfcu"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="4_5qh27"]
+[ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="4_mnnra"]
 [ext_resource type="Texture2D" uid="uid://cpvqon7isynb0" path="res://src/assets/levels/tmp_helpers/tmp_double_jump.png" id="6_jbjca"]
 [ext_resource type="Script" path="res://src/scripts/common/Entities/Lethal.gd" id="7_1qkxf"]
 [ext_resource type="PackedScene" uid="uid://cupq5nbenij27" path="res://src/scenes/common/Trampoline.tscn" id="7_wm4nq"]
@@ -182,6 +183,12 @@ layer_1/tile_data = PackedInt32Array(1572926, 0, 0, 1638462, 458752, 1, 1703998,
 
 [node name="Respawnpoints" type="Node" parent="."]
 
+[node name="Spawnpoint" parent="Respawnpoints" instance=ExtResource("4_mnnra")]
+position = Vector2(4695, -871)
+
+[node name="Spawnpoint2" parent="Respawnpoints" instance=ExtResource("4_mnnra")]
+position = Vector2(2367, -118)
+
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("4_0yfcu")]
@@ -328,10 +335,12 @@ movement_lock_duration = 0.35
 [node name="Trampoline4" parent="Trampolines" instance=ExtResource("7_wm4nq")]
 position = Vector2(-1503, 212)
 rotation = 1.57481
+movement_lock_duration = 3.0
 
 [node name="Trampoline5" parent="Trampolines" instance=ExtResource("7_wm4nq")]
 position = Vector2(-1503, 166)
 rotation = 1.57481
+movement_lock_duration = 3.0
 
 [node name="Trampoline6" parent="Trampolines" instance=ExtResource("7_wm4nq")]
 position = Vector2(874, 111)
