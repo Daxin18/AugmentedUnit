@@ -23,6 +23,7 @@ theme_override_font_sizes/normal_font_size = 80
 text = "Wygrana!"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="RichTextLabel"]
+layout_mode = 0
 offset_left = -3.0
 offset_top = -3.0
 offset_right = 441.0

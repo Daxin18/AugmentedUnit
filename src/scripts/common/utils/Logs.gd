@@ -74,31 +74,37 @@ const logs: Dictionary = {
 	LogId.test_log: ["log_name", "log_text", test_audio],
 	LogId.Jan_1:[
 		"Ostatnie słowa",
+		"Jan",
 		"Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie! Aaaaaaa!!!",
 		jan_1_audio
 	],
 	LogId.Jacek_1: [
 		"Początek znajomości",
+		"Szeregowy Jacek",
 		"Warta w magazynie nie jest taka zła, dzięki niej mogę czasem porozmawiać z Robertem. Chciałbym kiedyś pomóc mu z eksperymentami, zamiast tylko siedzieć w różnych częściach statku.",
 		jacek_1_audio
 	],
 	LogId.Robert_1: [
 		"Po co to tu jest?",
+		"Doktor Robert",
 		"Augmented Unit... Nie rozumiem, po co to tu trzymamy... To tak jakby ludzie oczekiwali, że ta cała operacja nie wypali, a tak nie będzie! Ale jeśli już... to lepiej, żeby ten robot odzyskał wszystkie dane, moja praca nie może pójść na marnę!",
 		robert_1_audio
 	],
 	LogId.Robert_2: [
 		"Ci ludzie...",
+		"Doktor Robert",
 		"To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!",
 		robert_2_audio
 	],
 	LogId.Jab_1: [
 		"Podziw: bronie",
+		"Admirał Jabłonowski",
 		"Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!",
 		jab_1_audio
 	],
 	LogId.Jab_2: [
 		"On musi z kimś porozmawiać",
+		"Admirał Jabłonowski",
 		"On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...",
 		jab_2_audio
 	]

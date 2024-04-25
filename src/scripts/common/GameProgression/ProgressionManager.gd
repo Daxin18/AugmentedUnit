@@ -24,6 +24,6 @@ func get_collected_logs() -> Array[Logs.LogId]:
 func get_collected_mods() -> Array[Modifications.Mod]:
 	return collected_mods
 
-# this will make everything alive and activate the timer
+# this will make everything alive and activate the timer (XD)
 func start_endgame():
 	pass

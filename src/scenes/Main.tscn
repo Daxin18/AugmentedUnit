@@ -70,6 +70,7 @@ initial_level = "res://src/scenes/levels/Cargo.tscn"
 player = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="LevelManager"]
+layer = 2
 
 [node name="ColorRect" type="ColorRect" parent="LevelManager/CanvasLayer"]
 offset_left = -220.0

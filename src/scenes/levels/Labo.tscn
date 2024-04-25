@@ -162,6 +162,7 @@ pattern_4 = SubResource("TileMapPattern_io8pp")
 [node name="Labo" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_da1ui")
 default_spawn = NodePath("Hardpoint")
+level_id = 2
 
 [node name="Hardpoint" parent="." instance=ExtResource("2_rteea")]
 position = Vector2(6221, -192)
@@ -184,19 +185,18 @@ layer_1/tile_data = PackedInt32Array(655665, 458752, 1, 721198, 0, 0, 721199, 0,
 
 [node name="Door" parent="Doors" instance=ExtResource("5_ptonm")]
 position = Vector2(4882, 153)
-next_level = "res://src/scenes/levels/Cabins.tscn"
+next_level_id = 1
 next_level_hardpoint = 8
 hardpoint_id = 8
 
 [node name="Door2" parent="Doors" instance=ExtResource("5_ptonm")]
 position = Vector2(5026, -841)
-next_level = "res://src/scenes/levels/Deck.tscn"
+next_level_id = 3
 next_level_hardpoint = 9
 hardpoint_id = 9
 
 [node name="Door3" parent="Doors" instance=ExtResource("5_ptonm")]
 position = Vector2(6590, 156)
-next_level = "res://src/scenes/levels/Cargo.tscn"
 next_level_hardpoint = 4
 hardpoint_id = 10
 hardpoint_on_left = true

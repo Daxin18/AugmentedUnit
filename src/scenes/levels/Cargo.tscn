@@ -537,32 +537,30 @@ id = 3
 
 [node name="Door" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(-904, -312)
-next_level = "res://PoC/ActualPOCLevel/PoC_Level.tscn"
-next_level_hardpoint = 1
 hardpoint_id = 3
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(-893, 423)
-next_level = "res://src/scenes/levels/Labo.tscn"
+next_level_id = 2
 next_level_hardpoint = 10
 hardpoint_id = 4
 
 [node name="Door3" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(-92, -632)
-next_level = "res://src/scenes/levels/Deck.tscn"
+next_level_id = 3
 next_level_hardpoint = 5
 hardpoint_id = 5
 
 [node name="Door4" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(1694, -778)
-next_level = "res://src/scenes/levels/Cabins.tscn"
+next_level_id = 1
 next_level_hardpoint = 7
 hardpoint_id = 7
 hardpoint_on_left = true
 
 [node name="Door5" parent="Doors" instance=ExtResource("10_j21nl")]
 position = Vector2(1006, 425)
-next_level = "res://src/scenes/levels/Cabins.tscn"
+next_level_id = 1
 next_level_hardpoint = 6
 hardpoint_id = 6
 hardpoint_on_left = true

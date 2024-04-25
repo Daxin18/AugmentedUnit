@@ -238,6 +238,7 @@ size = Vector2(9600, 300)
 [node name="Deck" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_mqg0k")
 default_spawn = NodePath("Hardpoint")
+level_id = 3
 
 [node name="Hardpoint" parent="." instance=ExtResource("2_f7nex")]
 position = Vector2(4910, -1368)
@@ -262,13 +263,12 @@ layer_2/tile_data = PackedInt32Array(-5242886, 458752, 3, -5242885, 327680, 3, -
 
 [node name="Door" parent="Doors" instance=ExtResource("5_v7soy")]
 position = Vector2(-94, -1297)
-next_level = "res://src/scenes/levels/Cargo.tscn"
 next_level_hardpoint = 5
 hardpoint_id = 5
 
 [node name="Door2" parent="Doors" instance=ExtResource("5_v7soy")]
 position = Vector2(4974, -1307)
-next_level = "res://src/scenes/levels/Labo.tscn"
+next_level_id = 2
 next_level_hardpoint = 9
 hardpoint_id = 9
 hardpoint_on_left = true

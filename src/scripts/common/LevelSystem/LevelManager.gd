@@ -21,12 +21,12 @@ func start_game():
 	current_level.spawn_player(Hardpoints.Id.Default_Id, player)
 	player.state_logic.unlock_player()
 
-func change_level(new_level: String, hardpoint_id: Hardpoints.Id) -> void:
+func change_level(new_level: Levels.LevelId, hardpoint_id: Hardpoints.Id) -> void:
 	fading.speed_scale = 1/Constants.fading_time_in_seconds
 	fading.play("fade_to_black")
 	await get_tree().create_timer(Constants.fading_time_in_seconds).timeout
 	remove_child(current_level)
-	current_level = load(new_level).instantiate()
+	current_level = load(Levels.get_level_scene_name(new_level)).instantiate()
 	add_child(current_level)
 	current_level.spawn_player(hardpoint_id, player)
 	fade_in()

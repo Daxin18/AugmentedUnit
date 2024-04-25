@@ -2,6 +2,7 @@ class_name Level
 extends Node
 
 @export var default_spawn: Hardpoint
+@export var level_id: Levels.LevelId
 
 var hardpoints: Array[Hardpoint] = []
 

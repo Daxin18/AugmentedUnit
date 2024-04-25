@@ -1,7 +1,7 @@
 class_name Door
 extends Interactable
 
-@export_file("*.tscn") var next_level: String
+@export var next_level_id: Levels.LevelId
 @export var next_level_hardpoint: Hardpoints.Id
 
 @export var hardpoint_id: Hardpoints.Id
@@ -27,4 +27,4 @@ func interact(entity: Actor) -> void:
 	#=======================
 	if can_transition: 
 		can_transition = false
-		manager.change_level(next_level, next_level_hardpoint)
+		manager.change_level(next_level_id, next_level_hardpoint)

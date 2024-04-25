@@ -20,6 +20,7 @@ func _ready():
 func interact(entity: Actor) -> void:
 	if entity is Player:
 		entity.state_logic.unlock_modification(mod)
+		# this is temporary
 		if mod == Modifications.Mod.DEM:
 			entity.state_logic.block_player()
 			var win = win_scene.instantiate()
@@ -30,6 +31,7 @@ func interact(entity: Actor) -> void:
 				entity.state_logic.die()
 				await get_tree().create_timer(.5).timeout
 			get_tree().change_scene_to_file("res://src/scenes/common/UI/Menu.tscn")
+		# temporary ends here
 		queue_free()
 
 func wait(time: int) -> void:
