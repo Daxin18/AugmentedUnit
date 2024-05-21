@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dooawahri7iws"]
+
+[ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="1_g1is5"]
+[ext_resource type="Script" path="res://src/scripts/common/UI/LogButton.gd" id="2_xk070"]
+
+[node name="LogButton" type="Button"]
+self_modulate = Color(0, 0.972549, 0.47451, 1)
+offset_right = 88.0
+offset_bottom = 24.0
+theme = ExtResource("1_g1is5")
+theme_override_font_sizes/font_size = 8
+disabled = true
+text = "???"
+script = ExtResource("2_xk070")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

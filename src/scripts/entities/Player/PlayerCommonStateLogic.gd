@@ -281,8 +281,6 @@ func can_respawn() -> bool:
 @onready var scream_hud = $"../CanvasLayer/HUD/Skills/Scream"
 @onready var level_name_hud = $"../CanvasLayer/HUD/LevelName"
 @onready var timer_hud = $"../CanvasLayer/HUD/Timer"
-@onready var current_log_hud = $"../CanvasLayer/HUD/CurrentLog"
-@onready var log_title_hud = $"../CanvasLayer/HUD/CurrentLog/logTitle"
 
 func init_hud():
 	for mod in progression_manager.get_collected_mods():

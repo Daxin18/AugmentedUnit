@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://db8srgwfvm4y2"]
+
+[ext_resource type="Script" path="res://src/scripts/common/UI/PauseMenu.gd" id="1_huftb"]
+[ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="2_3y03q"]
+[ext_resource type="PackedScene" uid="uid://bl3vgubmncfl2" path="res://src/scenes/common/UI/LogsMenu.tscn" id="3_j5iep"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_huftb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 639.0
+offset_bottom = 357.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="CenterContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme = ExtResource("2_3y03q")
+text = "	Kontynuuj"
+
+[node name="Save" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_3y03q")
+text = "Zapisz"
+
+[node name="Logs" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_3y03q")
+text = "Logi"
+
+[node name="Menu" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_3y03q")
+text = "Menu
+"
+
+[node name="LogsMenu" parent="." instance=ExtResource("3_j5iep")]
+visible = false
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Logs" to="." method="_on_logs_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

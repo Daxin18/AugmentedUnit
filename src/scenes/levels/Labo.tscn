@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dafbxj8wigpto"]
+[gd_scene load_steps=16 format=3 uid="uid://dafbxj8wigpto"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Labo.gd" id="1_da1ui"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_rteea"]
 [ext_resource type="Texture2D" uid="uid://d3xponyux2015" path="res://src/assets/levels/labo/tilemap.png" id="3_e1wf6"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="4_lh5qs"]
+[ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="5_f3ahq"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="5_ptonm"]
 [ext_resource type="PackedScene" uid="uid://beii4xboemkwr" path="res://src/scenes/common/Anomaly.tscn" id="6_mblk2"]
 [ext_resource type="Texture2D" uid="uid://dtiuf0usc2xym" path="res://src/assets/levels/tmp_helpers/tmp_DEM.png" id="7_hef3p"]
@@ -197,11 +198,32 @@ hardpoint_id = 9
 
 [node name="Door3" parent="Doors" instance=ExtResource("5_ptonm")]
 position = Vector2(6590, 156)
-next_level_hardpoint = 4
+next_level_id = 4
+next_level_hardpoint = 10
 hardpoint_id = 10
 hardpoint_on_left = true
 
 [node name="Logs" type="Node" parent="."]
+
+[node name="Rob_6" parent="Logs" instance=ExtResource("5_f3ahq")]
+position = Vector2(5188, 152)
+id = 23
+
+[node name="Jac_6" parent="Logs" instance=ExtResource("5_f3ahq")]
+position = Vector2(5551, -54)
+id = 24
+
+[node name="Rob_7" parent="Logs" instance=ExtResource("5_f3ahq")]
+position = Vector2(5590, 150)
+id = 25
+
+[node name="Jab_8" parent="Logs" instance=ExtResource("5_f3ahq")]
+position = Vector2(5076, -518)
+id = 26
+
+[node name="Rob_8" parent="Logs" instance=ExtResource("5_f3ahq")]
+position = Vector2(6227, -177)
+id = 27
 
 [node name="Mods" type="Node" parent="."]
 

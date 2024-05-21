@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7cqaqnfv0yxh"]
+[gd_scene load_steps=19 format=3 uid="uid://c7cqaqnfv0yxh"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Deck.gd" id="1_mqg0k"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="2_5icbx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7vxfdx0nf65t" path="res://src/assets/levels/deck/tilemap.png" id="3_l1fgy"]
 [ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="4_46moo"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="5_v7soy"]
+[ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="6_850wp"]
 [ext_resource type="Script" path="res://src/scripts/common/Entities/Lethal.gd" id="6_tt04w"]
 [ext_resource type="Texture2D" uid="uid://bj6nlrvbkksbc" path="res://src/assets/levels/deck/tmb_bckgrd.png" id="7_u6irk"]
 [ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="8_orjuu"]
@@ -285,6 +286,10 @@ hardpoint_on_left = true
 
 [node name="Logs" type="Node" parent="."]
 
+[node name="Rob_3" parent="Logs" instance=ExtResource("6_850wp")]
+position = Vector2(80, -1304)
+id = 22
+
 [node name="Mods" type="Node" parent="."]
 
 [node name="Modification" parent="Mods" instance=ExtResource("2_5icbx")]
@@ -292,7 +297,7 @@ position = Vector2(4107, -1310)
 mod = 2
 
 [node name="DEV_ITEMS" type="Node2D" parent="."]
-position = Vector2(170, -1361)
+position = Vector2(512, -1521)
 
 [node name="scream" parent="DEV_ITEMS" instance=ExtResource("2_5icbx")]
 position = Vector2(-136, 60)

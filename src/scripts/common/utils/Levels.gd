@@ -15,7 +15,10 @@ const levels: Dictionary = {
 	LevelId.Cargo: ["Magazyn", "res://src/scenes/levels/Cargo.tscn"],
 	LevelId.Cabins: ["Kajuty", "res://src/scenes/levels/Cabins.tscn"],
 	LevelId.Labo: ["Laboratorium", "res://src/scenes/levels/Labo.tscn"],
-	LevelId.Deck: ["Poklad", "res://src/scenes/levels/Deck.tscn"]
+	LevelId.Deck: ["Poklad", "res://src/scenes/levels/Deck.tscn"],
+	LevelId.Reactor: ["Reaktor", "res://src/scenes/levels/Reactor.tscn"],
+	LevelId.Submarine: ["Lodz podwodna", "res://src/scenes/levels/Submarine.tscn"],
+	LevelId.Armory: ["Zbrojownia","res://src/scenes/levels/Armory.tscn" ]
 }
 
 static func get_level_name(id: LevelId) -> String:
