@@ -141,13 +141,13 @@ hardpoint_on_left = true
 
 [node name="Logs" type="Node" parent="."]
 
-[node name="Jab3" parent="Logs" instance=ExtResource("5_mwsks")]
+[node name="Jab_2" parent="Logs" instance=ExtResource("5_mwsks")]
 position = Vector2(-1160, 394)
-id = 18
+id = 21
 
-[node name="Jac_2" parent="Logs" instance=ExtResource("5_mwsks")]
+[node name="Jac_8" parent="Logs" instance=ExtResource("5_mwsks")]
 position = Vector2(-1684, 470)
-id = 19
+id = 10
 
 [node name="Mods" type="Node" parent="."]
 

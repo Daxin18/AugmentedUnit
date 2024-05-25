@@ -213,43 +213,43 @@ hardpoint_on_left = true
 
 [node name="Rob_4" parent="Logs" instance=ExtResource("6_x85u2")]
 position = Vector2(1997, -772)
-id = 9
+id = 15
 
-[node name="Jab_4" parent="Logs" instance=ExtResource("6_x85u2")]
+[node name="Jab_8" parent="Logs" instance=ExtResource("6_x85u2")]
 position = Vector2(1627, 100)
-id = 8
+id = 27
 
-[node name="Jac_4" parent="Logs" instance=ExtResource("6_x85u2")]
+[node name="Jac_2" parent="Logs" instance=ExtResource("6_x85u2")]
 position = Vector2(2009, -203)
-id = 10
+id = 4
 
 [node name="Rob_5" parent="Logs" instance=ExtResource("6_x85u2")]
 position = Vector2(2438, -867)
-id = 11
-
-[node name="Jac_5" parent="Logs" instance=ExtResource("6_x85u2")]
-position = Vector2(3096, -407)
-id = 12
-
-[node name="Jab_6" parent="Logs" instance=ExtResource("6_x85u2")]
-position = Vector2(3686, -700)
-id = 13
-
-[node name="Jac_7" parent="Logs" instance=ExtResource("6_x85u2")]
-position = Vector2(4595, 67)
-id = 14
-
-[node name="Jac_8" parent="Logs" instance=ExtResource("6_x85u2")]
-position = Vector2(4042, -499)
 id = 16
 
-[node name="Jab_7" parent="Logs" instance=ExtResource("6_x85u2")]
-position = Vector2(4208, 65)
-id = 15
+[node name="Jac_3" parent="Logs" instance=ExtResource("6_x85u2")]
+position = Vector2(3096, -407)
+id = 5
 
-[node name="Jac_9" parent="Logs" instance=ExtResource("6_x85u2")]
+[node name="Jab_4" parent="Logs" instance=ExtResource("6_x85u2")]
+position = Vector2(3686, -700)
+id = 25
+
+[node name="Jac_5" parent="Logs" instance=ExtResource("6_x85u2")]
+position = Vector2(4595, 67)
+id = 7
+
+[node name="Jac_6" parent="Logs" instance=ExtResource("6_x85u2")]
+position = Vector2(4042, -499)
+id = 8
+
+[node name="Jab_5" parent="Logs" instance=ExtResource("6_x85u2")]
+position = Vector2(4208, 65)
+id = 24
+
+[node name="Jac_7" parent="Logs" instance=ExtResource("6_x85u2")]
 position = Vector2(3154, 204)
-id = 17
+id = 9
 
 [node name="Mods" type="Node" parent="."]
 

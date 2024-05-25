@@ -513,21 +513,21 @@ position = Vector2(-288, -24)
 position = Vector2(-573, 27)
 id = 2
 
-[node name="Jab_2" parent="Logs" instance=ExtResource("4_w1n5y")]
+[node name="Jab_7" parent="Logs" instance=ExtResource("4_w1n5y")]
 position = Vector2(-848, -86)
-id = 7
+id = 26
 
 [node name="Jab_1" parent="Logs" instance=ExtResource("4_w1n5y")]
 position = Vector2(-651, -417)
-id = 6
+id = 20
 
 [node name="Robert_1" parent="Logs" instance=ExtResource("4_w1n5y")]
 position = Vector2(-108, 215)
-id = 4
+id = 12
 
 [node name="Robert_2" parent="Logs" instance=ExtResource("4_w1n5y")]
 position = Vector2(397, 431)
-id = 5
+id = 13
 
 [node name="Jacek_1" parent="Logs" instance=ExtResource("4_w1n5y")]
 position = Vector2(-685, 424)

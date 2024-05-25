@@ -6,9 +6,10 @@ extends CanvasLayer
 @onready var text = $TextureRect/Text
 @onready var progression_manager: ProgressionManager = get_tree().get_root().get_node("Main").find_child("ProgressionManager")
 @onready var log_player: AudioStreamPlayer2D = get_tree().get_root().get_node("Main").find_child("Player").find_child("LogPlayer")
+@onready var player_logic: PlayerInteractionLogic = get_tree().get_root().get_node("Main").find_child("Player").find_child("InteractionLogicHolder")
 
 @export var button_containers: Array[Container]
-var current_log_audio : AudioStream
+var current_log_id: Logs.LogId
 
 const title_prefix = "Tytul: "
 const author_prefix = "Autor: "
@@ -59,7 +60,7 @@ func update_text(text_string: String) -> void:
 		child.text = text_prefix + text_string
 
 func update_log_audio(log_id: Logs.LogId) -> void:
-	current_log_audio = Logs.get_log_audio(log_id)
+	current_log_id = log_id
 
 
 
@@ -69,5 +70,4 @@ func _on_log_button_pressed(log_id: Logs.LogId) -> void:
 
 func _on_play_pressed():
 	log_player.stop()
-	log_player.stream = current_log_audio
-	log_player.play()
+	player_logic.play_log(current_log_id)

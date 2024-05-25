@@ -4,38 +4,32 @@ extends Node
 enum LogId {
 	dog_log,
 	test_log,
-	# Cargo
 	Jan_1,
 	Jacek_1,
-	Robert_1,
-	Robert_2,
-	Jab_1,
-	Jab_2,
-	# Cabins
-	Jab_4,
-	Robert_4,
+	Jacek_2,
+	Jacek_3,
 	Jacek_4,
-	Robert_5,
 	Jacek_5,
-	Jab_6,
+	Jacek_6,
 	Jacek_7,
-	Jab_7,
 	Jacek_8,
 	Jacek_9,
-	# Submarine
-	Jab_3,
-	Jacek_2,
-	# Zbrojownia
-	Jab_5,
-	Jacek_3,
-	# Deck
+	Robert_1,
+	Robert_2,
 	Robert_3,
-	# Lab
+	Robert_4,
+	Robert_5,
 	Robert_6,
-	Jacek_6,
 	Robert_7,
+	Robert_8,
+	Jab_1,
+	Jab_2,
+	Jab_3,
+	Jab_4,
+	Jab_5,
+	Jab_6,
+	Jab_7,
 	Jab_8,
-	Robert_8
 }
 const dog_audio = preload("res://PoC/everything_goes_here/Dog single bark.wav")
 const test_audio = preload("res://src/assets/entities/log/sounds/test_log.wav")
@@ -67,9 +61,9 @@ const jab_7_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/T
 const jab_8_audio = preload("res://src/assets/entities/log/sounds/Jabłonowski/Jest z nim gorzej.wav")
 
 const author_jan = "Jan"
-const author_jacek = "Szeregowy Jacek"
-const author_robert = "Doktor Robert"
-const author_jab = "Admirał Jabłonowski"
+const author_jacek = "Jacek"
+const author_robert = "Robert"
+const author_jab = "Jabłonowski"
 
 # this dict
 # id: name - text - audio_to_play
@@ -90,52 +84,52 @@ const logs: Dictionary = {
 		jacek_1_audio
 	],
 	LogId.Jacek_2: [
-		"Na wszelki wypadek...",
-		author_jacek,
-		"Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!",
-		jacek_2_audio
-	],
-	LogId.Jacek_3: [
-		"Ostatnie życzenie",
-		author_jacek,
-		"To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...",
-		jacek_3_audio
-	],
-	LogId.Jacek_4: [
 		"Nazywa to DEM",
 		author_jacek,
 		"Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej!",
 		jacek_4_audio
 	],
-	LogId.Jacek_5: [
+	LogId.Jacek_3: [
 		"W końcu jest ciekawie",
 		author_jacek,
 		"Robert... cały czas myli moje imię, ale całkiem przyjemnie się z nim pracuje. Można dużo się od niego dowiedzieć, a chociaż nie muszę nudzić się na statku. Chciałbym kiedyś zrobić coś przy DEM!",
 		jacek_5_audio
 	],
-	LogId.Jacek_6: [
+	LogId.Jacek_4: [
 		"To było dziwne",
 		author_jacek,
 		" Walnąłem dziś DEM młotkiem, chciałem sprawdzić, czy naprawdę jest tak wytrzymałe, jak Robert mówił... Po uderzeniu poczułem się dziwnie, a Robert zaczął krzyczeć, że nie powinienem się do tego zbliżać bez ochrony i mówił coś o broni nuklearnej.",
 		jacek_6_audio
 	],
-	LogId.Jacek_7: [
+	LogId.Jacek_5: [
 		"Nie czuję się najlepiej",
 		author_jacek,
 		"Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem!",
 		jacek_7_audio
 	],
-	LogId.Jacek_8: [
+	LogId.Jacek_6: [
 		"Trzeba go ostrzec!",
 		author_jacek,
 		"Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad tym pracować!",
 		jacek_8_audio
 	],
-	LogId.Jacek_9: [
+	LogId.Jacek_7: [
 		"Nie mogę tak dłużej",
 		author_jacek,
 		"Robert nie zaniepokoił się tym, co mu powiedziałem... Tylko bardziej go to zmotywowało do prowadzenia prac nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!",
 		jacek_9_audio
+	],
+	LogId.Jacek_8: [
+		"Na wszelki wypadek...",
+		author_jacek,
+		"Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!",
+		jacek_2_audio
+	],
+	LogId.Jacek_9: [
+		"Ostatnie życzenie",
+		author_jacek,
+		"To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...",
+		jacek_3_audio
 	],
 	LogId.Robert_1: [
 		"Po co to tu jest?",
@@ -162,13 +156,13 @@ const logs: Dictionary = {
 		robert_4_audio
 	],
 	LogId.Robert_5: [
-		"Zaczynam się do niego przekonywać...",
+		"Pomocnik",
 		author_robert,
 		"Ten Janek zdaje się być coraz bardziej zainteresowany moimi badaniami... Kręci się przy laboratorium, dopytuje, przygląda się DEM, gdy jesteśmy w laboratorium... Powoli zaczynam się do niego przekonywać... może być dobrym pomocnikiem",
 		robert_5_audio
 	],
 	LogId.Robert_6: [
-		"Jest bystry... ale nadal głupi",
+		"Zadziwia mnie",
 		author_robert,
 		"Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny... potem chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka!",
 		robert_6_audio
@@ -192,46 +186,46 @@ const logs: Dictionary = {
 		jab_1_audio
 	],
 	LogId.Jab_2: [
-		"On musi z kimś porozmawiać",
-		author_jab,
-		"On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...",
-		jab_2_audio
-	],
-	LogId.Jab_3: [
 		"Podziw: łódź podwodna",
 		author_jab,
 		"Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!",
 		jab_3_audio
 	],
-	LogId.Jab_4: [
-		"Zrobiłem to...",
-		author_jab,
-		"Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]",
-		jab_4_audio
-	],
-	LogId.Jab_5: [
+	LogId.Jab_3: [
 		"Waga naszej misji",
 		author_jab,
 		"Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...",
 		jab_5_audio
 	],
-	LogId.Jab_6: [
+	LogId.Jab_4: [
 		"Cieszę się, że jest szczęśliwy",
 		author_jab,
 		"Jacek ostatnio spędza bardzo dużo czasu z Robertem, cieszę się, że w końcu ma co robić, widać było, że nie przepada za wartami, a w ten sposób może chociaż uda im się skończyć te badania szybciej.",
 		jab_6_audio
 	],
-	LogId.Jab_7: [
+	LogId.Jab_5: [
 		"Tym razem przesadził",
 		author_jab,
 		"Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!",
 		jab_7_audio
 	],
-	LogId.Jab_8: [
+	LogId.Jab_6: [
 		"Jest z nim gorzej",
 		author_jab,
 		"Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas tylko tam siedzi, jakby ostatni wypadek tylko bardziej go zmotywował...",
 		jab_8_audio
+	],
+	LogId.Jab_7: [
+		"On musi z kimś porozmawiać",
+		author_jab,
+		"On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...",
+		jab_2_audio
+	],
+	LogId.Jab_8: [
+		"Zrobiłem to...",
+		author_jab,
+		"Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]",
+		jab_4_audio
 	]
 }
 

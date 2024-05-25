@@ -288,7 +288,7 @@ hardpoint_on_left = true
 
 [node name="Rob_3" parent="Logs" instance=ExtResource("6_850wp")]
 position = Vector2(80, -1304)
-id = 22
+id = 14
 
 [node name="Mods" type="Node" parent="."]
 
