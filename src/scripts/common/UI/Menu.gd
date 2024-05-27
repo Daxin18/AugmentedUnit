@@ -18,6 +18,7 @@ func connect_buttons() -> void:
 	button_quit.pressed.connect(self.quit)
 
 func play() -> void:
+	#SaveData.load_state("TEST.save")
 	get_tree().change_scene_to_file("res://src/scenes/Main.tscn")
 
 # might want to do thiss one with different type of button (popup-button)

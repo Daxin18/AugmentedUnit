@@ -221,6 +221,7 @@ debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
 [node name="LogPlayer" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
+volume_db = 5.0
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true

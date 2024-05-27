@@ -58,10 +58,11 @@ func play_log(log_id: Logs.LogId) -> void:
 		Logs.record_log_pickup(log_id, progression_manager)
 
 func collect_log(log_id: Logs.LogId) -> void:
-	set_current_log(Logs.get_log_title(log_id))
 	Logs.record_log_pickup(log_id, progression_manager)
-	await get_tree().create_timer(3).timeout
-	set_current_log(null)
+	if not parent.log_player.playing:
+		set_current_log(Logs.get_log_title(log_id))
+		await get_tree().create_timer(3).timeout
+		set_current_log(null)
 
 func set_current_log(log_title) -> void:
 	if log_title:

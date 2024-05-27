@@ -21,9 +21,10 @@ func toggle_pause() -> void:
 func _on_continue_pressed():
 	toggle_pause()
 
-# this button might get deleted as we're gonna save on every respawnpoint
+# this button might get deleted as we're gonna save on every respawnpoint (XD, nope)
 func _on_save_pressed():
-	# do saving stuff
+	var manager = get_tree().get_root().get_node("Main").find_child("LevelManager")
+	manager.save()
 	save_button.disabled = true
 
 func _on_logs_pressed():

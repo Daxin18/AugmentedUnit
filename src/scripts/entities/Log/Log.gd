@@ -4,7 +4,7 @@ extends Interactable
 @export var id: Logs.LogId
 
 func _ready():
-	log_blocks_interaction = true
+	log_blocks_interaction = false
 
 func interact(entity: Actor) -> void:
 	if entity is Player:

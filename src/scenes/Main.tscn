@@ -83,5 +83,8 @@ libraries = {
 "": SubResource("AnimationLibrary_e4mfl")
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LevelManager"]
+volume_db = -10.0
+
 [node name="ProgressionManager" type="Node" parent="."]
 script = ExtResource("4_q44dp")
