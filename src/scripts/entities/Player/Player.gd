@@ -9,11 +9,15 @@ extends Actor
 @onready var interaction_logic = $InteractionLogicHolder
 @onready var audio_manager = $AudioManager
 
+# temp - remove once options implemented
+@export var logs_autoplay: bool
+
 func _ready() -> void:
 	state_machine.init(self)
 	state_logic.init(self)
 	interaction_logic.init(self)
 	state_logic.set_spawnpoint(position)
+	Options.autoplay_logs = logs_autoplay
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)

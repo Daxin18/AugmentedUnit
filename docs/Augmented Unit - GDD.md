@@ -211,9 +211,7 @@ Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowe
 
 ### Główny splashscreen
 
-Na tym etapie jedynie jako Concept-art
-
-![podstawowy splashscreen](images/image-1.png)
+![podstawowy splashscreen](../src/assets/UI/Menu.png)
 
 ### Cutscenki, narracja in-game'owa
 
@@ -309,6 +307,10 @@ Muzyka będzie służyć historii, postaramy się przygotować też dźwięki ot
 ### Narracja
 
 Treść wszystkich logów (będących jedyną formą narracji w grze) znajduje się w sekcji [Fabuła/Logi](#logi)
+
+Gracz będzie mógł przeglądać i odsłuchiwać zebrane wcześniej logi z poziomu menu.
+
+![Menu logów](./images/log-menu.png)
 
 ## PoC/prototyp
 

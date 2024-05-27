@@ -8,5 +8,8 @@ func _ready():
 
 func interact(entity: Actor) -> void:
 	if entity is Player:
-		entity.interaction_logic.play_log(id)
+		if Options._do_logs_play():
+			entity.interaction_logic.play_log(id)
+		else:
+			entity.interaction_logic.collect_log(id)
 		queue_free() # once the log is collected, we don't need it
