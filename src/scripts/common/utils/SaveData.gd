@@ -1,10 +1,21 @@
 class_name SaveData
 extends Node
 
+# for saving
 static var logs: Array[Logs.LogId]
 static var mods: Array[Modifications.Mod]
 static var level: Levels.LevelId
 static var spawnpoint: Vector2
+
+# utils
+static var save_name: String = "TEST.save"
+static var save_location: String = "user://"
+
+static var general_section: String = "General"
+static var logs_value_name: String = "logs"
+static var mods_value_name: String = "mods"
+static var level_value_name: String = "level"
+static var spawnpoint_value_name: String = "spawnpoint"
 
 static func set_state(new_logs: Array[Logs.LogId],\
 new_mods: Array[Modifications.Mod], \
@@ -16,50 +27,35 @@ new_spawnpoint: Vector2\
 	level = new_level
 	spawnpoint = new_spawnpoint
 
-static func save_state(filename: String) -> void:
-	var save_game = FileAccess.open("user://" + filename, FileAccess.WRITE)
-	var save_dict = get_save_dict()
-	var json_string = JSON.stringify(save_dict)
-	save_game.store_line(json_string)
+static func set_save(slot_name: String) -> void:
+	save_name = slot_name
 
-static func get_save_dict() -> Dictionary:
-	var save_dict = {
-		"logs": logs,
-		"mods": mods,
-		"level": level,
-		"spawnpoint": spawnpoint
-	}
-	return save_dict
+static func save_state() -> void:
+	var config_file = ConfigFile.new()
+	var path = save_location + save_name
+	
+	config_file.set_value(general_section, logs_value_name, logs)
+	config_file.set_value(general_section, mods_value_name, mods)
+	config_file.set_value(general_section, level_value_name, level)
+	config_file.set_value(general_section, spawnpoint_value_name, spawnpoint)
+	
+	var error: = config_file.save(path)
+	if error:
+		print("An error has occured while saving data: ", error)
+
 
 static func load_state(filename: String) -> void:
-	var full_path = "user://" + filename
-	if not FileAccess.file_exists(full_path):
-		print("Provided save file not found")
+	var config_file: = ConfigFile.new()
+	var path = save_location + filename
+	var error: = config_file.load(path)
+	
+	if error:
+		print("An error has occured while loading data: ", error)
 		return
 	
-	var saved_game = FileAccess.open("user://" + filename, FileAccess.READ)
-	while saved_game.get_position() < saved_game.get_length():
-		var json_string = saved_game.get_line()
-		var json = JSON.new()
-		
-		var parse_result = json.parse(json_string)
-		if not parse_result == OK:
-			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
-			continue
-		
-		var saved_data = json.get_data()
-		logs = saved_data["logs"]
-		mods = saved_data["mods"]
-		level = saved_data["level"]
-		spawnpoint = saved_data["spawnpoint"]
+	logs = config_file.get_value(general_section, logs_value_name, logs)
+	mods = config_file.get_value(general_section, mods_value_name, mods)
+	level = config_file.get_value(general_section, level_value_name, level)
+	spawnpoint = config_file.get_value(general_section, spawnpoint_value_name, spawnpoint)
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+

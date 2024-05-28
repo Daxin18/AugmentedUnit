@@ -37,7 +37,7 @@ func start_endgame():
 
 func save(position: Vector2, level: Levels.LevelId) -> void:
 	SaveData.set_state(collected_logs, collected_mods, level, position)
-	SaveData.save_state("TEST.save")
+	SaveData.save_state()
 
 func load_data() -> void:
 	if SaveData.logs:

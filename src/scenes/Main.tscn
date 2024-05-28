@@ -64,6 +64,9 @@ _data = {
 [node name="BodypartManager" type="Node" parent="."]
 script = ExtResource("2_c0xjy")
 
+[node name="ProgressionManager" type="Node" parent="."]
+script = ExtResource("4_q44dp")
+
 [node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("1_v7pol")
 player = NodePath("../Player")
@@ -85,6 +88,3 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LevelManager"]
 volume_db = -10.0
-
-[node name="ProgressionManager" type="Node" parent="."]
-script = ExtResource("4_q44dp")

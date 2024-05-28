@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8lcit32mbhiv"]
+[gd_scene load_steps=6 format=3 uid="uid://b8lcit32mbhiv"]
 
 [ext_resource type="Texture2D" uid="uid://ba3sn3bdlk1bv" path="res://src/assets/UI/Menu.png" id="1_mf5s4"]
 [ext_resource type="Script" path="res://src/scripts/common/UI/Menu.gd" id="1_xsarh"]
 [ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="2_tljkw"]
 [ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="3_tm61q"]
+[ext_resource type="PackedScene" uid="uid://dc04trt87ymej" path="res://src/scenes/common/UI/SaveMenu.tscn" id="5_c8fh0"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -77,6 +78,9 @@ text = "	Opcje	"
 layout_mode = 2
 theme = ExtResource("2_tljkw")
 text = "	Koniec	"
+
+[node name="SaveMenu" parent="." instance=ExtResource("5_c8fh0")]
+visible = false
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

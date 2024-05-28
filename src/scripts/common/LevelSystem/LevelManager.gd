@@ -86,3 +86,4 @@ func load_state() -> void:
 		player.global_position = spawnpoint
 		player.state_logic.set_spawnpoint(spawnpoint) #set player spawnpoint
 		player.state_machine.init(player) # reset state so player doesn't float
+		spawn_player = false
