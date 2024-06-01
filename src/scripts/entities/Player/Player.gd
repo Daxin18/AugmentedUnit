@@ -8,6 +8,7 @@ extends Actor
 @onready var state_logic = $StateLogicHolder
 @onready var interaction_logic = $InteractionLogicHolder
 @onready var audio_manager = $AudioManager
+@onready var hint = $Hint
 
 # temp - remove once options implemented
 @export var logs_autoplay: bool

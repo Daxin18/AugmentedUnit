@@ -6,7 +6,7 @@ extends Node
 
 @onready var fading: = $CanvasLayer/fading
 @onready var music: = $AudioStreamPlayer
-@onready var progresssion_manager: = $"../ProgressionManager"
+@onready var progression_manager: = $"../ProgressionManager"
 
 var current_level: Level
 var spawn_player: bool = true
@@ -47,8 +47,11 @@ func reset_spawnpoint_textures() -> void:
 
 # yes, this is hardcoded, yes, it is bad, no, I'm not changing it
 func decide_music_change(current: Levels.LevelId, next: Levels.LevelId) -> void:
-	if progresssion_manager.is_endgame() \
-	or current == next \
+	if progression_manager.is_capybara():
+		return
+	if progression_manager.is_endgame():
+		return
+	if current == next \
 	or (current == Levels.LevelId.Submarine and next == Levels.LevelId.Cargo) \
 	or (current == Levels.LevelId.Cargo and next == Levels.LevelId.Submarine) \
 	or (current == Levels.LevelId.Labo and next == Levels.LevelId.Reactor) \
@@ -58,6 +61,11 @@ func decide_music_change(current: Levels.LevelId, next: Levels.LevelId) -> void:
 
 func set_music(level: Levels.LevelId) -> void:
 	var music_audio = Levels.get_level_music(level)
+	music.stop()
+	music.stream = music_audio
+	music.play()
+
+func set_music_independant(music_audio: AudioStream) -> void:
 	music.stop()
 	music.stream = music_audio
 	music.play()
@@ -73,7 +81,7 @@ func fade_in() -> void:
 	await get_tree().create_timer(Constants.fading_time_in_seconds).timeout
 
 func save() -> void:
-	progresssion_manager.save(player.global_position, current_level.level_id)
+	progression_manager.save(player.global_position, current_level.level_id)
 
 func load_state() -> void:
 	if SaveData.level:

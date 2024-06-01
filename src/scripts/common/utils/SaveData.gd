@@ -51,11 +51,16 @@ static func load_state(filename: String) -> void:
 	
 	if error:
 		print("An error has occured while loading data: ", error)
+		load_default()
 		return
 	
 	logs = config_file.get_value(general_section, logs_value_name, logs)
 	mods = config_file.get_value(general_section, mods_value_name, mods)
 	level = config_file.get_value(general_section, level_value_name, level)
 	spawnpoint = config_file.get_value(general_section, spawnpoint_value_name, spawnpoint)
-	
 
+static func load_default() -> void:
+	logs = []
+	mods = []
+	level = Levels.LevelId.Cargo
+	spawnpoint = Vector2(-845,24)

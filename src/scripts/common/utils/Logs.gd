@@ -69,12 +69,22 @@ const author_jab = "Jabłonowski"
 # id: name - text - audio_to_play
 # having them all here will make life easier
 const logs: Dictionary = {
-	LogId.dog_log: ["dog", "DOG", dog_audio],
-	LogId.test_log: ["log_name", "log_text", test_audio],
+	LogId.dog_log: [
+		"Pies",
+		"DOG",
+		"*bark*",
+		dog_audio
+	],
+	LogId.test_log: [
+		"Log testowy",
+		" --- ",
+		"Oto przykładowy log treningowy, jeśli go słuchasz to znaczy, że ukończyłeś tutorial",
+		test_audio
+	],
 	LogId.Jan_1:[
 		"Ostatnie słowa",
 		author_jan,
-		"Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie! Aaaaaaa!!!",
+		"Coś tu jest nie tak, coś jest nie tak! Coś pojawiło się na statku... O Boże... idzie tu! To tu idzie!!!",
 		jan_1_audio
 	],
 	LogId.Jacek_1: [

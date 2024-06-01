@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpjskxhp6k2v0"]
+
+[ext_resource type="Script" path="res://src/scripts/common/Capybara.gd" id="1_nmrk0"]
+[ext_resource type="Texture2D" uid="uid://cg13hiub6427f" path="res://src/assets/levels/cabins/CAPYBARA.png" id="2_1ywpj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myk8y"]
+size = Vector2(1205, 590)
+
+[node name="Capybara" type="Area2D"]
+script = ExtResource("1_nmrk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1ywpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, -30)
+shape = SubResource("RectangleShape2D_myk8y")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://boxw6015v4dlj"]
+[gd_scene load_steps=11 format=3 uid="uid://boxw6015v4dlj"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Submarine.gd" id="1_383we"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="1_rtqc4"]
 [ext_resource type="Texture2D" uid="uid://cie21ie2ft0la" path="res://src/assets/levels/submarine/tilemap.png" id="3_gdhwi"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="3_khoid"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="5_mwsks"]
+[ext_resource type="Texture2D" uid="uid://ik44xfp8arml" path="res://src/assets/levels/submarine/submarine.png" id="6_7hvkw"]
+[ext_resource type="Script" path="res://src/scripts/common/GameProgression/SubmarineInteractable.gd" id="7_ldalj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7do4"]
 texture = ExtResource("3_gdhwi")
@@ -109,6 +111,9 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 13
 sources/0 = SubResource("TileSetAtlasSource_o7do4")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xe1w"]
+radius = 19.3132
+
 [node name="Submarine" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_383we")
 default_spawn = NodePath("Hardpoint")
@@ -152,3 +157,15 @@ id = 10
 [node name="Mods" type="Node" parent="."]
 
 [node name="Lethal" type="Node" parent="."]
+
+[node name="Submarine" type="Sprite2D" parent="."]
+position = Vector2(-1457, 463)
+texture = ExtResource("6_7hvkw")
+
+[node name="SubmarineInteractable" type="Area2D" parent="."]
+position = Vector2(-1484, 449)
+script = ExtResource("7_ldalj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmarineInteractable"]
+shape = SubResource("CircleShape2D_2xe1w")
+debug_color = Color(0.894118, 0, 0.788235, 0.419608)

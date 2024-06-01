@@ -348,7 +348,16 @@ layout_mode = 2
 [node name="LogButton" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
 layout_mode = 2
 text = "             ???            "
+log_id = 1
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton2" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
 log_id = 2
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton3" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
 logs_menu = NodePath("../../../..")
 
 [connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]

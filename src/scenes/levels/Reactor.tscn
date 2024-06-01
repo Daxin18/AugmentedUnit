@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfs87e3245gkn"]
+[gd_scene load_steps=10 format=3 uid="uid://bfs87e3245gkn"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Reactor.gd" id="1_jmhhg"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_tbpf6"]
 [ext_resource type="Texture2D" uid="uid://qan2go73unkt" path="res://src/assets/levels/reactor/tilemap.png" id="3_x482x"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="4_n8yvi"]
+[ext_resource type="Texture2D" uid="uid://csywg5ycl2hqf" path="res://src/assets/levels/reactor/reactor.png" id="5_pfjx6"]
+[ext_resource type="Script" path="res://src/scripts/common/GameProgression/ReactorInteractable.gd" id="6_g5gbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8u64x"]
 texture = ExtResource("3_x482x")
@@ -108,6 +110,9 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 13
 sources/0 = SubResource("TileSetAtlasSource_8u64x")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ty20g"]
+radius = 16.2788
+
 [node name="Reactor" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_jmhhg")
 default_spawn = NodePath("Hardpoint")
@@ -144,3 +149,15 @@ hardpoint_on_left = true
 [node name="Mods" type="Node" parent="."]
 
 [node name="Lethal" type="Node" parent="."]
+
+[node name="Reactor" type="Sprite2D" parent="."]
+position = Vector2(5917, 636)
+texture = ExtResource("5_pfjx6")
+
+[node name="ReactorInteractable" type="Area2D" parent="."]
+position = Vector2(5918, 711)
+script = ExtResource("6_g5gbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ReactorInteractable"]
+shape = SubResource("CircleShape2D_ty20g")
+debug_color = Color(0.835294, 0, 0.933333, 0.419608)

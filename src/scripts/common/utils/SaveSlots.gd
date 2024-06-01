@@ -9,10 +9,10 @@ enum Names {
 }
 
 const mapping: Dictionary = {
-	Names.Slot_1: "Zapis 1",
-	Names.Slot_2: "Zapis 2",
-	Names.Slot_3: "Zapis 3",
-	Names.Slot_4: "Zapis 4",
+	Names.Slot_1: "Zapis_1",
+	Names.Slot_2: "Zapis_2",
+	Names.Slot_3: "Zapis_3",
+	Names.Slot_4: "Zapis_4",
 }
 
 static func get_slot_name(slot: Names) -> String:

@@ -185,6 +185,20 @@ z_index = 100
 collision_mask = 31
 script = ExtResource("1_6wu35")
 
+[node name="Hint" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -90.0
+offset_top = -45.0
+offset_right = 90.0
+offset_bottom = -19.0
+theme_override_colors/font_shadow_color = Color(0.176471, 0.176471, 0.176471, 1)
+theme_override_fonts/normal_font = ExtResource("17_drslc")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center] This will be tutorial text"
+fit_content = true
+scroll_active = false
+
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_k6fly")
 hframes = 5
@@ -327,7 +341,7 @@ offset_top = 9.0
 offset_right = 214.0
 offset_bottom = 50.0
 theme_override_fonts/normal_font = ExtResource("16_v1562")
-text = "Laboratorium"
+text = "Magazyn"
 
 [node name="LevelName" type="RichTextLabel" parent="CanvasLayer/HUD/LevelName"]
 layout_mode = 0
@@ -336,7 +350,7 @@ offset_top = 1.0
 offset_right = 203.0
 offset_bottom = 42.0
 theme_override_fonts/normal_font = ExtResource("16_v1562")
-text = "Laboratorium"
+text = "Magazyn"
 
 [node name="Timer" type="RichTextLabel" parent="CanvasLayer/HUD"]
 visible = false

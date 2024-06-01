@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c7cqaqnfv0yxh"]
+[gd_scene load_steps=22 format=3 uid="uid://c7cqaqnfv0yxh"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Deck.gd" id="1_mqg0k"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="2_5icbx"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bj6nlrvbkksbc" path="res://src/assets/levels/deck/tmb_bckgrd.png" id="7_u6irk"]
 [ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="8_orjuu"]
 [ext_resource type="PackedScene" uid="uid://cupq5nbenij27" path="res://src/scenes/common/Trampoline.tscn" id="9_7exy7"]
+[ext_resource type="AudioStream" uid="uid://dmu7w5284n5oa" path="res://src/assets/levels/music/Rain.mp3" id="12_j0riv"]
+[ext_resource type="Script" path="res://src/scripts/common/HintArea.gd" id="13_lq15p"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_x756p"]
 tile_data = PackedInt32Array(0, 0, 3, 65536, 0, 4, 1, 65536, 3, 65537, 65536, 4)
@@ -237,6 +239,9 @@ pattern_3 = SubResource("TileMapPattern_p48ye")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lstu"]
 size = Vector2(9600, 300)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m00mf"]
+size = Vector2(94, 78)
+
 [node name="Deck" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_mqg0k")
 default_spawn = NodePath("Hardpoint")
@@ -290,6 +295,10 @@ hardpoint_on_left = true
 position = Vector2(80, -1304)
 id = 14
 
+[node name="DOG_LOG" parent="Logs" instance=ExtResource("6_850wp")]
+z_index = 200
+position = Vector2(3320, -965)
+
 [node name="Mods" type="Node" parent="."]
 
 [node name="Modification" parent="Mods" instance=ExtResource("2_5icbx")]
@@ -312,7 +321,7 @@ position = Vector2(130, 63)
 mod = 1
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2449, -788)
+position = Vector2(2445, -763)
 script = ExtResource("6_tt04w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -342,3 +351,21 @@ position = Vector2(4643, -1300)
 rotation = -0.692585
 power = 2400
 movement_lock_duration = 3.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_j0riv")
+volume_db = -10.0
+autoplay = true
+
+[node name="HintArea2" type="Area2D" parent="."]
+position = Vector2(4070, -1323)
+script = ExtResource("13_lq15p")
+text = "[center][color=purple]Krzyk[/color] ([color=blue]Q[/color]) pozwala zatrzymac sie w powietrzu i odnawia [color=purple]zryw[/color] oraz [color=purple]podwojny skok[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea2"]
+position = Vector2(22, 3)
+shape = SubResource("RectangleShape2D_m00mf")
+debug_color = Color(0.858824, 0.333333, 0.384314, 0.419608)
+
+[connection signal="body_entered" from="HintArea2" to="HintArea2" method="_on_entered"]
+[connection signal="body_exited" from="HintArea2" to="HintArea2" method="_on_exited"]

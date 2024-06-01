@@ -34,6 +34,10 @@ func init(player: Player) -> void:
 	level_manager = get_tree().get_root().get_node("Main").find_child("LevelManager")
 	init_hud
 
+func _process(delta):
+	if progression_manager.is_endgame():
+		update_timer()
+
 # ===========================
 # 		Universal
 # ===========================
@@ -318,6 +322,28 @@ func set_level_name_hud() -> void:
 		level_name_hud.text = text
 		for child in level_name_hud.get_children():
 			child.text = text
+
+func update_timer() -> void:
+	timer_hud.visible = true
+	var timer = progression_manager.endgame_timer
+	var min: int = timer / 60
+	var sec: int = int(timer) % 60
+	var text = str(min) + ":"
+	if sec < 10:
+		text = text + "0" + str(sec)
+	else:
+		text = text + str(sec)
+	timer_hud.text = text
+	for child in timer_hud.get_children():
+			child.text = text
+
+# ============================
+# 			Endgame
+# ============================
+
+func start_endgame(endgame_music: AudioStream) -> void:
+	progression_manager.start_endgame(endgame_music)
+	update_timer()
 
 # ============================
 # 			Signals
