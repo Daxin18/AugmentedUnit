@@ -58,13 +58,13 @@ Sekcje, które będziemy mogli znaleźć w grze:
 Nazwa | Obowiązkowy | Modyfikacja | Logi | Opis
 ---|---|---|---|---
 Pokład statku | Y | krzyk | Znikome | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
-Kajuty załogi | Y | podwójny skok | DUŻO, przybliżające historię postaci | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
-Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne, czy kolce/pożar
-Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie działkom blokującym inne opcjonalne pokoje
-Laboratorium | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
-Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
-Pokój z łodzią podwodną (Submarine) | N | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | Dzięki łodzi można uciec ze statku po tym, jak uruchomimy bombę, z łodzi można skorzystać tylko, jeśli alarm został uruchomiony, ale potrzebuje ona zasilania
-Pokój treningowy | Y | Narrator | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka, będzie początkowo pokojem developerskim, w którym później umieścimy samouczek
+Kajuty | Y | podwójny skok | DUŻO, przybliżające historię postaci | przejście między magazynem a laboratorium, w kajutach znajduje się "easter egg" w postaci zmienianej muzyki w grze
+Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez kolce/pożar
+Reaktor | Y | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala włączyć zasilanie, co pozwoli uciec ze statku
+Laboratorium | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry
+Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia - alternatywne zakończenie
+Pokój z łodzią podwodną (Submarine) | Y | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | Dzięki łodzi można uciec ze statku po tym, jak uruchomimy bombę, z łodzi można skorzystać tylko, jeśli alarm został uruchomiony, ale potrzebuje ona zasilania
+Pokój treningowy | Y | - | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka
 
 ### Fabuła
 
@@ -172,12 +172,17 @@ Augmented Unit — uniwersalny robot odpowiedzialny za przechowywanie sekretów 
 
 #### Przeciwnicy
 
-- Działka automatyczne na statku blokujące dostęp do niektórych rejonów, wymagają zasilania, aby działać.
-- Załoga statku (po cofnięciu się w czasie), ludzie, którzy próbują powstrzymać AU przed ucieczką ze statku(?), stoją w miejscu i strzelają.
+- ~~Działka automatyczne na statku blokujące dostęp do niektórych rejonów, wymagają zasilania, aby działać.~~
+- ~~Załoga statku (po cofnięciu się w czasie), ludzie, którzy próbują powstrzymać AU przed ucieczką ze statku(?), stoją w miejscu i strzelają.~~
+
+_Notka: Po implementacji i wewnętrznych testach gry uznaliśmy, że przeciwnicy spowalniają tylko grę i sprawiają, że będzie ona niepotrzebnie frustrująca_
+
 
 #### NPC
 
-Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi za dużo czasu w jednym obszarze nie wykonując żadnej konkretnej akcji
+~~Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi za dużo czasu w jednym obszarze nie wykonując żadnej konkretnej akcji~~
+
+_Notka: Zrezygnowaliśmy z robota na rzecz podpowiedzi zawsze widocznych w konkretnych miejscach mapy_
 
 ## Rozgrywka i mechaniki
 
@@ -185,27 +190,26 @@ Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi
 
 - __Głównym celem__ gracza będzie dostanie się do wspomnianego wcześniej __Laboratorium__. Po drodze napotka różne przeszkody w postaci poruszających się platform, systemów bezpieczeństwa na statku, czy zagrożeń środowiskowych (woda/ogień/prąd).
 -  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
-- Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
+- Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do ~~początkowego pokoju~~ pokoju z łodzią podwodną w określonym czasie, ~~przy okazji unikając zabezpieczeń, które zostaną aktywowane~~ aby uciec ze statku.
+
+_Notka: Zrezygnowano z systemów zabezpieczeń, zamiast tego uruchomiony zostanie odliczanie do samozniszczenia statku_
 
 ### Interakcja/kontrolery/sterowanie
 
-Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy*) lub (opcjonalnie, nie w MVP) kontrolera.
+Postać gracza będzie kontrolowana za pomocą klawiatury lub (opcjonalnie, nie w MVP) kontrolera.
 Podstawowe sterowanie zostało przedstawione poniżej:
 
 - __AD__ - poruszanie się lewo-prawo
 - __Spacja__ - skok [dodatkowo podwójny skok — jako modyfikacja]
 - __LShift__ - zryw (modyfikacja)
 - __E__ - interakcja
-- __LPM__ - DEM (ostatnia modyfikacja, atak mieczem)
 - __Q__ - krzyk (modyfikacja)
-
-_*może to jeszcze ulec zmianie, gracz niekoniecznie musi korzystać z myszy na koniec, jeśli nie jest ona potrzebna w całej reszcie gry (poza menu)_
 
 <div style="page-break-after: always;"></div>
 
 ### Multiplayer
 
-Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów.
+Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej.
 
 ## Przebieg gry (flow)
 
@@ -232,10 +236,11 @@ Poniżej można zobaczyć concept-art menu i jego finalną wersję
 
 Bardzo ograniczony, aby nie rozpraszać gracza.
 W lewym górnym rogu znajdować się będzie nazwa aktualnego poziomu/sekcji, w lewym dolnym ikonki odblokowanych modyfikacji, przyciemnione, gdy gracz nie może ich użyć.
-Prawy górny róg zostanie wykorzystany przy alternatywnych zakończeniach - wyświetli pozostały czas, a w prawym dolnym będą pojawiać się aktualnie grające logi (gdy zostaną one wszystkie skonfigurowane).
+Prawy górny róg zostanie wykorzystany przy alternatywnych zakończeniach - wyświetli pozostały czas, a w prawym dolnym będą pojawiać się aktualnie grające logi.
 
 ![hud-1](images/hud-1.png)
 ![hud-2](images/hud-2.png)
+![hud-3](images/hud-3.png)
 
 ### Mapy
 
@@ -253,6 +258,8 @@ Warto zaznaczyć, że pokoje 4 i 5 mogą być odwiedzone w innej kolejności, je
 Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początku będzie miał z Magazynu dostęp do Pokoju z łodzią podwodną (__miniaturka łodzi, pod Magazynem__), z Laboratorium będzie mógł dość łatwo dostać się do Reaktora (__R__), a po jego wyłączeniu cofnąć się i przez Magazyn wrócić do Zbrojowni (__Z__).
 
 ![Mapa statku](./images/ship-map.png)
+
+_Notka: Rozłożenie pokojów uległo zmianie_
 
 ## Assety
 
@@ -299,10 +306,8 @@ Magazyn:
 
 ### Muzyka
 
-_W trakcie przygotowania_
-
-Muzyka będzie służyć historii, postaramy się przygotować też dźwięki otoczenia, które pomogą wprowadzić gracza w nastrój.
-<!-- TODO: wkleić i opisać + linki -->
+Cała muzyka w grze została wygenerowana z pomocą [SUNO AI](https://suno.com).
+Każda sekcja statku ma własny utwór grający w tle, poza tym istnieją różne utwory odgrywane przy zakończeniu, bądź po znalezieniu "easter egga"
 
 ### Narracja
 
@@ -409,7 +414,7 @@ Do ułatwienia gry, na tle obecne są strzałki, wskazujące kierunek ewentualne
 W kajutach specyficzną mechaniką są "trampoliny", które wystrzeliwują gracza we wskazanym kierunku.
 Każda trampolina ma własną siłę i czas, na który interakcja gracza zostaje wyłączona (aby tworzyć pułapki i specjalne przejścia).s
 
-Za jedną pułapką został umieszczony pokój, do którego można się dostać jedynie po odblokowaniu wszystkich modyfikacji.
+Za jedną pułapką został umieszczony pokój, do którego można się dostać jedynie po odblokowaniu wszystkich modyfikacji, w nim znajduje się "easter egg" zmieniający muzykę w tle do czasu powrotu do menu lub włączenia alarmu (koniec gry).
 
 Odblokowujemy tu podwójny skok.
 
@@ -420,7 +425,7 @@ Odblokowujemy tu podwójny skok.
 Na pokładzie specyficzną mechaniką jest burza - co jakiś czas w okolicy gracza uderzają pioruny, które mogą go zabić.
 Dodatkowo - jest to jedyna sekcja, która nie jest w pełni zamknięta - gracz może wyskoczyć poza burtę, co również zakończy się śmiercią postaci gracza.
 
-Na tym poziomie również znajduje się ukryty pokój, do którego można wejść, jeśli dostaliśmy się na pokład.
+Na tym poziomie również znajduje się ukryty pokój, do którego można wejść, jeśli dostaliśmy się na pokład, znajduje się w nim jeden dodatkowy log - "easter egg", który jest jedynie szczeknięciem psa.
 
 Odblokowujemy tu krzyk.
 
@@ -432,6 +437,22 @@ Przy wejściu w aktywną anomalię nakładane są na gracza losowe efekty - aktu
 Na poziomie został ukryty pokój, do którego można się dostać, jedynie korzystając z anomalii.
 
 Znajduje się tu DEM - przedmiot, którego zebranie kończy grę.
+
+#### Poziom 5 - Reaktor
+
+Mały poziom będący "podpoziomem" laboratorium (przechodząc między nimi nie zmienia się muzyka). Znajduje się tutaj reaktor, który możemy aktywować, aby przywrócić zasilanie na statku i móc uciec łodzią podwodną.
+
+#### Poziom 6 - Pokój z łodzią podwodną
+
+Mały poziom, "podpoziom" magazynu. Znajduje się tu łódź podwodna, która pozwala uciec ze statku - wygrać grę.
+
+#### Poziom 7 - Zbrojownia
+
+Mały poziom, pozwala aktywować sekwencję samozniszczenia (a tym samym alarm), co pozwoli na odblokowanie alternatywnego zakończenia gry.
+
+#### Poziom 8 - Samouczek/Trening
+
+Mały poziom pełen "podpowiedzi", które pozwalają graczowi zapoznać się ze sterowaniem i podstawowymi mechanikami wykorzystywanymi przez resztę gry.
 
 ### Modyfikacje
 
@@ -471,6 +492,24 @@ Każdy hardpoint ma swoje Id, aktualnie hardpointy używane są tylko przez mana
 Klasa zajmująca się zbieraniem informacji o postępach gracza.
 Aktualnie zapisywane tam są tylko informacje o zebranych logach i modyfikacjach, jednak z czasem może ona zostać rozbudowana.
 Informacje te są aktualnie wykorzystywane przy przejściach między poziomami, tak, aby zebrane wcześniej przedmioty nie pojawiały się drugi raz na mapie po powrocie do tej samej strefy.
+
+Ponadto zajmuje się ona wszystkimi "licznikami czasu" takimi jak ogólnie spędzony czas w grze i licznik pojawiający się na koniec gry.
+Zakończenia gry, jak i oddelegowanie zapisu danych również są tutaj obsługiwane
+
+#### LevelManager
+
+Klasa zajmująca się przejściami pomiędzy poziomami, w tym zmianami muzyki (konsultując aktualny stan gry z ProgressionManagerem) oraz animacjami przejść.
+
+#### SaveData
+
+Statyczna klasa zajmująca się ściśle zapisem danych. Otrzymuje dane od ProgressionManagera i zapisuje je w odpowiednim pliku.
+Pozwala też odczytywać dane z pliku i resetować zapis do domyślnych wartości.
+Wykorzystuje wbudowaną klasę ConfigFile, gdyż dane o Logach i Modyfikacjach nie mogły zostać zapisane w standardowym pliku zapisu.
+
+#### Hint
+
+Mała klasa rozszerzająca wbudowane Area2D. Sprawia ona, że gdy gracz wejdzie w daną strefę, pojawia się nad jego głową tekst - podpowiedź.
+Silnie wykorzystana w samouczku i przy modyfikacjach.
 
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
@@ -545,10 +584,16 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 12 (16.05.2024 - 23.05.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(O)__ Poprawki ewentualnych błędów
-    - __(O)__ Przeprowadzenie playtestów
 - __Tydzień 13 (23.05.2024 - 30.05.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Wprowadzanie poprawek po playtestach
-- __Tydzień 14 (29.05.2024 - 06.06.2024)__
+    - __(O)__ Poprawki ewentualnych błędów
+- __Tydzień 14 (30.05.2024 - 06.06.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Build i zgłoszenie gry do gamejamu
+    - __(O)__ Poprawki ewentualnych błędów
+- __Tydzień 15 (06.06.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Przeprowadzenie playtestów
+    - __(O)__ Wprowadzanie poprawek po playtestach
+- __Tydzień 15 (06.06.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Wprowadzanie poprawek po playtestach

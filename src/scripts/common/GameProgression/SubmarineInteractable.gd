@@ -14,5 +14,6 @@ func interact(body: Actor) -> void:
 		win.global_position = body.global_position + Vector2(-320, -180)
 		get_tree().get_root().get_child(0).add_child(win)
 		progression_manager.CAPYBARA()
+		progression_manager.reset_save()
 		await get_tree().create_timer(15).timeout
 		get_tree().change_scene_to_file("res://src/scenes/common/UI/Menu.tscn")

@@ -67,6 +67,8 @@ script = ExtResource("2_c0xjy")
 [node name="ProgressionManager" type="Node" parent="."]
 script = ExtResource("4_q44dp")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ProgressionManager"]
+
 [node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("1_v7pol")
 player = NodePath("../Player")

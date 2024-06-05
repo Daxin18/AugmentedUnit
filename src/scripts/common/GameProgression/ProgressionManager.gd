@@ -4,11 +4,19 @@ extends Node
 # exporting all variables for trackability in debugger
 @export var collected_logs: Array[Logs.LogId] = []
 @export var collected_mods: Array[Modifications.Mod] = []
+
+#endgame related
 @export var endgame: bool = false
 @export var capybara: bool = false
 @export var power: bool = false
 @export var endgame_timer: float = 0
 
+#time tracking
+@export var total_time: float = 0
+@export var track_time: bool = true
+
+# utils
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	endgame_timer = Constants.endgame_time
@@ -19,6 +27,9 @@ func _process(delta):
 		endgame_timer -= delta
 		if endgame_timer <= 0:
 			end_the_game()
+	if track_time:
+		total_time += delta
+	
 
 
 # there must be a better way to do this
@@ -59,7 +70,7 @@ func start_endgame(endgame_music: AudioStream):
 	endgame = true
 
 func save(position: Vector2, level: Levels.LevelId) -> void:
-	SaveData.set_state(collected_logs, collected_mods, level, position)
+	SaveData.set_state(collected_logs, collected_mods, level, position, total_time)
 	SaveData.save_state()
 
 func load_data() -> void:
@@ -70,13 +81,51 @@ func load_data() -> void:
 
 func end_the_game() -> void:
 	endgame = false
-	pass
+	track_time = false
+	var player: Player = get_tree().get_root().get_node("Main").find_child("Player")
+	player.state_logic.block_player()
+	audio.stream = load("res://src/assets/levels/endgame/boom.mp3")
+	audio.play()
+	reset_save()
+	await get_tree().create_timer(6).timeout
+	get_tree().change_scene_to_file("res://src/scenes/common/UI/Menu.tscn")
+
 
 func is_power() -> bool:
 	return power
 
 func enable_power() -> void:
 	power = true
+	audio.stream = load("res://src/assets/levels/endgame/Power_up.mp3")
+	audio.play()
 
 func stop_timer() -> void:
 	endgame = false
+	track_time = false
+
+func reset_save() -> void:
+	SaveData.load_default()
+	SaveData.save_state()
+	pass
+
+func get_total_time_string() -> String:
+	var mins = int(total_time) / 60
+	var secs = int(total_time) % 60
+	var hours = 0
+	
+	if mins > 60:
+		hours = mins / 60
+		mins = mins % 60
+	
+	var h_str: String = str(hours)
+	var min_str: String = str(mins)
+	var s_str: String = str(secs)
+	
+	if hours < 10:
+		h_str = "0" + h_str
+	if mins < 10:
+		min_str = "0" + min_str
+	if secs < 10:
+		s_str = "0" + s_str
+	
+	return h_str + ":" + min_str + ":" + s_str

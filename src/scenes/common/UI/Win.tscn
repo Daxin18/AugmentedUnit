@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4altu01gqnx5"]
+[gd_scene load_steps=4 format=3 uid="uid://d4altu01gqnx5"]
 
+[ext_resource type="Script" path="res://src/scripts/common/UI/WinScreen.gd" id="1_igoxd"]
 [ext_resource type="FontFile" uid="uid://ddckps1108f3l" path="res://src/assets/UI/pixelart.ttf" id="1_uorf8"]
+[ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="3_dk2vb"]
 
 [node name="Win" type="Control"]
 z_index = 4000
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_igoxd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 self_modulate = Color(0.764706, 0.00784314, 0.517647, 1)
@@ -31,3 +34,15 @@ offset_bottom = 100.0
 theme_override_fonts/normal_font = ExtResource("1_uorf8")
 theme_override_font_sizes/normal_font_size = 80
 text = "Wygrana!"
+
+[node name="TIME" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 218.0
+offset_right = 477.0
+offset_bottom = 335.0
+theme_override_colors/font_shadow_color = Color(0, 0.713726, 0.278431, 1)
+theme_override_fonts/normal_font = ExtResource("3_dk2vb")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Czas: 00:00:00"

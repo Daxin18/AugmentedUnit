@@ -5,9 +5,9 @@ extends Actor
 @onready var log_player = $LogPlayer
 
 @onready var state_machine = $state_machine
-@onready var state_logic = $StateLogicHolder
-@onready var interaction_logic = $InteractionLogicHolder
-@onready var audio_manager = $AudioManager
+@onready var state_logic: PlayerCommonStateLogic = $StateLogicHolder
+@onready var interaction_logic: PlayerInteractionLogic = $InteractionLogicHolder
+@onready var audio_manager: PlayerAudioManager = $AudioManager
 @onready var hint = $Hint
 
 # temp - remove once options implemented
