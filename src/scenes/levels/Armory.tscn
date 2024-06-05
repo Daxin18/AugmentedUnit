@@ -1,11 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://bi42b5vpmkbpr"]
+[gd_scene load_steps=16 format=3 uid="uid://bi42b5vpmkbpr"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Armory.gd" id="1_hie0w"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_b55w8"]
 [ext_resource type="Texture2D" uid="uid://c72ixf7kdyol" path="res://src/assets/levels/armory/tilemap.png" id="3_67wts"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="4_m0n8n"]
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="5_uj2yg"]
+[ext_resource type="Texture2D" uid="uid://dhjgr8xbkv2lp" path="res://src/assets/levels/armory/NUKE.png" id="6_1csll"]
 [ext_resource type="Script" path="res://src/scripts/common/GameProgression/ActivateNuke.gd" id="6_hb2o6"]
+[ext_resource type="Texture2D" uid="uid://dlskg078ika0g" path="res://src/assets/levels/I cant/nuvlearmissile.png" id="7_lay81"]
+[ext_resource type="FontFile" uid="uid://ddckps1108f3l" path="res://src/assets/UI/pixelart.ttf" id="8_r3klh"]
+[ext_resource type="Script" path="res://src/scripts/common/HintArea.gd" id="10_4jof3"]
+[ext_resource type="Texture2D" uid="uid://bvmmyeem1uf8" path="res://src/assets/levels/I cant/NPC&GUNS.png" id="11_hpn50"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gb6yc"]
 texture = ExtResource("3_67wts")
@@ -117,6 +122,9 @@ sources/0 = SubResource("TileSetAtlasSource_gb6yc")
 [sub_resource type="CircleShape2D" id="CircleShape2D_o2mxg"]
 radius = 14.0357
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tld54"]
+size = Vector2(104, 80)
+
 [node name="Armory" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_hie0w")
 default_spawn = NodePath("Hardpoint")
@@ -154,7 +162,7 @@ position = Vector2(-1006, -503)
 id = 22
 
 [node name="Jac_9" parent="Logs" instance=ExtResource("5_uj2yg")]
-position = Vector2(-2072, -304)
+position = Vector2(-1869, -289)
 id = 11
 
 [node name="Mods" type="Node" parent="."]
@@ -162,9 +170,124 @@ id = 11
 [node name="Lethal" type="Node" parent="."]
 
 [node name="NUKE" type="Area2D" parent="."]
-position = Vector2(-1945, -297)
+z_index = 15
+position = Vector2(-1941, -307)
 script = ExtResource("6_hb2o6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NUKE"]
 position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_o2mxg")
+
+[node name="Decorations" type="Node" parent="."]
+
+[node name="Decor_1" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-2022, -355)
+texture = ExtResource("6_1csll")
+vframes = 12
+frame = 1
+
+[node name="Decor_2" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1763, -340)
+texture = ExtResource("6_1csll")
+vframes = 12
+frame = 4
+
+[node name="Decor_9" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1645, -340)
+texture = ExtResource("6_1csll")
+vframes = 12
+frame = 4
+
+[node name="Decor_3" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1489, -252)
+texture = ExtResource("6_1csll")
+vframes = 13
+frame = 6
+
+[node name="Decor_4" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1352, -348)
+texture = ExtResource("6_1csll")
+vframes = 12
+frame = 3
+
+[node name="Decor_5" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1835.97, -563.944)
+rotation = -1.57142
+texture = ExtResource("6_1csll")
+hframes = 2
+vframes = 12
+
+[node name="Decor_8" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-2018, -563)
+rotation = -1.57142
+texture = ExtResource("6_1csll")
+hframes = 2
+vframes = 12
+
+[node name="Decor_6" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1642.97, -563.944)
+rotation = -1.57142
+texture = ExtResource("6_1csll")
+hframes = 2
+vframes = 12
+
+[node name="Decor_7" type="Sprite2D" parent="Decorations"]
+z_index = -1
+position = Vector2(-1452.97, -563.944)
+rotation = -1.57142
+texture = ExtResource("6_1csll")
+hframes = 2
+vframes = 12
+
+[node name="Nuvlearmissile" type="Sprite2D" parent="Decorations"]
+position = Vector2(-1942, -306)
+texture = ExtResource("7_lay81")
+hframes = 3
+vframes = 15
+frame = 40
+
+[node name="ColorRect" type="ColorRect" parent="Decorations/Nuvlearmissile"]
+offset_left = -11.0
+offset_top = -14.0
+offset_right = 12.0
+offset_bottom = 2.0
+color = Color(0.882353, 0.517647, 0.423529, 1)
+
+[node name="Label" type="Label" parent="Decorations/Nuvlearmissile"]
+offset_left = -11.0
+offset_top = -14.0
+offset_right = 13.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.886275, 0, 0.2, 1)
+theme_override_fonts/font = ExtResource("8_r3klh")
+theme_override_font_sizes/font_size = 8
+text = "Boom
+OK?"
+horizontal_alignment = 1
+
+[node name="Npc&guns" type="Sprite2D" parent="Decorations"]
+position = Vector2(-1868, -278)
+texture = ExtResource("11_hpn50")
+vframes = 22
+frame = 18
+
+[node name="HintArea" type="Area2D" parent="."]
+position = Vector2(-1950, -293)
+script = ExtResource("10_4jof3")
+text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) aby aktywowac [color=red]samozniszczenie[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea"]
+position = Vector2(11, -19)
+shape = SubResource("RectangleShape2D_tld54")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="body_entered" from="HintArea" to="HintArea" method="_on_entered"]
+[connection signal="body_exited" from="HintArea" to="HintArea" method="_on_exited"]

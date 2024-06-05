@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c7cqaqnfv0yxh"]
+[gd_scene load_steps=25 format=3 uid="uid://c7cqaqnfv0yxh"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Deck.gd" id="1_mqg0k"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="2_5icbx"]
@@ -10,9 +10,12 @@
 [ext_resource type="Script" path="res://src/scripts/common/Entities/Lethal.gd" id="6_tt04w"]
 [ext_resource type="Texture2D" uid="uid://bj6nlrvbkksbc" path="res://src/assets/levels/deck/tmb_bckgrd.png" id="7_u6irk"]
 [ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="8_orjuu"]
+[ext_resource type="Texture2D" uid="uid://dlskg078ika0g" path="res://src/assets/levels/I cant/nuvlearmissile.png" id="8_rivii"]
 [ext_resource type="PackedScene" uid="uid://cupq5nbenij27" path="res://src/scenes/common/Trampoline.tscn" id="9_7exy7"]
 [ext_resource type="AudioStream" uid="uid://dmu7w5284n5oa" path="res://src/assets/levels/music/Rain.mp3" id="12_j0riv"]
 [ext_resource type="Script" path="res://src/scripts/common/HintArea.gd" id="13_lq15p"]
+[ext_resource type="Texture2D" uid="uid://c2lbgj4wtgm03" path="res://src/assets/levels/deck/rain.png" id="14_biwtn"]
+[ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Rain.gd" id="15_gsfvf"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_x756p"]
 tile_data = PackedInt32Array(0, 0, 3, 65536, 0, 4, 1, 65536, 3, 65537, 65536, 4)
@@ -305,6 +308,20 @@ position = Vector2(3320, -965)
 position = Vector2(4107, -1310)
 mod = 2
 
+[node name="Decorations" type="Node" parent="."]
+
+[node name="Nuvlearmissile" type="Sprite2D" parent="Decorations"]
+position = Vector2(-592, -1335)
+texture = ExtResource("8_rivii")
+vframes = 15
+frame = 8
+
+[node name="Nuvlearmissile2" type="Sprite2D" parent="Decorations"]
+position = Vector2(5732, -1335)
+texture = ExtResource("8_rivii")
+vframes = 15
+frame = 8
+
 [node name="DEV_ITEMS" type="Node2D" parent="."]
 position = Vector2(512, -1521)
 
@@ -366,6 +383,13 @@ text = "[center][color=purple]Krzyk[/color] ([color=blue]Q[/color]) pozwala zatr
 position = Vector2(22, 3)
 shape = SubResource("RectangleShape2D_m00mf")
 debug_color = Color(0.858824, 0.333333, 0.384314, 0.419608)
+
+[node name="Rain" type="Sprite2D" parent="."]
+z_index = 3000
+position = Vector2(3433, -194)
+texture = ExtResource("14_biwtn")
+vframes = 39
+script = ExtResource("15_gsfvf")
 
 [connection signal="body_entered" from="HintArea2" to="HintArea2" method="_on_entered"]
 [connection signal="body_exited" from="HintArea2" to="HintArea2" method="_on_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ck4beiy5pakp2"]
+[gd_scene load_steps=28 format=3 uid="uid://ck4beiy5pakp2"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Cargo.gd" id="1_tqtm1"]
 [ext_resource type="Texture2D" uid="uid://bfln5ouo1x0on" path="res://src/assets/levels/cargo_hold/tilemap.png" id="2_2ss33"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8mpj6ntjn7kc" path="res://src/scenes/common/RespawnStation.tscn" id="7_ksml0"]
 [ext_resource type="PackedScene" uid="uid://tloaklr5oyru" path="res://src/scenes/common/SpikeTrap.tscn" id="8_dy1ij"]
 [ext_resource type="PackedScene" uid="uid://c7rr08uce4xc" path="res://src/scenes/levels/decorations/CargoDecorBig.tscn" id="8_ikrur"]
+[ext_resource type="Texture2D" uid="uid://bvmmyeem1uf8" path="res://src/assets/levels/I cant/NPC&GUNS.png" id="9_u8pve"]
 [ext_resource type="PackedScene" uid="uid://o6irawrqkjiu" path="res://src/scenes/entities/Modification.tscn" id="9_ukxvb"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="10_j21nl"]
 [ext_resource type="Texture2D" uid="uid://cc4dm5gql30ld" path="res://src/assets/levels/tmp_helpers/tmp_dash.png" id="11_hpy0s"]
@@ -458,6 +459,38 @@ frame = 0
 [node name="CargoDecorBig2" parent="Decorations/HighRoom/BIG/CargoDecorBig2/CargoDecorBig4" instance=ExtResource("8_ikrur")]
 position = Vector2(-123, 0)
 frame = 0
+
+[node name="DEAD" type="Node" parent="Decorations"]
+
+[node name="Npc&guns" type="Sprite2D" parent="Decorations/DEAD"]
+position = Vector2(-566, 43)
+texture = ExtResource("9_u8pve")
+vframes = 22
+frame = 19
+
+[node name="Npc&guns2" type="Sprite2D" parent="Decorations/DEAD"]
+position = Vector2(-191, 299)
+texture = ExtResource("9_u8pve")
+vframes = 22
+frame = 17
+
+[node name="Npc&guns3" type="Sprite2D" parent="Decorations/DEAD"]
+position = Vector2(28, 443)
+texture = ExtResource("9_u8pve")
+vframes = 22
+frame = 16
+
+[node name="Npc&guns4" type="Sprite2D" parent="Decorations/DEAD"]
+position = Vector2(562, 443)
+texture = ExtResource("9_u8pve")
+vframes = 22
+frame = 18
+
+[node name="Npc&guns5" type="Sprite2D" parent="Decorations/DEAD"]
+position = Vector2(779, -357)
+texture = ExtResource("9_u8pve")
+vframes = 22
+frame = 19
 
 [node name="Platforms" type="Node" parent="."]
 
