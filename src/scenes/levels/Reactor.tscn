@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bfs87e3245gkn"]
+[gd_scene load_steps=12 format=3 uid="uid://bfs87e3245gkn"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Reactor.gd" id="1_jmhhg"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_tbpf6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="4_n8yvi"]
 [ext_resource type="Texture2D" uid="uid://csywg5ycl2hqf" path="res://src/assets/levels/reactor/reactor.png" id="5_pfjx6"]
 [ext_resource type="Script" path="res://src/scripts/common/GameProgression/ReactorInteractable.gd" id="6_g5gbh"]
+[ext_resource type="Script" path="res://src/scripts/common/HintArea.gd" id="7_v6j3s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8u64x"]
 texture = ExtResource("3_x482x")
@@ -113,6 +114,9 @@ sources/0 = SubResource("TileSetAtlasSource_8u64x")
 [sub_resource type="CircleShape2D" id="CircleShape2D_ty20g"]
 radius = 16.2788
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6p6o"]
+size = Vector2(76, 52)
+
 [node name="Reactor" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_jmhhg")
 default_spawn = NodePath("Hardpoint")
@@ -138,7 +142,7 @@ layer_1/tile_data = PackedInt32Array(721307, 65536, 1, 3539355, 0, 0, 3539356, 3
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("4_n8yvi")]
-position = Vector2(6642, 714)
+position = Vector2(6645, 714)
 next_level_id = 2
 next_level_hardpoint = 10
 hardpoint_id = 10
@@ -161,3 +165,15 @@ script = ExtResource("6_g5gbh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReactorInteractable"]
 shape = SubResource("CircleShape2D_ty20g")
 debug_color = Color(0.835294, 0, 0.933333, 0.419608)
+
+[node name="HintArea3" type="Area2D" parent="."]
+position = Vector2(5918, 714)
+script = ExtResource("7_v6j3s")
+text = "[center]Wejdz w [color=orange]interakcje[/color] aby przywrocic [color=greenyellow]zasilanie[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea3"]
+position = Vector2(-1, -3)
+shape = SubResource("RectangleShape2D_s6p6o")
+
+[connection signal="body_entered" from="HintArea3" to="HintArea3" method="_on_entered"]
+[connection signal="body_exited" from="HintArea3" to="HintArea3" method="_on_exited"]

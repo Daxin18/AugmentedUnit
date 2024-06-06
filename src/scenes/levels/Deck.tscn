@@ -295,7 +295,7 @@ hardpoint_on_left = true
 [node name="Logs" type="Node" parent="."]
 
 [node name="Rob_3" parent="Logs" instance=ExtResource("6_850wp")]
-position = Vector2(80, -1304)
+position = Vector2(-489, -1304)
 id = 14
 
 [node name="DOG_LOG" parent="Logs" instance=ExtResource("6_850wp")]

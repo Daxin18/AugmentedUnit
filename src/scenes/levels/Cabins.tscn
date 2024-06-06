@@ -201,12 +201,12 @@ position = Vector2(2367, -118)
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("4_0yfcu")]
-position = Vector2(1652, -777)
+position = Vector2(1650, -777)
 next_level_hardpoint = 7
 hardpoint_id = 7
 
 [node name="Door2" parent="Doors" instance=ExtResource("4_0yfcu")]
-position = Vector2(996, 430)
+position = Vector2(994, 430)
 next_level_hardpoint = 6
 hardpoint_id = 6
 

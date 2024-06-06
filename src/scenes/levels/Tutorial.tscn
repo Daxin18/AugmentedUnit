@@ -200,7 +200,7 @@ position = Vector2(98, 127)
 [node name="HintArea" type="Area2D" parent="Hints"]
 position = Vector2(-988, 45)
 script = ExtResource("8_y7qsc")
-text = "[center]Aby sie poruszac uzyj klawiszy [color=blue]A[/color] oraz [color=blue]D[/color][/center]"
+text = "[center]Twoim celem jest odzyskanie [color=purple]DEM[/color] z LABORATORIUM[/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea"]
 position = Vector2(-140.5, 63)

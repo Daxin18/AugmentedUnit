@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bi42b5vpmkbpr"]
+[gd_scene load_steps=17 format=3 uid="uid://bi42b5vpmkbpr"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Armory.gd" id="1_hie0w"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_b55w8"]
@@ -125,6 +125,9 @@ radius = 14.0357
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tld54"]
 size = Vector2(104, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsn8t"]
+size = Vector2(186, 67)
+
 [node name="Armory" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_hie0w")
 default_spawn = NodePath("Hardpoint")
@@ -150,7 +153,7 @@ layer_1/tile_data = PackedInt32Array(-1114170, 0, 1, -1114169, 0, 1, -1376314, 0
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("4_m0n8n")]
-position = Vector2(-877, -511)
+position = Vector2(-874, -511)
 next_level_hardpoint = 3
 hardpoint_id = 3
 hardpoint_on_left = true
@@ -279,15 +282,28 @@ texture = ExtResource("11_hpn50")
 vframes = 22
 frame = 18
 
-[node name="HintArea" type="Area2D" parent="."]
+[node name="Hints" type="Node" parent="."]
+
+[node name="HintArea" type="Area2D" parent="Hints"]
 position = Vector2(-1950, -293)
 script = ExtResource("10_4jof3")
 text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) aby aktywowac [color=red]samozniszczenie[/color][/center]"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea"]
 position = Vector2(11, -19)
 shape = SubResource("RectangleShape2D_tld54")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[connection signal="body_entered" from="HintArea" to="HintArea" method="_on_entered"]
-[connection signal="body_exited" from="HintArea" to="HintArea" method="_on_exited"]
+[node name="HintArea2" type="Area2D" parent="Hints"]
+position = Vector2(-1123, -504)
+script = ExtResource("10_4jof3")
+text = "[center]Aktywujac [color=red]samozniszczenie[/color] zostanie wlaczony [color=orangered]alarm[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea2"]
+position = Vector2(-13, -3.5)
+shape = SubResource("RectangleShape2D_rsn8t")
+
+[connection signal="body_entered" from="Hints/HintArea" to="Hints/HintArea" method="_on_entered"]
+[connection signal="body_exited" from="Hints/HintArea" to="Hints/HintArea" method="_on_exited"]
+[connection signal="body_entered" from="Hints/HintArea2" to="Hints/HintArea2" method="_on_entered"]
+[connection signal="body_exited" from="Hints/HintArea2" to="Hints/HintArea2" method="_on_exited"]

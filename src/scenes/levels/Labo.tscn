@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dafbxj8wigpto"]
+[gd_scene load_steps=19 format=3 uid="uid://dafbxj8wigpto"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Labo.gd" id="1_da1ui"]
 [ext_resource type="PackedScene" uid="uid://d3sq75v6h6wcc" path="res://src/scenes/common/Hardpoint.tscn" id="2_rteea"]
@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b7ip5pqsecna4" path="res://src/scenes/entities/Log.tscn" id="5_f3ahq"]
 [ext_resource type="PackedScene" uid="uid://bqj3uwhcmsukx" path="res://src/scenes/common/Door.tscn" id="5_ptonm"]
 [ext_resource type="PackedScene" uid="uid://beii4xboemkwr" path="res://src/scenes/common/Anomaly.tscn" id="6_mblk2"]
-[ext_resource type="Texture2D" uid="uid://dtiuf0usc2xym" path="res://src/assets/levels/tmp_helpers/tmp_DEM.png" id="7_hef3p"]
 [ext_resource type="Texture2D" uid="uid://cih71nn33pi6h" path="res://src/assets/levels/tmp_helpers/tmp_scream.png" id="9_ci2uu"]
+[ext_resource type="Script" path="res://src/scripts/common/HintArea.gd" id="10_gfoyk"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_eje1h"]
 tile_data = PackedInt32Array(0, 262144, 3, 65536, 262144, 4)
@@ -161,6 +161,12 @@ pattern_2 = SubResource("TileMapPattern_q7q2o")
 pattern_3 = SubResource("TileMapPattern_exka0")
 pattern_4 = SubResource("TileMapPattern_io8pp")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eglev"]
+size = Vector2(191, 211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afydd"]
+size = Vector2(66, 49)
+
 [node name="Labo" type="Node2D" node_paths=PackedStringArray("default_spawn")]
 script = ExtResource("1_da1ui")
 default_spawn = NodePath("Hardpoint")
@@ -275,13 +281,32 @@ position = Vector2(-7, 62)
 position = Vector2(130, 63)
 mod = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 1, 1, 0.682353)
-z_index = 100
-position = Vector2(5823, -431)
-texture = ExtResource("7_hef3p")
-
 [node name="TmpScream" type="Sprite2D" parent="."]
 z_index = 20
 position = Vector2(6256, -336)
 texture = ExtResource("9_ci2uu")
+
+[node name="Hints" type="Node" parent="."]
+
+[node name="HintArea2" type="Area2D" parent="Hints"]
+position = Vector2(6285, -441)
+script = ExtResource("10_gfoyk")
+text = "[center]Podnieesienie [color=purple]DEM[/color] wlaczy [color=orangered]alarm[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea2"]
+position = Vector2(-9.5, -67.5)
+shape = SubResource("RectangleShape2D_eglev")
+
+[node name="HintArea3" type="Area2D" parent="Hints"]
+position = Vector2(5897, -434)
+script = ExtResource("10_gfoyk")
+text = "[center][color=purple]DEM[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea3"]
+position = Vector2(3, -4.5)
+shape = SubResource("RectangleShape2D_afydd")
+
+[connection signal="body_entered" from="Hints/HintArea2" to="Hints/HintArea2" method="_on_entered"]
+[connection signal="body_exited" from="Hints/HintArea2" to="Hints/HintArea2" method="_on_exited"]
+[connection signal="body_entered" from="Hints/HintArea3" to="Hints/HintArea3" method="_on_entered"]
+[connection signal="body_exited" from="Hints/HintArea3" to="Hints/HintArea3" method="_on_exited"]

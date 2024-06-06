@@ -17,6 +17,7 @@ extends Node
 
 # utils
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
+var defeat_scene: = preload("res://src/scenes/common/UI/Defeat.tscn")
 
 func _ready():
 	endgame_timer = Constants.endgame_time
@@ -84,6 +85,9 @@ func end_the_game() -> void:
 	track_time = false
 	var player: Player = get_tree().get_root().get_node("Main").find_child("Player")
 	player.state_logic.block_player()
+	var defeat = defeat_scene.instantiate()
+	defeat.global_position = player.global_position + Vector2(-320, -180)
+	get_tree().get_root().get_child(0).add_child(defeat)
 	audio.stream = load("res://src/assets/levels/endgame/boom.mp3")
 	audio.play()
 	reset_save()

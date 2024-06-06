@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ck4beiy5pakp2"]
+[gd_scene load_steps=29 format=3 uid="uid://ck4beiy5pakp2"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/Levels/Cargo.gd" id="1_tqtm1"]
 [ext_resource type="Texture2D" uid="uid://bfln5ouo1x0on" path="res://src/assets/levels/cargo_hold/tilemap.png" id="2_2ss33"]
@@ -161,7 +161,10 @@ _data = {
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyg5u"]
-size = Vector2(104, 80)
+size = Vector2(86, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s68yf"]
+size = Vector2(80, 85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqsay"]
 size = Vector2(50, 45)
@@ -174,7 +177,7 @@ script = ExtResource("1_tqtm1")
 default_spawn = NodePath("Hardpoint")
 
 [node name="Hardpoint" parent="." instance=ExtResource("2_r28gf")]
-position = Vector2(-844, 15)
+position = Vector2(-870, 16)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_unj3h")
@@ -579,19 +582,19 @@ id = 3
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("10_j21nl")]
-position = Vector2(-904, -312)
+position = Vector2(-910, -310)
 next_level_id = 5
 next_level_hardpoint = 3
 hardpoint_id = 3
 
 [node name="Door2" parent="Doors" instance=ExtResource("10_j21nl")]
-position = Vector2(-893, 423)
+position = Vector2(-894, 423)
 next_level_id = 6
 next_level_hardpoint = 4
 hardpoint_id = 4
 
 [node name="Door3" parent="Doors" instance=ExtResource("10_j21nl")]
-position = Vector2(-92, -632)
+position = Vector2(-94, -632)
 next_level_id = 3
 next_level_hardpoint = 5
 hardpoint_id = 5
@@ -611,7 +614,7 @@ hardpoint_id = 6
 hardpoint_on_left = true
 
 [node name="Door6" parent="Doors" instance=ExtResource("10_j21nl")]
-position = Vector2(-615, 18)
+position = Vector2(-610, 18)
 next_level_id = 7
 
 [node name="Traps" type="Node" parent="."]
@@ -696,9 +699,18 @@ script = ExtResource("15_peeyg")
 text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) z [color=green]drzwiami[/color] aby przejsc do samouczka[/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea"]
-position = Vector2(11, -19)
+position = Vector2(20, -19)
 shape = SubResource("RectangleShape2D_jyg5u")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="HintArea4" type="Area2D" parent="."]
+position = Vector2(-805, 27)
+script = ExtResource("15_peeyg")
+text = "[center]Aby sie poruszac uzyj klawiszy [color=blue]A[/color] oraz [color=blue]D[/color][/center]"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea4"]
+position = Vector2(-1, -21.5)
+shape = SubResource("RectangleShape2D_s68yf")
 
 [node name="HintArea2" type="Area2D" parent="."]
 position = Vector2(1506, -373)
@@ -720,6 +732,8 @@ shape = SubResource("RectangleShape2D_cxc4p")
 
 [connection signal="body_entered" from="HintArea" to="HintArea" method="_on_entered"]
 [connection signal="body_exited" from="HintArea" to="HintArea" method="_on_exited"]
+[connection signal="body_entered" from="HintArea4" to="HintArea4" method="_on_entered"]
+[connection signal="body_exited" from="HintArea4" to="HintArea4" method="_on_exited"]
 [connection signal="body_entered" from="HintArea2" to="HintArea2" method="_on_entered"]
 [connection signal="body_exited" from="HintArea2" to="HintArea2" method="_on_exited"]
 [connection signal="body_entered" from="HintArea3" to="HintArea3" method="_on_entered"]
