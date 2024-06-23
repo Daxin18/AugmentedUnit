@@ -187,13 +187,13 @@ script = ExtResource("1_6wu35")
 
 [node name="Hint" type="RichTextLabel" parent="."]
 visible = false
-offset_left = -90.0
-offset_top = -45.0
-offset_right = 90.0
+offset_left = -117.0
+offset_top = -55.0
+offset_right = 117.0
 offset_bottom = -19.0
 theme_override_colors/font_shadow_color = Color(0.176471, 0.176471, 0.176471, 1)
 theme_override_fonts/normal_font = ExtResource("17_drslc")
-theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center] This will be tutorial text"
 fit_content = true

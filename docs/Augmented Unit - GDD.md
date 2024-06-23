@@ -345,8 +345,6 @@ Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana d
 W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (Node) w scenie gracza.
 Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
 
-<div style="page-break-after: always;"></div>
-
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
 - Jumping --> skok
 - Dashing --> zryw 
@@ -379,8 +377,6 @@ Jumping | Dashing | Gracz posiada jeszcze dostępne zrywy i nacisnął przycisk 
 _*Wejście do stanów Moving oraz Idle odnawia skoki, zrywy i krzyki gracza, więc będąc w tych stanach, gracz musi posiadać dostępne skoki/zrywy/krzyki_
 
 _**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
-
-<div style="page-break-after: always;"></div>
 
 Postać gracza ma też dwa różne źródła dźwięków, aby uniknąć problemów z kolejkowaniem albo przerywaniem dźwięku.
 Jedno służy do odtwarzania logów, drugie (zarządzane przez specjalnego menadżera audio) odtwarza inne dźwięki takie jak skok, śmierć czy zryw.
@@ -417,8 +413,6 @@ Każda trampolina ma własną siłę i czas, na który interakcja gracza zostaje
 Za jedną pułapką został umieszczony pokój, do którego można się dostać jedynie po odblokowaniu wszystkich modyfikacji, w nim znajduje się "easter egg" zmieniający muzykę w tle do czasu powrotu do menu lub włączenia alarmu (koniec gry).
 
 Odblokowujemy tu podwójny skok.
-
-<div style="page-break-after: always;"></div>
 
 #### Poziom 3 - Pokład
 
@@ -515,6 +509,118 @@ Silnie wykorzystana w samouczku i przy modyfikacjach.
 
 <div style="page-break-after: always;"></div>
 
+## Playtesty, ankietyzacja
+
+### Ogólne dane o testujących
+
+Testy przeprowadzono na grupie 10 ludzi w wieku od 17 do 62 lat, w tym 7 mężczyzn i 3 kobiety. W grupie znalazły się osoby z całego zakresu doświadczenia z grami - od nie grających w ogóle, po ludzi określających się jako "zaawansowany gracz nałogowy".
+
+Gracze otrzymali grę, grając w nią aż do osiągnięcia zakończenia (wygraną bądź przegraną). Zajmowało im to średnio koło 15 minut. Po skończonej grze gracze otrzymali ankietę z pytaniami, które wraz z odpowiedziami znajdują się niżej.
+
+### Odpowiedzi
+
+#### Czy były w grze momenty, gdzie na ekranie działo się za dużo / ilość informacji była przytłaczająca?
+
+9 NIE, 1 TAK
+
+Osoba odpowiadająca tak miała problem z poruszającymi się platformami - brak doświadczenia w platformówkach
+
+#### Czy jasne było kiedy możliwe jest np. użycie "zrywu" (albo innych umiejętności)?
+
+100% TAK
+
+#### Czy brak mapy poziomów przeszkadzał w rozgrywce?
+
+50/50
+
+Części graczy podobał się brak mapy - zachęcał ich do eksploracji, inni mieli problemy, bo woleliby wiedzieć w którą stronę iść.
+Z uwagi na to, że połowa graczy chciałaby mapę, została ona dodana do gry, ale nie pokazuje pozycji gracza, aby dalej zachęcać do eksploracji.
+
+#### Czy funkcje wszystkich przycisków menu były jasne?
+
+100% TAK
+
+#### Czy wiedziałeś(-aś) jaki jest twój cel w grze?
+
+80% TAK, 20% NIE
+
+Gracze głosujący na NIE byli tymi, którzy po prostu przebiegli przez samouczek, nie patrząc na podane im informacje.
+
+#### Czy sterowanie było intuicyjne?
+
+100% TAK
+
+#### Czy zawsze było jasne gdzie należy iść?
+
+70% TAK, 30% NIE
+
+Podobnie jak w pytaniu o mapę - rozwiązuje ona ten problem.
+
+#### Czy rzeczy, z którymi wchodziło się w interakcje były zawsze widoczne?
+
+100% TAK
+
+#### Czy jasne było co jest czym? (Czy wygląd przedmiotów sugerował co mogą robić?)
+
+80% TAK, 20% NIE
+
+Gracze głosujący na NIE byli tymi grającymi na wcześniejszej wersji gry, gdzie nie było podpowiedzi mówiących o wchodzeniu w interakcję przy komputerze w zbrojowni i w reaktorze.
+
+#### Jak oceniasz... (skala 1-5)
+
+Tabela z liczbą danych ocen ocen
+
+aspekt              | 1 | 2 | 3 | 4 | 5
+---                 |---|---|---|---|---
+rozgrywkę           | 0 | 0 | 0 | 3 | 7 
+szatę graficzną     | 0 | 0 | 0 | 3 | 7 
+oprawę audio        | 0 | 0 | 0 | 2 | 8 
+intuicyjność gry    | 0 | 0 | 0 | 6 | 4 
+
+#### Która sekcja statku była najciekawsza?
+
+- 80% Pokład statku
+- 10% Magazyn
+- 10% Laboratorium
+
+Graczom podobały się efekty pogodowe, które nadawały klimatu lokacji.
+
+#### Która sekcja statku była najmniej ciekawa?
+
+- 70% Reaktor
+- 20% Pokój z łodzią podwodną
+- 10% Laboratorium
+
+Reaktor i pokój z łodzią podwodną są małe i mają tylko jedną funkcję, więc wydawały się graczom nudne, jeden głos na laboratorium wynika z mechaniki teleportacji, gracz został przeteleportowany do zamkniętego pokoju z logiem i musiał czekać aż będzie mógł z niego wyjść.
+
+#### Co najbardziej podobało Ci się w grze?
+
+Gracze na zmianę wskazywali klimat i płynne mechaniki poruszania się.
+
+#### Co najmniej podobało Ci się w grze?
+
+Tutaj znowu gracze wskazywali raczej fakt, że czasem nie mogli się odnaleźć na mapie. Niektórzy też narzekali na to, że gra jest dla nich zbyt krótka.
+
+#### Czy zagrałbyś ponownie w tę grę?
+
+100% TAK
+
+## Utrzymanie gry w post-produkcji
+
+Po premierze gry planowane są poprawki ewentualnych błędów oraz rozbudowywanie gry o kolejne etapy, czy ukryte pokoje tak, aby gracze mogli dłużej się przy niej bawić.
+
+## Udział własnych assetów w grze:
+
+kategoria   | własne    | gotowe    | wszystkie
+---         |---        |---        |---
+grafiki     | 50 (98%)  |    1      |  51
+dźwięki     | 38 (78%)  |    11     |  49
+skrypty(kod)| 66 (100%) |    0      |  66
+
+Większość dźwięków to nagrane przez nas logi, reszta "własnych" to posklejane i przerabiane efekty dźwiękowe, jako "gotowe" została uznana muzyka w tle, którą generowało [SUNO AI](https://suno.com).
+
+Wszystkie poziomy i historia też zostały przygotowane w 100% przez nas.
+
 ## Zakres projektu
 
 ### harmonogram i podział prac
@@ -590,10 +696,10 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 14 (30.05.2024 - 06.06.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(O)__ Poprawki ewentualnych błędów
-- __Tydzień 15 (06.06.2024)__
+- __Tydzień 15 (06.06.2024 - 13.06.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(O)__ Przeprowadzenie playtestów
     - __(O)__ Wprowadzanie poprawek po playtestach
-- __Tydzień 15 (06.06.2024)__
+- __Tydzień 16 (13.06.2024 - 20.06.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(O)__ Wprowadzanie poprawek po playtestach

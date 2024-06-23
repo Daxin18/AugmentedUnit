@@ -10,6 +10,9 @@ extends Node
 @export var capybara: bool = false
 @export var power: bool = false
 @export var endgame_timer: float = 0
+@onready var alarm: = $CanvasLayer/alarm
+@onready var alarm_sound: = $AlarmSound
+@export var playing_alarm: = false
 
 #time tracking
 @export var total_time: float = 0
@@ -28,6 +31,7 @@ func _process(delta):
 		endgame_timer -= delta
 		if endgame_timer <= 0:
 			end_the_game()
+		handle_alarm()
 	if track_time:
 		total_time += delta
 	
@@ -41,9 +45,10 @@ func record_log_pickup(item: Logs.LogId) -> void:
 
 func record_mod_pickup(item: Modifications.Mod) -> void:
 	if not collected_mods.has(item):
-		collected_mods.append(item)
 		if item == Modifications.Mod.DEM:
 			start_endgame(Levels.jump_and_groove_1)
+		else:
+			collected_mods.append(item)
 	print("Modification " + str(Modifications.Mod.keys()[item]) + " collected")
 
 func get_collected_logs() -> Array[Logs.LogId]:
@@ -69,6 +74,7 @@ func start_endgame(endgame_music: AudioStream):
 	level_manager.set_music_independant(endgame_music)
 	endgame_timer = Constants.endgame_time
 	endgame = true
+	alarm_sound.play()
 
 func save(position: Vector2, level: Levels.LevelId) -> void:
 	SaveData.set_state(collected_logs, collected_mods, level, position, total_time)
@@ -79,10 +85,13 @@ func load_data() -> void:
 		collected_logs = SaveData.logs
 	if SaveData.mods:
 		collected_mods = SaveData.mods
+	if SaveData.time:
+		total_time = SaveData.time
 
 func end_the_game() -> void:
 	endgame = false
 	track_time = false
+	stop_alarm_sound()
 	var player: Player = get_tree().get_root().get_node("Main").find_child("Player")
 	player.state_logic.block_player()
 	var defeat = defeat_scene.instantiate()
@@ -111,6 +120,26 @@ func reset_save() -> void:
 	SaveData.load_default()
 	SaveData.save_state()
 	pass
+
+func handle_alarm() -> void:
+	if not playing_alarm:
+		play_alarm_animation()
+
+func play_alarm_animation() -> void:
+	playing_alarm = true
+	alarm.speed_scale = 1/Constants.fading_time_in_seconds
+	alarm.play("fade_to_red")
+	await get_tree().create_timer(Constants.fading_time_in_seconds).timeout
+	alarm.speed_scale = 1/Constants.fading_time_in_seconds
+	alarm.play("red_to_normal")
+	await get_tree().create_timer(3 * Constants.fading_time_in_seconds).timeout
+	playing_alarm = false
+
+func play_alarm_sound() -> void:
+	alarm_sound.play()
+
+func stop_alarm_sound() -> void:
+	alarm_sound.stop()
 
 func get_total_time_string() -> String:
 	var mins = int(total_time) / 60

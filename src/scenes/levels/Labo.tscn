@@ -266,21 +266,6 @@ rotation = -2.93923
 [node name="Anomaly6" parent="Anomalies" instance=ExtResource("6_mblk2")]
 position = Vector2(91, 109)
 
-[node name="DEV_ITEMS" type="Node2D" parent="."]
-position = Vector2(6151, -234)
-
-[node name="scream" parent="DEV_ITEMS" instance=ExtResource("4_lh5qs")]
-position = Vector2(-136, 60)
-scale = Vector2(1.00803, 1)
-mod = 2
-
-[node name="DJump" parent="DEV_ITEMS" instance=ExtResource("4_lh5qs")]
-position = Vector2(-7, 62)
-
-[node name="Dash" parent="DEV_ITEMS" instance=ExtResource("4_lh5qs")]
-position = Vector2(130, 63)
-mod = 1
-
 [node name="TmpScream" type="Sprite2D" parent="."]
 z_index = 20
 position = Vector2(6256, -336)

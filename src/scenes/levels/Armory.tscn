@@ -287,7 +287,7 @@ frame = 18
 [node name="HintArea" type="Area2D" parent="Hints"]
 position = Vector2(-1950, -293)
 script = ExtResource("10_4jof3")
-text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) aby aktywowac [color=red]samozniszczenie[/color][/center]"
+text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=deepskyblue]E[/color]) aby aktywowac [color=red]samozniszczenie[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea"]
 position = Vector2(11, -19)

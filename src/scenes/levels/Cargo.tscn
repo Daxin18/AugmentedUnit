@@ -679,24 +679,10 @@ position = Vector2(1158, -208)
 position = Vector2(1511, -368)
 mod = 1
 
-[node name="DEV_ITEMS" type="Node" parent="."]
-
-[node name="Dash" parent="DEV_ITEMS" instance=ExtResource("9_ukxvb")]
-position = Vector2(-365, 31)
-mod = 1
-
-[node name="DJump" parent="DEV_ITEMS" instance=ExtResource("9_ukxvb")]
-position = Vector2(-451, 29)
-
-[node name="scream" parent="DEV_ITEMS" instance=ExtResource("9_ukxvb")]
-position = Vector2(-401, -46)
-scale = Vector2(1.00803, 1)
-mod = 2
-
 [node name="HintArea" type="Area2D" parent="."]
 position = Vector2(-710, 27)
 script = ExtResource("15_peeyg")
-text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) z [color=green]drzwiami[/color] aby przejsc do samouczka[/center]"
+text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=deepskyblue]E[/color]) z [color=green]drzwiami[/color] aby przejsc do samouczka[/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea"]
 position = Vector2(20, -19)
@@ -706,7 +692,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 [node name="HintArea4" type="Area2D" parent="."]
 position = Vector2(-805, 27)
 script = ExtResource("15_peeyg")
-text = "[center]Aby sie poruszac uzyj klawiszy [color=blue]A[/color] oraz [color=blue]D[/color][/center]"
+text = "[center]Aby sie poruszac uzyj klawiszy [color=deepskyblue]A[/color] oraz [color=deepskyblue]D[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea4"]
 position = Vector2(-1, -21.5)
@@ -715,7 +701,7 @@ shape = SubResource("RectangleShape2D_s68yf")
 [node name="HintArea2" type="Area2D" parent="."]
 position = Vector2(1506, -373)
 script = ExtResource("15_peeyg")
-text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) z [color=green]modyfikacja[/color] aby ja odblokowac[/center]"
+text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=deepskyblue]E[/color]) z [color=green]modyfikacja[/color] aby ja odblokowac[/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea2"]
 position = Vector2(5, -0.5)
@@ -724,7 +710,7 @@ shape = SubResource("RectangleShape2D_lqsay")
 [node name="HintArea3" type="Area2D" parent="."]
 position = Vector2(1506, -373)
 script = ExtResource("15_peeyg")
-text = "[center][color=purple]Zryw[/color] ([color=blue]SHIFT[/color]) pozwala szybko przemiescic sie horyzontalnie[/center]"
+text = "[center][color=purple]Zryw[/color] ([color=deepskyblue]SHIFT[/color]) pozwala szybko przemiescic sie horyzontalnie[/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea3"]
 position = Vector2(-146.5, -3.5)

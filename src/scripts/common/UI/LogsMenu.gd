@@ -9,7 +9,7 @@ extends CanvasLayer
 @onready var player_logic: PlayerInteractionLogic = get_tree().get_root().get_node("Main").find_child("Player").find_child("InteractionLogicHolder")
 
 @export var button_containers: Array[Container]
-var current_log_id: Logs.LogId
+var current_log_id = null
 
 const title_prefix = "Tytul: "
 const author_prefix = "Autor: "
@@ -69,5 +69,6 @@ func _on_log_button_pressed(log_id: Logs.LogId) -> void:
 	update_log_audio(log_id)
 
 func _on_play_pressed():
-	log_player.stop()
-	player_logic.play_log(current_log_id)
+	if current_log_id != null:
+		log_player.stop()
+		player_logic.play_log(current_log_id)

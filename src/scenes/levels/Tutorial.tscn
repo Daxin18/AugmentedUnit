@@ -210,7 +210,7 @@ debug_color = Color(0.941176, 0.215686, 0.278431, 0.419608)
 [node name="HintArea2" type="Area2D" parent="Hints"]
 position = Vector2(-834, 79)
 script = ExtResource("8_y7qsc")
-text = "[center]Aby skoczyc, wcisnij [color=blue]spacje[/color][/center]"
+text = "[center]Aby skoczyc, wcisnij [color=deepskyblue]spacje[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea2"]
 position = Vector2(8, 23.5)
@@ -220,7 +220,7 @@ debug_color = Color(0.890196, 0.278431, 0.435294, 0.419608)
 [node name="HintArea3" type="Area2D" parent="Hints"]
 position = Vector2(-419, 103)
 script = ExtResource("8_y7qsc")
-text = "[center]Wchodzisz w [color=orange]interakcje[/color] wciskajac [color=blue]E[/color][/center]"
+text = "[center]Wchodzisz w [color=orange]interakcje[/color] wciskajac [color=deepskyblue]E[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea3"]
 position = Vector2(-54, -2)
@@ -270,7 +270,7 @@ debug_color = Color(0.835294, 0.364706, 0.364706, 0.419608)
 [node name="HintArea8" type="Area2D" parent="Hints"]
 position = Vector2(545, 112)
 script = ExtResource("8_y7qsc")
-text = "[center][color=green]Logi[/color] mozesz odsluchac w menu pauzy, klikajac [color=blue]ESC[/color], a nastepnie przycisk [color=blue]LOGI[/color][/center]"
+text = "[center][color=green]Logi[/color] mozesz odsluchac w menu pauzy, klikajac [color=deepskyblue]ESC[/color], a nastepnie przycisk [color=deepskyblue]LOGI[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hints/HintArea8"]
 position = Vector2(49, -5)

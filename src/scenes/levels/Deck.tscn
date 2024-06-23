@@ -322,21 +322,6 @@ texture = ExtResource("8_rivii")
 vframes = 15
 frame = 8
 
-[node name="DEV_ITEMS" type="Node2D" parent="."]
-position = Vector2(512, -1521)
-
-[node name="scream" parent="DEV_ITEMS" instance=ExtResource("2_5icbx")]
-position = Vector2(-136, 60)
-scale = Vector2(1.00803, 1)
-mod = 2
-
-[node name="DJump" parent="DEV_ITEMS" instance=ExtResource("2_5icbx")]
-position = Vector2(-7, 62)
-
-[node name="Dash" parent="DEV_ITEMS" instance=ExtResource("2_5icbx")]
-position = Vector2(130, 63)
-mod = 1
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(2445, -763)
 script = ExtResource("6_tt04w")
@@ -377,7 +362,7 @@ autoplay = true
 [node name="HintArea2" type="Area2D" parent="."]
 position = Vector2(4070, -1323)
 script = ExtResource("13_lq15p")
-text = "[center][color=purple]Krzyk[/color] ([color=blue]Q[/color]) pozwala zatrzymac sie w powietrzu i odnawia [color=purple]zryw[/color] oraz [color=purple]podwojny skok[/color][/center]"
+text = "[center][color=purple]Krzyk[/color] ([color=deepskyblue]Q[/color]) pozwala zatrzymac sie w powietrzu i odnawia [color=purple]zryw[/color] oraz [color=purple]podwojny skok[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea2"]
 position = Vector2(22, 3)

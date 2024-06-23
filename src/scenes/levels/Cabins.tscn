@@ -430,7 +430,8 @@ rotation = -1.17633
 movement_lock_duration = 0.4
 
 [node name="DEV_ITEMS" type="Node2D" parent="."]
-position = Vector2(2745, -446)
+visible = false
+position = Vector2(2800, -1137)
 
 [node name="scream" parent="DEV_ITEMS" instance=ExtResource("4_5qh27")]
 position = Vector2(-136, 60)
@@ -451,7 +452,7 @@ scale = Vector2(0.3, 0.3)
 [node name="HintArea" type="Area2D" parent="."]
 position = Vector2(3622, -46)
 script = ExtResource("13_1es12")
-text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=blue]E[/color]) z [color=gold]KAPIBARA[/color][/center]"
+text = "[center]Wejdz w [color=orange]interakcje[/color] ([color=deepskyblue]E[/color]) z [color=gold]KAPIBARA[/color][/center]"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintArea"]
 position = Vector2(26, -25.5)
