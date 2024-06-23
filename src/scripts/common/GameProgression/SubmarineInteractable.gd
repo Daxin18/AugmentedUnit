@@ -9,6 +9,7 @@ func interact(body: Actor) -> void:
 	and progression_manager.is_endgame() \
 	and progression_manager.is_power():
 		progression_manager.stop_timer()
+		progression_manager.stop_alarm_sound()
 		body.state_logic.block_player()
 		var win = win_scene.instantiate()
 		win.global_position = body.global_position + Vector2(-320, -180)
