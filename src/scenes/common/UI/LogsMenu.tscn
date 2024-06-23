@@ -1,0 +1,363 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl3vgubmncfl2"]
+
+[ext_resource type="Script" path="res://src/scripts/common/UI/LogsMenu.gd" id="1_ts1d1"]
+[ext_resource type="Texture2D" uid="uid://dh8nu35ltoogf" path="res://src/assets/UI/LogsMenu.png" id="2_hsihq"]
+[ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="3_m3ctx"]
+[ext_resource type="PackedScene" uid="uid://dooawahri7iws" path="res://src/scenes/common/UI/LogButton.tscn" id="4_i7emc"]
+[ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="4_rgo6l"]
+
+[node name="LogsMenu" type="CanvasLayer" node_paths=PackedStringArray("button_containers")]
+process_mode = 3
+layer = 10
+script = ExtResource("1_ts1d1")
+button_containers = [NodePath("TextureRect/ScrollContainer/JacekButtons"), NodePath("TextureRect/ScrollContainer2/RobertButtons"), NodePath("TextureRect/ScrollContainer3/JablonButtons"), NodePath("TextureRect/ScrollContainer4/InneButtons")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 646.0
+offset_bottom = 361.0
+texture = ExtResource("2_hsihq")
+
+[node name="Title" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 53.0
+offset_right = 578.0
+offset_bottom = 101.0
+theme_override_colors/font_shadow_color = Color(0.117647, 0.466667, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("3_m3ctx")
+theme_override_font_sizes/normal_font_size = 16
+text = "Title"
+
+[node name="Author" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 106.0
+offset_right = 578.0
+offset_bottom = 128.0
+theme_override_colors/font_shadow_color = Color(0.117647, 0.466667, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("3_m3ctx")
+theme_override_font_sizes/normal_font_size = 16
+text = "Author"
+
+[node name="Text" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 136.0
+offset_right = 575.0
+offset_bottom = 273.0
+theme_override_colors/font_shadow_color = Color(0.117647, 0.466667, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("3_m3ctx")
+theme_override_font_sizes/normal_font_size = 16
+text = "Text"
+
+[node name="Play" type="Button" parent="TextureRect"]
+process_mode = 3
+self_modulate = Color(0, 0.972549, 0.47451, 1)
+layout_mode = 0
+offset_left = 418.0
+offset_top = 280.0
+offset_right = 530.0
+offset_bottom = 310.0
+theme = ExtResource("4_rgo6l")
+text = "Odsluchaj"
+
+[node name="Jac" type="Label" parent="TextureRect"]
+self_modulate = Color(0.117647, 0.466667, 0.196078, 1)
+layout_mode = 2
+offset_left = 62.0
+offset_top = 54.0
+offset_right = 202.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Szeregowy Jacek"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/Jac"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 141.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Szeregowy Jacek"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 73.0
+offset_right = 210.0
+offset_bottom = 184.0
+
+[node name="JacekButtons" type="VBoxContainer" parent="TextureRect/ScrollContainer"]
+layout_mode = 2
+
+[node name="LogButton" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 3
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton2" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 4
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton3" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 5
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton4" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 6
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton5" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 7
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton6" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 8
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton7" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 9
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton8" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 10
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton9" parent="TextureRect/ScrollContainer/JacekButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                          ???                         "
+log_id = 11
+logs_menu = NodePath("../../../..")
+
+[node name="Rob" type="Label" parent="TextureRect"]
+self_modulate = Color(0.117647, 0.466667, 0.196078, 1)
+layout_mode = 2
+offset_left = 215.0
+offset_top = 53.0
+offset_right = 327.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Doktor Robert"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/Rob"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 1.0
+offset_right = 127.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Doktor Robert"
+horizontal_alignment = 1
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 73.0
+offset_right = 341.0
+offset_bottom = 183.0
+
+[node name="RobertButtons" type="VBoxContainer" parent="TextureRect/ScrollContainer2"]
+layout_mode = 2
+
+[node name="LogButton" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 12
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton2" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 13
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton3" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 14
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton4" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 15
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton5" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 16
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton6" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 17
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton7" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 18
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton8" parent="TextureRect/ScrollContainer2/RobertButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                    ???                   "
+log_id = 19
+logs_menu = NodePath("../../../..")
+
+[node name="Jab" type="Label" parent="TextureRect"]
+self_modulate = Color(0.117647, 0.466667, 0.196078, 1)
+layout_mode = 2
+offset_left = 60.0
+offset_top = 185.0
+offset_right = 218.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Admiral Jablonowski"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/Jab"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 141.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Admiral Jablonowski"
+horizontal_alignment = 1
+
+[node name="ScrollContainer3" type="ScrollContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 202.0
+offset_right = 236.0
+offset_bottom = 314.0
+
+[node name="JablonButtons" type="VBoxContainer" parent="TextureRect/ScrollContainer3"]
+layout_mode = 2
+
+[node name="LogButton" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 20
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton2" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 21
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton3" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 22
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton4" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 23
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton5" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 24
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton6" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 25
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton7" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 26
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton8" parent="TextureRect/ScrollContainer3/JablonButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "                                ???                               "
+log_id = 27
+logs_menu = NodePath("../../../..")
+
+[node name="Misc" type="Label" parent="TextureRect"]
+self_modulate = Color(0.117647, 0.466667, 0.196078, 1)
+layout_mode = 2
+offset_left = 244.0
+offset_top = 186.0
+offset_right = 314.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Inne Logi"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/Misc"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 67.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_m3ctx")
+theme_override_font_sizes/font_size = 16
+text = "Inne Logi"
+horizontal_alignment = 1
+
+[node name="ScrollContainer4" type="ScrollContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 205.0
+offset_right = 339.0
+offset_bottom = 315.0
+
+[node name="InneButtons" type="VBoxContainer" parent="TextureRect/ScrollContainer4"]
+layout_mode = 2
+
+[node name="LogButton" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+text = "             ???            "
+log_id = 1
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton2" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+log_id = 2
+logs_menu = NodePath("../../../..")
+
+[node name="LogButton3" parent="TextureRect/ScrollContainer4/InneButtons" node_paths=PackedStringArray("logs_menu") instance=ExtResource("4_i7emc")]
+layout_mode = 2
+logs_menu = NodePath("../../../..")
+
+[connection signal="pressed" from="TextureRect/Play" to="." method="_on_play_pressed"]

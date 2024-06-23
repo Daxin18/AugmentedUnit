@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdl4jmbgq3mcn"]
+
+[ext_resource type="Script" path="res://src/scripts/entities/Scream/Scream.gd" id="1_p2321"]
+[ext_resource type="Texture2D" uid="uid://cit07gb4b7bgr" path="res://src/assets/entities/scream/scan_0.png" id="1_vtvny"]
+[ext_resource type="Texture2D" uid="uid://oj11oapuqmjd" path="res://src/assets/entities/scream/scan_1.png" id="2_qfc8g"]
+[ext_resource type="Texture2D" uid="uid://histeg2c0p65" path="res://src/assets/entities/scream/scan_2.png" id="3_cfc67"]
+[ext_resource type="Texture2D" uid="uid://tvt6qtn58tv4" path="res://src/assets/entities/scream/scan_3.png" id="4_jerp1"]
+[ext_resource type="Texture2D" uid="uid://dc7l1oqj62tqp" path="res://src/assets/entities/scream/scan_4.png" id="5_hek3g"]
+[ext_resource type="Texture2D" uid="uid://cegak2tewl2nf" path="res://src/assets/entities/scream/scan_5.png" id="6_i1sdo"]
+[ext_resource type="Texture2D" uid="uid://dpxa2ayykyoit" path="res://src/assets/entities/scream/scan_6.png" id="7_gl1fy"]
+[ext_resource type="Texture2D" uid="uid://bc0aapx3ylx02" path="res://src/assets/entities/scream/scan_7.png" id="8_s75y2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkj8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vtvny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qfc8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cfc67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jerp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hek3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i1sdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gl1fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s75y2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ck1sc"]
+radius = 120.204
+
+[node name="Scream" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_p2321")
+
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.686275)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_gkj8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ck1sc")
+
+[connection signal="animation_finished" from="Anim" to="." method="_on_animated_sprite_2d_animation_finished"]

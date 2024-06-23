@@ -76,7 +76,8 @@ shape = SubResource("CapsuleShape2D_ct2rl")
 debug_color = Color(0.960784, 0.184314, 0.219608, 0.419608)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource("3_vfj2x")
-volume_db = -80.0
+volume_db = -10.0
 
 [connection signal="body_entered" from="Jumper" to="." method="_on_jumper_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bpvk8s82bk4rf"]
+[gd_scene load_steps=38 format=3 uid="uid://bpvk8s82bk4rf"]
 
 [ext_resource type="Script" path="res://src/scripts/entities/Player/Player.gd" id="1_6wu35"]
 [ext_resource type="Texture2D" uid="uid://dcu3u58ocxnd6" path="res://src/assets/entities/player/player.png" id="2_k6fly"]
@@ -18,8 +18,11 @@
 [ext_resource type="FontFile" uid="uid://ddckps1108f3l" path="res://src/assets/UI/pixelart.ttf" id="16_v1562"]
 [ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="17_drslc"]
 [ext_resource type="Texture2D" uid="uid://cq2d56fboonxf" path="res://src/assets/UI/dash.png" id="18_ckvg2"]
+[ext_resource type="Texture2D" uid="uid://c01u2mkvpnw8p" path="res://src/assets/UI/speaker.png" id="18_jspmx"]
+[ext_resource type="Script" path="res://src/scripts/common/UI/VAlign.gd" id="19_scvb5"]
 [ext_resource type="Texture2D" uid="uid://daijh2djjgmtt" path="res://src/assets/UI/djump.png" id="19_txq1w"]
 [ext_resource type="Texture2D" uid="uid://2o6wb0jjvxs1" path="res://src/assets/UI/scream.png" id="20_c314c"]
+[ext_resource type="PackedScene" uid="uid://db8srgwfvm4y2" path="res://src/scenes/common/UI/PauseMenu.tscn" id="23_kjc5o"]
 
 [sub_resource type="Animation" id="Animation_s75ks"]
 length = 0.001
@@ -171,10 +174,30 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0mc3"]
 radius = 19.0263
 
+[sub_resource type="RichTextEffect" id="RichTextEffect_o4p1k"]
+script = ExtResource("19_scvb5")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_jnaix"]
+script = ExtResource("19_scvb5")
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 100
 collision_mask = 31
 script = ExtResource("1_6wu35")
+
+[node name="Hint" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -117.0
+offset_top = -55.0
+offset_right = 117.0
+offset_bottom = -19.0
+theme_override_colors/font_shadow_color = Color(0.176471, 0.176471, 0.176471, 1)
+theme_override_fonts/normal_font = ExtResource("17_drslc")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center] This will be tutorial text"
+fit_content = true
+scroll_active = false
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_k6fly")
@@ -211,6 +234,8 @@ shape = SubResource("CircleShape2D_l0mc3")
 debug_color = Color(0.572549, 0.733333, 0.25098, 0.419608)
 
 [node name="LogPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+volume_db = 5.0
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -316,7 +341,7 @@ offset_top = 9.0
 offset_right = 214.0
 offset_bottom = 50.0
 theme_override_fonts/normal_font = ExtResource("16_v1562")
-text = "Laboratorium"
+text = "Magazyn"
 
 [node name="LevelName" type="RichTextLabel" parent="CanvasLayer/HUD/LevelName"]
 layout_mode = 0
@@ -325,7 +350,7 @@ offset_top = 1.0
 offset_right = 203.0
 offset_bottom = 42.0
 theme_override_fonts/normal_font = ExtResource("16_v1562")
-text = "Laboratorium"
+text = "Magazyn"
 
 [node name="Timer" type="RichTextLabel" parent="CanvasLayer/HUD"]
 visible = false
@@ -338,25 +363,39 @@ theme_override_fonts/normal_font = ExtResource("17_drslc")
 text = "12:37"
 
 [node name="CurrentLog" type="HBoxContainer" parent="CanvasLayer/HUD"]
-visible = false
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 0
-offset_left = 433.0
+offset_left = 382.0
 offset_top = 299.0
 offset_right = 640.0
-offset_bottom = 358.0
-alignment = 1
+offset_bottom = 359.0
+alignment = 2
 
 [node name="audio" type="TextureRect" parent="CanvasLayer/HUD/CurrentLog"]
 layout_mode = 2
+texture = ExtResource("18_jspmx")
 expand_mode = 2
 
 [node name="logTitle" type="RichTextLabel" parent="CanvasLayer/HUD/CurrentLog"]
+self_modulate = Color(0.329412, 0.568627, 0.403922, 1)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("16_v1562")
 bbcode_enabled = true
-text = "LogTitle"
-autowrap_mode = 2
-shortcut_keys_enabled = false
+text = "[valign px=-10]Zaczynam się do niego przekonywać..."
+custom_effects = [SubResource("RichTextEffect_o4p1k")]
+
+[node name="logTitle" type="RichTextLabel" parent="CanvasLayer/HUD/CurrentLog/logTitle"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 195.0
+offset_bottom = 62.0
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("16_v1562")
+bbcode_enabled = true
+text = "[valign px=-10]Zaczynam się do niego przekonywać..."
+custom_effects = [SubResource("RichTextEffect_jnaix")]
 
 [node name="Skills" type="HBoxContainer" parent="CanvasLayer/HUD"]
 layout_mode = 0
@@ -382,6 +421,9 @@ visible = false
 layout_mode = 2
 texture = ExtResource("20_c314c")
 expand_mode = 2
+
+[node name="PauseMenu" parent="." instance=ExtResource("23_kjc5o")]
+visible = false
 
 [connection signal="area_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hitbox" to="StateLogicHolder" method="_on_hitbox_body_entered"]

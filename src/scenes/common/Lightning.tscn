@@ -19,3 +19,4 @@ texture = ExtResource("2_8nrhp")
 hframes = 3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://k8rqyto38clj"]
+
+[ext_resource type="FontFile" uid="uid://ddckps1108f3l" path="res://src/assets/UI/pixelart.ttf" id="1_8hgap"]
+
+[node name="Control" type="Control"]
+z_index = 4000
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+self_modulate = Color(0.764706, 0.00784314, 0.517647, 1)
+offset_left = 69.0
+offset_top = 125.0
+offset_right = 580.0
+offset_bottom = 228.0
+theme_override_fonts/normal_font = ExtResource("1_8hgap")
+theme_override_font_sizes/normal_font_size = 80
+text = "Przegrana!"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 508.0
+offset_bottom = 100.0
+theme_override_fonts/normal_font = ExtResource("1_8hgap")
+theme_override_font_sizes/normal_font_size = 80
+text = "Przegrana!"

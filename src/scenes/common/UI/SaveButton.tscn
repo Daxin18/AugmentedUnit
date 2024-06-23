@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ofopmott3pj"]
+
+[ext_resource type="Script" path="res://src/scripts/common/UI/SaveButton.gd" id="1_sw16p"]
+[ext_resource type="Theme" uid="uid://b527674foce31" path="res://src/scenes/common/UI/Button_menu.tres" id="1_vkvsv"]
+
+[node name="SaveButton" type="Button"]
+process_mode = 3
+offset_right = 47.0
+offset_bottom = 41.0
+theme = ExtResource("1_vkvsv")
+text = "<"
+script = ExtResource("1_sw16p")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

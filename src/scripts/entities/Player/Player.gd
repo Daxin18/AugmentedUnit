@@ -5,15 +5,20 @@ extends Actor
 @onready var log_player = $LogPlayer
 
 @onready var state_machine = $state_machine
-@onready var state_logic = $StateLogicHolder
-@onready var interaction_logic = $InteractionLogicHolder
-@onready var audio_manager = $AudioManager
+@onready var state_logic: PlayerCommonStateLogic = $StateLogicHolder
+@onready var interaction_logic: PlayerInteractionLogic = $InteractionLogicHolder
+@onready var audio_manager: PlayerAudioManager = $AudioManager
+@onready var hint = $Hint
+
+# temp - remove once options implemented
+@export var logs_autoplay: bool
 
 func _ready() -> void:
 	state_machine.init(self)
 	state_logic.init(self)
 	interaction_logic.init(self)
 	state_logic.set_spawnpoint(position)
+	Options.autoplay_logs = logs_autoplay
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)

@@ -25,3 +25,5 @@ const deck_max_lightning_time: = 8
 
 const lightning_lifetime: = .75
 const lightning_delay: = 1.5
+
+const endgame_time = 120

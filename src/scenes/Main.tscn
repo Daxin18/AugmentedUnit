@@ -1,9 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://dipjbaccc7bll"]
+[gd_scene load_steps=20 format=3 uid="uid://dipjbaccc7bll"]
 
 [ext_resource type="Script" path="res://src/scripts/common/LevelSystem/LevelManager.gd" id="1_v7pol"]
 [ext_resource type="Script" path="res://src/scripts/entities/Bodypart/BodypartManager.gd" id="2_c0xjy"]
 [ext_resource type="PackedScene" uid="uid://bpvk8s82bk4rf" path="res://src/scenes/entities/Player.tscn" id="2_d5val"]
 [ext_resource type="Script" path="res://src/scripts/common/GameProgression/ProgressionManager.gd" id="4_q44dp"]
+[ext_resource type="AudioStream" uid="uid://c5xkbth76lusd" path="res://src/assets/levels/music/final/Siren (sound effect).mp3" id="4_v0dqv"]
+[ext_resource type="Script" path="res://src/scripts/common/UI/map.gd" id="6_5l3rv"]
+[ext_resource type="Texture2D" uid="uid://1qwltkoinif8" path="res://src/assets/UI/map.png" id="7_mt4qt"]
+[ext_resource type="Texture2D" uid="uid://csywg5ycl2hqf" path="res://src/assets/levels/reactor/reactor.png" id="8_fxfui"]
+[ext_resource type="Texture2D" uid="uid://ik44xfp8arml" path="res://src/assets/levels/submarine/submarine.png" id="9_538ai"]
+[ext_resource type="Texture2D" uid="uid://cjxlqil4fflle" path="res://src/assets/entities/modification/DEM.png" id="10_w0gvg"]
+[ext_resource type="FontFile" uid="uid://cy6qjro34vwe5" path="res://src/assets/UI/Pixelme.ttf" id="11_wuw55"]
 
 [sub_resource type="Animation" id="Animation_p2mqr"]
 length = 0.001
@@ -50,12 +57,51 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_3kyid"]
+resource_name = "fade_to_red"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 0, 0.0156863, 0.588235)]
+}
+
+[sub_resource type="Animation" id="Animation_75djv"]
+resource_name = "red_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0.0166664, 0.392157), Color(1, 0, 0.0156863, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e4mfl"]
 _data = {
 "RESET": SubResource("Animation_p2mqr"),
 "fade_to_black": SubResource("Animation_lnpxo"),
-"fade_to_normal": SubResource("Animation_e1ouv")
+"fade_to_normal": SubResource("Animation_e1ouv"),
+"fade_to_red": SubResource("Animation_3kyid"),
+"red_to_normal": SubResource("Animation_75djv")
 }
+
+[sub_resource type="Gradient" id="Gradient_itlpr"]
+colors = PackedColorArray(0.0497178, 0.532313, 0.794668, 1, 0.268135, 0.88194, 0.897033, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l7qg0"]
+gradient = SubResource("Gradient_itlpr")
+fill = 1
 
 [node name="Main" type="Node2D"]
 
@@ -63,6 +109,30 @@ _data = {
 
 [node name="BodypartManager" type="Node" parent="."]
 script = ExtResource("2_c0xjy")
+
+[node name="ProgressionManager" type="Node" parent="."]
+script = ExtResource("4_q44dp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ProgressionManager"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ProgressionManager"]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="ProgressionManager/CanvasLayer"]
+offset_left = -220.0
+offset_top = -146.0
+offset_right = 873.0
+offset_bottom = 504.0
+color = Color(0, 0, 0, 0)
+
+[node name="alarm" type="AnimationPlayer" parent="ProgressionManager/CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_e4mfl")
+}
+
+[node name="AlarmSound" type="AudioStreamPlayer" parent="ProgressionManager"]
+stream = ExtResource("4_v0dqv")
+volume_db = -20.0
 
 [node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("1_v7pol")
@@ -83,5 +153,79 @@ libraries = {
 "": SubResource("AnimationLibrary_e4mfl")
 }
 
-[node name="ProgressionManager" type="Node" parent="."]
-script = ExtResource("4_q44dp")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LevelManager"]
+volume_db = -10.0
+
+[node name="Map" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("6_5l3rv")
+
+[node name="TextureRect2" type="TextureRect" parent="Map"]
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 569.0
+offset_bottom = 287.0
+texture = SubResource("GradientTexture2D_l7qg0")
+
+[node name="TextureRect" type="TextureRect" parent="Map/TextureRect2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 484.0
+offset_bottom = 232.0
+texture = ExtResource("7_mt4qt")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Map/TextureRect2/TextureRect"]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 177.0
+offset_right = 432.0
+offset_bottom = 225.0
+texture = ExtResource("8_fxfui")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Map/TextureRect2/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 172.0
+offset_right = 75.0
+offset_bottom = 238.0
+texture = ExtResource("9_538ai")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Map/TextureRect2/TextureRect"]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 99.0
+offset_right = 427.0
+offset_bottom = 124.0
+texture = ExtResource("10_w0gvg")
+
+[node name="ColorRect" type="ColorRect" parent="Map/TextureRect2"]
+layout_mode = 0
+offset_right = 94.0
+offset_bottom = 126.0
+color = Color(0.360784, 0.360784, 0.360784, 1)
+
+[node name="Alarm" type="RichTextLabel" parent="Map/TextureRect2/ColorRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 25.0
+offset_right = 65.0
+offset_bottom = 64.0
+theme_override_colors/font_shadow_color = Color(0.168627, 0.168627, 0.168627, 1)
+theme_override_fonts/normal_font = ExtResource("11_wuw55")
+bbcode_enabled = true
+text = "Alarm"
+
+[node name="Power" type="RichTextLabel" parent="Map/TextureRect2/ColorRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 67.0
+offset_right = 88.0
+offset_bottom = 106.0
+theme_override_colors/font_shadow_color = Color(0.168627, 0.168627, 0.168627, 1)
+theme_override_fonts/normal_font = ExtResource("11_wuw55")
+bbcode_enabled = true
+text = "Zasilanie"

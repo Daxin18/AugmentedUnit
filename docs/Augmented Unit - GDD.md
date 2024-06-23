@@ -58,13 +58,13 @@ Sekcje, które będziemy mogli znaleźć w grze:
 Nazwa | Obowiązkowy | Modyfikacja | Logi | Opis
 ---|---|---|---|---
 Pokład statku | Y | krzyk | Znikome | przeszkody w postaci pseudo-losowych uderzeń piorunów czy powiewów wiatru
-Kajuty załogi | Y | podwójny skok | DUŻO, przybliżające historię postaci | skrót do innych rejonów, ale jest w nim dużo trupów, które w końcowym etapie gry uniemożliwią przejście przez ten sektor
-Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez działka automatyczne, czy kolce/pożar
-Reaktor | N | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala wyłączyć zasilanie działkom blokującym inne opcjonalne pokoje
-Laboratorium | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry, cutscenki tutaj
-Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia
-Pokój z łodzią podwodną (Submarine) | N | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | Dzięki łodzi można uciec ze statku po tym, jak uruchomimy bombę, z łodzi można skorzystać tylko, jeśli alarm został uruchomiony, ale potrzebuje ona zasilania
-Pokój treningowy | Y | Narrator | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka, będzie początkowo pokojem developerskim, w którym później umieścimy samouczek
+Kajuty | Y | podwójny skok | DUŻO, przybliżające historię postaci | przejście między magazynem a laboratorium, w kajutach znajduje się "easter egg" w postaci zmienianej muzyki w grze
+Magazyn | Y | zryw | Kilka, pozwalające zapoznać się z postaciami | początkowa sekcja, w niej znajdziemy przejścia do dodatkowych poziomów i kilka podstawowych informacji, oraz drogi blokowane przez kolce/pożar
+Reaktor | Y | - | Kilka, pogłębienie problemów psychicznych postaci | ukryty koło ostatniej sekcji, pozwala włączyć zasilanie, co pozwoli uciec ze statku
+Laboratorium | Y | DEM (Deus Ex Machina) | DUŻO, silniejsze podpowiedzi na pętlę czasu i możliwość wysadzenia statku | pokój z logami bezpieczeństwa, które mogą nakierować gracza na prawdziwe zakończenie gry, końcowa część gry
+Zbrojownia | N | - | Kilka, ostatni log Jacka i kilka o tym, po co nam broń nuklearna | w nim można aktywować bombę nuklearną, która rozpocznie odliczanie do samozniszczenia - alternatywne zakończenie
+Pokój z łodzią podwodną (Submarine) | Y | - | Dwa, mówiące, po co łódź i że może przetrwać wybuch nuklearny | Dzięki łodzi można uciec ze statku po tym, jak uruchomimy bombę, z łodzi można skorzystać tylko, jeśli alarm został uruchomiony, ale potrzebuje ona zasilania
+Pokój treningowy | Y | - | Jeden, przykład mechaniki | Pokój, do którego jesteśmy teleportowaniu w ramach samouczka
 
 ### Fabuła
 
@@ -139,27 +139,27 @@ Po co to tu jest? | Robert | Robert_1 | Magazyn | Augmented Unit... Nie rozumiem
 Ci ludzie... | Robert | Robert_2 | Magazyn | To niewiarygodne jak dużo trzeba gadać z tymi ludźmi, zanim cokolwiek dostanę z magazynu... Czy oni nie rozumieją, że w mojej pracy CZAS JEST KLUCZOWY?!
 Początek znajomości | Jacek | Jacek_1 | Magazyn | Warta w magazynie nie jest taka zła, dzięki niej mogę czasem porozmawiać z Robertem. Chciałbym kiedyś pomóc mu z eksperymentami, zamiast tylko siedzieć w różnych częściach statku.
 Podziw: bronie | Jabłonowski | Jab_1 | Magazyn | Za każdym razem, gdy tu przychodzę, nie mogę się powstrzymać przed podziwianiem tej kolekcji broni... Ten statek to prawdziwe dzieło sztuki!
-On musi z kimś porozmawiać | Jabłonowski | Jab_2 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
-Podziw: łódź podwodna | Jabłonowski | Jab_3 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
-Na wszelki wypadek... | Jacek | Jacek_2 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!
-Zrobiłem to... | Jabłonowski | Jab_4 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
-Waga naszej misji | Jabłonowski | Jab_5 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...
-Ostatnie życzenie | Jacek | Jacek_3 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
+On musi z kimś porozmawiać | Jabłonowski | Jab_7 | Magazyn | On oszalał! Wczoraj gadał jakieś głupoty, a teraz włamał się do zbrojowni! Może ktoś musi z nim porozmawiać...
+Podziw: łódź podwodna | Jabłonowski | Jab_2 | Submarine | Ta łódź... to najcudowniejsza defensywna technologia na tym statku... ponoć może nawet przetrwać wybuch nuklearny!
+Na wszelki wypadek... | Jacek | Jacek_8 | Submarine | Ok... Jacek... pamiętaj, łódź podwodna może być aktywowana TYLKO, jeśli alarm został już odpalony, a generator działa, pamiętaj, żeby wszystko przygotować, zanim coś zrobisz! Widziałeś, jak możesz skończyć!
+Zrobiłem to... | Jabłonowski | Jab_8 | Kajuty | Zrobiłem to... Ja... Już go nie ma... I nikt nie wie... Tyl... Tylko ja mam dostęp do zbrojowni i... ja... zostawiłem go tam... Boże! [płacz]
+Waga naszej misji | Jabłonowski | Jab_3 | Zbrojownia | Nasza misja jest ważna... to miejsce mi o tym przypomina... Jeden błąd, jeden atak i cały statek musi zostać wysadzony w powietrze! Tylko Admirał ma dostęp do tego pokoju, tylko Admirał ma kody... Tylko ja decyduję, co się stanie na wypadek ataku...
+Ostatnie życzenie | Jacek | Jacek_9 | Zbrojownia | To słowa pożegnalne... Jeśli ktoś czyta ten log, to znaczy, że znalazł go przy moim ciele i coś poszło nie tak... Proszę... upewnij się, że DEM zostanie zniszczony... To... to jest zbyt niebezpieczne, żeby ktokolwiek mógł tego używać...
 Dlaczego statek? | Robert | Robert_3 | Pokład | Czasami ludzie pytają się — czemu akurat statek? Czemu nie pracujesz na lądzie, czy w jakimś bunkrze? Odchodzę wtedy bez słowa... Oni nie potrafią pojąć, że pływając, dużo prościej jest pojąć naturę mojej pracy. Zrozumieć fenomen, który jest z nami non-stop, a którego nie dostrzegamy!
 Ten szeregowy... | Robert | Robert_4 | Kajuty | Ten szeregowy, jak on miał... Janek? Nie ważne! Ostatnio zaczął się sporo koło mnie kręcić, podpytuje o postęp prac, próbuje dowiedzieć się czegoś o DEM... Zabiera mi tylko czas! Chociaż... Wydaje się faktycznie zainteresowany, może się jeszcze do czegoś przydać.
-Nazywa to DEM | Jacek | Jacek_4 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej!
-Zaczynam się do niego przekonywać... | Robert | Robert_5 | Kajuty | Ten Janek zdaje się być coraz bardziej zainteresowany moimi badaniami... Kręci się przy laboratorium, dopytuje, przygląda się DEM, gdy jesteśmy w laboratorium... Powoli zaczynam się do niego przekonywać... może być dobrym pomocnikiem
-W końcu jest ciekawie | Jacek | Jacek_5 | Kajuty | Robert... cały czas myli moje imię, ale całkiem przyjemnie się z nim pracuje. Można dużo się od niego dowiedzieć, a chociaż nie muszę nudzić się na statku. Chciałbym kiedyś zrobić coś przy DEM!
-Cieszę się, że jest szczęśliwy | Jabłonowski | Jab_6 | Kajuty | Jacek ostatnio spędza bardzo dużo czasu z Robertem, cieszę się, że w końcu ma co robić, widać było, że nie przepada za wartami, a w ten sposób może chociaż uda im się skończyć te badania szybciej.
-Jest bystry... ale nadal głupi | Robert | Robert_6 | Laboratorium | Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny... potem chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka! 
-To było dziwne | Jacek | Jacek_6 | Laboratorium | Walnąłem dziś DEM młotkiem, chciałem sprawdzić, czy naprawdę jest tak wytrzymałe, jak Robert mówił... Po uderzeniu poczułem się dziwnie, a Robert zaczął krzyczeć, że nie powinienem się do tego zbliżać bez ochrony i mówił coś o broni nuklearnej.
-Nie czuję się najlepiej | Jacek | Jacek_7 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
-Tym razem przesadził | Jabłonowski | Jab_7 | Kajuty | Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!
+Nazywa to DEM | Jacek | Jacek_2 | Kajuty | Ostatnio wypytywałem Roberta o tę jego maszynkę... broń? Nie ważne! Nazywa to DEM, skrót od Deus Ex Machina, mówi, że to dlatego, że to tak jakby na nowo wynalazł czas i przestrzeń... Muszę dowiedzieć się więcej!
+Może się przydać | Robert | Robert_5 | Kajuty | Ten Janek zdaje się być coraz bardziej zainteresowany moimi badaniami... Kręci się przy laboratorium, dopytuje, przygląda się DEM, gdy jesteśmy w laboratorium... Powoli zaczynam się do niego przekonywać... może być dobrym pomocnikiem
+W końcu jest ciekawie | Jacek | Jacek_3 | Kajuty | Robert... cały czas myli moje imię, ale całkiem przyjemnie się z nim pracuje. Można dużo się od niego dowiedzieć, a chociaż nie muszę nudzić się na statku. Chciałbym kiedyś zrobić coś przy DEM!
+Cieszę się, że jest szczęśliwy | Jabłonowski | Jab_4 | Kajuty | Jacek ostatnio spędza bardzo dużo czasu z Robertem, cieszę się, że w końcu ma co robić, widać było, że nie przepada za wartami, a w ten sposób może chociaż uda im się skończyć te badania szybciej.
+Zadziwia mnie | Robert | Robert_6 | Laboratorium | Z każdym dniem Janek zadziwia mnie coraz bardziej! Dzisiaj próbował dotknąć DEM __GOŁYMI RĘKAMI__! Wie przecież, że DEM nie jest jeszcze stabilny... potem chciał sprawdzić, co się stanie, gdy spróbuje uderzyć to młotkiem! Powiedziałem mu, że jeśli chce cokolwiek zrobić tej broni, to potrzebowałby broni nuklearnej, a nie młotka! 
+To było dziwne | Jacek | Jacek_4 | Laboratorium | Walnąłem dziś DEM młotkiem, chciałem sprawdzić, czy naprawdę jest tak wytrzymałe, jak Robert mówił... Po uderzeniu poczułem się dziwnie, a Robert zaczął krzyczeć, że nie powinienem się do tego zbliżać bez ochrony i mówił coś o broni nuklearnej.
+Nie czuję się najlepiej | Jacek | Jacek_5 | Kajuty | Moja głowa... Odkąd uderzyłem DEM, czuję się... dziwnie... jakbym nie był sobą, wszystko mi się miesza, wszystko wydaje się obce, ten statek nie jest już taki, jak pamiętałem! <!-- Notka: Jacek odczuwa efekty załamań czasu i czuje się dziwnie, bo pamięta swoje wspomnienia z przyszłości, których jeszcze nie doświadczył(?) -->
+Tym razem przesadził | Jabłonowski | Jab_5 | Kajuty | Właśnie wróciłem z rozmowy z Robertem! Po ostatnim incydencie w laboratorium Jacek dziwnie się zachowuje... Zabroniłem mu już tam eksperymentować i dałem kilka dni na dojście do siebie, a Robert będzie już dużo dokładniej kontrolowany!
 Za kogo on się uważa?! | Robert | Robert_7 | Laboratorium | Za kogo on się uważa?! Ten Admirał twierdzi, że Janek ma problemy przeze mnie! Sam uderzył młotkiem w DEM, nie słuchał moich ostrzeżeń i to on sobie coś zrobił... Wróci do siebie za dzień czy dwa i powinien dalej mi pomagać, nic mu się nie stanie, jeśli będzie się słuchał!
-Trzeba go ostrzec! | Jacek | Jacek_8 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad tym pracować!
-Jest z nim gorzej | Jabłonowski | Jab_8 | Laboratorium | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas tylko tam siedzi, jakby ostatni wypadek tylko bardziej go zmotywował...
+Trzeba go ostrzec! | Jacek | Jacek_6 | Kajuty | Nie mam już wstępu do laboratorium... Chciałem tylko pójść porozmawiać z Robertem... Widziałem dziwne rzeczy, DEM nie jest bezpieczny, nie powinniśmy dalej nad tym pracować!
+Jest z nim gorzej | Jabłonowski | Jab_6 | Laboratorium | Z Jackiem jest coraz gorzej! Usilnie próbuje dostać się do laboratorium, żeby porozmawiać z Robertem... A on cały czas tylko tam siedzi, jakby ostatni wypadek tylko bardziej go zmotywował...
 Muszę to zbadać | Robert | Robert_8 | Laboratorium | Udało mi się dzisiaj porozmawiać krótko z Jankiem w kajutach... Mówił o DEM, o tym, że od wypadku widzi dziwne rzeczy... Czy to możliwe, że DEM zaczyna działać, jak powinien? Muszę to sprawdzić!
-Nie mogę tak dłużej | Jacek | Jacek_9 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... Tylko bardziej go to zmotywowało do prowadzenia prac nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
+Nie mogę tak dłużej | Jacek | Jacek_7 | Kajuty | Robert nie zaniepokoił się tym, co mu powiedziałem... Tylko bardziej go to zmotywowało do prowadzenia prac nad DEM! Nie można dłużej tego ciągnąć! Muszę wziąć się w garść i zniszczyć to, zanim będzie za późno!
 ??? | ??? | ??? | ??? | ???
 
 _*Id może się zmienić, zorganizujemy to, gdy wszystkie logi będą napisane_
@@ -172,12 +172,17 @@ Augmented Unit — uniwersalny robot odpowiedzialny za przechowywanie sekretów 
 
 #### Przeciwnicy
 
-- Działka automatyczne na statku blokujące dostęp do niektórych rejonów, wymagają zasilania, aby działać.
-- Załoga statku (po cofnięciu się w czasie), ludzie, którzy próbują powstrzymać AU przed ucieczką ze statku(?), stoją w miejscu i strzelają.
+- ~~Działka automatyczne na statku blokujące dostęp do niektórych rejonów, wymagają zasilania, aby działać.~~
+- ~~Załoga statku (po cofnięciu się w czasie), ludzie, którzy próbują powstrzymać AU przed ucieczką ze statku(?), stoją w miejscu i strzelają.~~
+
+_Notka: Po implementacji i wewnętrznych testach gry uznaliśmy, że przeciwnicy spowalniają tylko grę i sprawiają, że będzie ona niepotrzebnie frustrująca_
+
 
 #### NPC
 
-Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi za dużo czasu w jednym obszarze nie wykonując żadnej konkretnej akcji
+~~Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi za dużo czasu w jednym obszarze nie wykonując żadnej konkretnej akcji~~
+
+_Notka: Zrezygnowaliśmy z robota na rzecz podpowiedzi zawsze widocznych w konkretnych miejscach mapy_
 
 ## Rozgrywka i mechaniki
 
@@ -185,35 +190,32 @@ Robot Porządkowy (RP) - mały robot, który pomaga graczowi, jeśli ten spędzi
 
 - __Głównym celem__ gracza będzie dostanie się do wspomnianego wcześniej __Laboratorium__. Po drodze napotka różne przeszkody w postaci poruszających się platform, systemów bezpieczeństwa na statku, czy zagrożeń środowiskowych (woda/ogień/prąd).
 -  __Dodatkowo__, znalezione logi będą mogły oferować informacje, na podstawie których gracz będzie mógł próbować dostać się do opcjonalnych, ukrytych obszarów, które pozwolą mu na odkrycie głębszej historii, czy ukrytych zakończeń.
-- Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do początkowego pokoju w określonym czasie, przy okazji unikając zabezpieczeń, które zostaną aktywowane.
+- Przy __zebraniu ostatniej modyfikacji__ pojawi się pierwszy quest w grze - _"przeżyj"_ i gracz będzie musiał wrócić do ~~początkowego pokoju~~ pokoju z łodzią podwodną w określonym czasie, ~~przy okazji unikając zabezpieczeń, które zostaną aktywowane~~ aby uciec ze statku.
+
+_Notka: Zrezygnowano z systemów zabezpieczeń, zamiast tego uruchomiony zostanie odliczanie do samozniszczenia statku_
 
 ### Interakcja/kontrolery/sterowanie
 
-Postać gracza będzie kontrolowana za pomocą klawiatury (i myszy*) lub (opcjonalnie, nie w MVP) kontrolera.
+Postać gracza będzie kontrolowana za pomocą klawiatury lub (opcjonalnie, nie w MVP) kontrolera.
 Podstawowe sterowanie zostało przedstawione poniżej:
 
 - __AD__ - poruszanie się lewo-prawo
 - __Spacja__ - skok [dodatkowo podwójny skok — jako modyfikacja]
 - __LShift__ - zryw (modyfikacja)
 - __E__ - interakcja
-- __LPM__ - DEM (ostatnia modyfikacja, atak mieczem)
 - __Q__ - krzyk (modyfikacja)
-
-_*może to jeszcze ulec zmianie, gracz niekoniecznie musi korzystać z myszy na koniec, jeśli nie jest ona potrzebna w całej reszcie gry (poza menu)_
 
 <div style="page-break-after: always;"></div>
 
 ### Multiplayer
 
-Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej. Jedyną namiastką mogą być globalne/lokalne tablice wyników do speedrunów.
+Z uwagi na gatunek gry (narracyjna), nie będzie ona wspierała gry wieloosobowej.
 
 ## Przebieg gry (flow)
 
 ### Główny splashscreen
 
-Na tym etapie jedynie jako Concept-art
-
-![podstawowy splashscreen](images/image-1.png)
+![podstawowy splashscreen](../src/assets/UI/Menu.png)
 
 ### Cutscenki, narracja in-game'owa
 
@@ -234,10 +236,11 @@ Poniżej można zobaczyć concept-art menu i jego finalną wersję
 
 Bardzo ograniczony, aby nie rozpraszać gracza.
 W lewym górnym rogu znajdować się będzie nazwa aktualnego poziomu/sekcji, w lewym dolnym ikonki odblokowanych modyfikacji, przyciemnione, gdy gracz nie może ich użyć.
-Prawy górny róg zostanie wykorzystany przy alternatywnych zakończeniach - wyświetli pozostały czas, a w prawym dolnym będą pojawiać się aktualnie grające logi (gdy zostaną one wszystkie skonfigurowane).
+Prawy górny róg zostanie wykorzystany przy alternatywnych zakończeniach - wyświetli pozostały czas, a w prawym dolnym będą pojawiać się aktualnie grające logi.
 
 ![hud-1](images/hud-1.png)
 ![hud-2](images/hud-2.png)
+![hud-3](images/hud-3.png)
 
 ### Mapy
 
@@ -255,6 +258,8 @@ Warto zaznaczyć, że pokoje 4 i 5 mogą być odwiedzone w innej kolejności, je
 Pokoje opcjonalne nie zostały tu uwzględnione, jednak gracz od samego początku będzie miał z Magazynu dostęp do Pokoju z łodzią podwodną (__miniaturka łodzi, pod Magazynem__), z Laboratorium będzie mógł dość łatwo dostać się do Reaktora (__R__), a po jego wyłączeniu cofnąć się i przez Magazyn wrócić do Zbrojowni (__Z__).
 
 ![Mapa statku](./images/ship-map.png)
+
+_Notka: Rozłożenie pokojów uległo zmianie_
 
 ## Assety
 
@@ -301,14 +306,16 @@ Magazyn:
 
 ### Muzyka
 
-_W trakcie przygotowania_
-
-Muzyka będzie służyć historii, postaramy się przygotować też dźwięki otoczenia, które pomogą wprowadzić gracza w nastrój.
-<!-- TODO: wkleić i opisać + linki -->
+Cała muzyka w grze została wygenerowana z pomocą [SUNO AI](https://suno.com).
+Każda sekcja statku ma własny utwór grający w tle, poza tym istnieją różne utwory odgrywane przy zakończeniu, bądź po znalezieniu "easter egga"
 
 ### Narracja
 
 Treść wszystkich logów (będących jedyną formą narracji w grze) znajduje się w sekcji [Fabuła/Logi](#logi)
+
+Gracz będzie mógł przeglądać i odsłuchiwać zebrane wcześniej logi z poziomu menu.
+
+![Menu logów](./images/log-menu.png)
 
 ## PoC/prototyp
 
@@ -337,8 +344,6 @@ Na potrzeby prototypu przygotowane zostaną:
 Odpowiedzialność za sterowanie ruchem postaci została w pełni oddelegowana do maszyny stanów, która używa metod aktualnego stanu do obsługi tego ruchu.
 W celu utrzymania kodu stanów w czytelnej postaci, całość logiki przechowywana jest w osobnym Nodzie (Node) w scenie gracza.
 Pozwala to też trzymać wszystkie ważne do debugowania zmienne w jednym miejscu i mieć ciągły podgląd stanu postaci.
-
-<div style="page-break-after: always;"></div>
 
 W poniższej tabeli znajdują się wszystkie przejścia między stanami, nazwy stanów zostały takie jak w kodzie, tj: 
 - Jumping --> skok
@@ -373,8 +378,6 @@ _*Wejście do stanów Moving oraz Idle odnawia skoki, zrywy i krzyki gracza, wi�
 
 _**Przejście ze stanu Jumping do Jumping to jedyny przypadek, w którym jawnie przechodzimy ze stanu w samego siebie (zamiast zostawać w nim!), sprawia to, że podwójny skok jest możliwy, gdyż nadanie prędkości dzieje się na wejściu do stanu_
 
-<div style="page-break-after: always;"></div>
-
 Postać gracza ma też dwa różne źródła dźwięków, aby uniknąć problemów z kolejkowaniem albo przerywaniem dźwięku.
 Jedno służy do odtwarzania logów, drugie (zarządzane przez specjalnego menadżera audio) odtwarza inne dźwięki takie jak skok, śmierć czy zryw.
 Aby odegrać dźwięk za pomocą menadżer audio, należy najpierw dodać odpowiednią wartość do enuma _Sound_ i mapować go na plik z dźwiękiem w słowniku _mapping_.
@@ -407,18 +410,16 @@ Do ułatwienia gry, na tle obecne są strzałki, wskazujące kierunek ewentualne
 W kajutach specyficzną mechaniką są "trampoliny", które wystrzeliwują gracza we wskazanym kierunku.
 Każda trampolina ma własną siłę i czas, na który interakcja gracza zostaje wyłączona (aby tworzyć pułapki i specjalne przejścia).s
 
-Za jedną pułapką został umieszczony pokój, do którego można się dostać jedynie po odblokowaniu wszystkich modyfikacji.
+Za jedną pułapką został umieszczony pokój, do którego można się dostać jedynie po odblokowaniu wszystkich modyfikacji, w nim znajduje się "easter egg" zmieniający muzykę w tle do czasu powrotu do menu lub włączenia alarmu (koniec gry).
 
 Odblokowujemy tu podwójny skok.
-
-<div style="page-break-after: always;"></div>
 
 #### Poziom 3 - Pokład
 
 Na pokładzie specyficzną mechaniką jest burza - co jakiś czas w okolicy gracza uderzają pioruny, które mogą go zabić.
 Dodatkowo - jest to jedyna sekcja, która nie jest w pełni zamknięta - gracz może wyskoczyć poza burtę, co również zakończy się śmiercią postaci gracza.
 
-Na tym poziomie również znajduje się ukryty pokój, do którego można wejść, jeśli dostaliśmy się na pokład.
+Na tym poziomie również znajduje się ukryty pokój, do którego można wejść, jeśli dostaliśmy się na pokład, znajduje się w nim jeden dodatkowy log - "easter egg", który jest jedynie szczeknięciem psa.
 
 Odblokowujemy tu krzyk.
 
@@ -430,6 +431,22 @@ Przy wejściu w aktywną anomalię nakładane są na gracza losowe efekty - aktu
 Na poziomie został ukryty pokój, do którego można się dostać, jedynie korzystając z anomalii.
 
 Znajduje się tu DEM - przedmiot, którego zebranie kończy grę.
+
+#### Poziom 5 - Reaktor
+
+Mały poziom będący "podpoziomem" laboratorium (przechodząc między nimi nie zmienia się muzyka). Znajduje się tutaj reaktor, który możemy aktywować, aby przywrócić zasilanie na statku i móc uciec łodzią podwodną.
+
+#### Poziom 6 - Pokój z łodzią podwodną
+
+Mały poziom, "podpoziom" magazynu. Znajduje się tu łódź podwodna, która pozwala uciec ze statku - wygrać grę.
+
+#### Poziom 7 - Zbrojownia
+
+Mały poziom, pozwala aktywować sekwencję samozniszczenia (a tym samym alarm), co pozwoli na odblokowanie alternatywnego zakończenia gry.
+
+#### Poziom 8 - Samouczek/Trening
+
+Mały poziom pełen "podpowiedzi", które pozwalają graczowi zapoznać się ze sterowaniem i podstawowymi mechanikami wykorzystywanymi przez resztę gry.
 
 ### Modyfikacje
 
@@ -470,9 +487,139 @@ Klasa zajmująca się zbieraniem informacji o postępach gracza.
 Aktualnie zapisywane tam są tylko informacje o zebranych logach i modyfikacjach, jednak z czasem może ona zostać rozbudowana.
 Informacje te są aktualnie wykorzystywane przy przejściach między poziomami, tak, aby zebrane wcześniej przedmioty nie pojawiały się drugi raz na mapie po powrocie do tej samej strefy.
 
+Ponadto zajmuje się ona wszystkimi "licznikami czasu" takimi jak ogólnie spędzony czas w grze i licznik pojawiający się na koniec gry.
+Zakończenia gry, jak i oddelegowanie zapisu danych również są tutaj obsługiwane
+
+#### LevelManager
+
+Klasa zajmująca się przejściami pomiędzy poziomami, w tym zmianami muzyki (konsultując aktualny stan gry z ProgressionManagerem) oraz animacjami przejść.
+
+#### SaveData
+
+Statyczna klasa zajmująca się ściśle zapisem danych. Otrzymuje dane od ProgressionManagera i zapisuje je w odpowiednim pliku.
+Pozwala też odczytywać dane z pliku i resetować zapis do domyślnych wartości.
+Wykorzystuje wbudowaną klasę ConfigFile, gdyż dane o Logach i Modyfikacjach nie mogły zostać zapisane w standardowym pliku zapisu.
+
+#### Hint
+
+Mała klasa rozszerzająca wbudowane Area2D. Sprawia ona, że gdy gracz wejdzie w daną strefę, pojawia się nad jego głową tekst - podpowiedź.
+Silnie wykorzystana w samouczku i przy modyfikacjach.
+
 <!-- ### TODO? - w trakcie implementacji mogą pojawić się kolejne sekcje warte opisania -->
 
 <div style="page-break-after: always;"></div>
+
+## Playtesty, ankietyzacja
+
+### Ogólne dane o testujących
+
+Testy przeprowadzono na grupie 10 ludzi w wieku od 17 do 62 lat, w tym 7 mężczyzn i 3 kobiety. W grupie znalazły się osoby z całego zakresu doświadczenia z grami - od nie grających w ogóle, po ludzi określających się jako "zaawansowany gracz nałogowy".
+
+Gracze otrzymali grę, grając w nią aż do osiągnięcia zakończenia (wygraną bądź przegraną). Zajmowało im to średnio koło 15 minut. Po skończonej grze gracze otrzymali ankietę z pytaniami, które wraz z odpowiedziami znajdują się niżej.
+
+### Odpowiedzi
+
+#### Czy były w grze momenty, gdzie na ekranie działo się za dużo / ilość informacji była przytłaczająca?
+
+9 NIE, 1 TAK
+
+Osoba odpowiadająca tak miała problem z poruszającymi się platformami - brak doświadczenia w platformówkach
+
+#### Czy jasne było kiedy możliwe jest np. użycie "zrywu" (albo innych umiejętności)?
+
+100% TAK
+
+#### Czy brak mapy poziomów przeszkadzał w rozgrywce?
+
+50/50
+
+Części graczy podobał się brak mapy - zachęcał ich do eksploracji, inni mieli problemy, bo woleliby wiedzieć w którą stronę iść.
+Z uwagi na to, że połowa graczy chciałaby mapę, została ona dodana do gry, ale nie pokazuje pozycji gracza, aby dalej zachęcać do eksploracji.
+
+#### Czy funkcje wszystkich przycisków menu były jasne?
+
+100% TAK
+
+#### Czy wiedziałeś(-aś) jaki jest twój cel w grze?
+
+80% TAK, 20% NIE
+
+Gracze głosujący na NIE byli tymi, którzy po prostu przebiegli przez samouczek, nie patrząc na podane im informacje.
+
+#### Czy sterowanie było intuicyjne?
+
+100% TAK
+
+#### Czy zawsze było jasne gdzie należy iść?
+
+70% TAK, 30% NIE
+
+Podobnie jak w pytaniu o mapę - rozwiązuje ona ten problem.
+
+#### Czy rzeczy, z którymi wchodziło się w interakcje były zawsze widoczne?
+
+100% TAK
+
+#### Czy jasne było co jest czym? (Czy wygląd przedmiotów sugerował co mogą robić?)
+
+80% TAK, 20% NIE
+
+Gracze głosujący na NIE byli tymi grającymi na wcześniejszej wersji gry, gdzie nie było podpowiedzi mówiących o wchodzeniu w interakcję przy komputerze w zbrojowni i w reaktorze.
+
+#### Jak oceniasz... (skala 1-5)
+
+Tabela z liczbą danych ocen ocen
+
+aspekt              | 1 | 2 | 3 | 4 | 5
+---                 |---|---|---|---|---
+rozgrywkę           | 0 | 0 | 0 | 3 | 7 
+szatę graficzną     | 0 | 0 | 0 | 3 | 7 
+oprawę audio        | 0 | 0 | 0 | 2 | 8 
+intuicyjność gry    | 0 | 0 | 0 | 6 | 4 
+
+#### Która sekcja statku była najciekawsza?
+
+- 80% Pokład statku
+- 10% Magazyn
+- 10% Laboratorium
+
+Graczom podobały się efekty pogodowe, które nadawały klimatu lokacji.
+
+#### Która sekcja statku była najmniej ciekawa?
+
+- 70% Reaktor
+- 20% Pokój z łodzią podwodną
+- 10% Laboratorium
+
+Reaktor i pokój z łodzią podwodną są małe i mają tylko jedną funkcję, więc wydawały się graczom nudne, jeden głos na laboratorium wynika z mechaniki teleportacji, gracz został przeteleportowany do zamkniętego pokoju z logiem i musiał czekać aż będzie mógł z niego wyjść.
+
+#### Co najbardziej podobało Ci się w grze?
+
+Gracze na zmianę wskazywali klimat i płynne mechaniki poruszania się.
+
+#### Co najmniej podobało Ci się w grze?
+
+Tutaj znowu gracze wskazywali raczej fakt, że czasem nie mogli się odnaleźć na mapie. Niektórzy też narzekali na to, że gra jest dla nich zbyt krótka.
+
+#### Czy zagrałbyś ponownie w tę grę?
+
+100% TAK
+
+## Utrzymanie gry w post-produkcji
+
+Po premierze gry planowane są poprawki ewentualnych błędów oraz rozbudowywanie gry o kolejne etapy, czy ukryte pokoje tak, aby gracze mogli dłużej się przy niej bawić.
+
+## Udział własnych assetów w grze:
+
+kategoria   | własne    | gotowe    | wszystkie
+---         |---        |---        |---
+grafiki     | 50 (98%)  |    1      |  51
+dźwięki     | 38 (78%)  |    11     |  49
+skrypty(kod)| 66 (100%) |    0      |  66
+
+Większość dźwięków to nagrane przez nas logi, reszta "własnych" to posklejane i przerabiane efekty dźwiękowe, jako "gotowe" została uznana muzyka w tle, którą generowało [SUNO AI](https://suno.com).
+
+Wszystkie poziomy i historia też zostały przygotowane w 100% przez nas.
 
 ## Zakres projektu
 
@@ -543,10 +690,16 @@ Zadania będą przypisane konkretnym tygodniom i uzupełniane na bieżąco w pon
 - __Tydzień 12 (16.05.2024 - 23.05.2024)__
     - __(O)__ Aktualizowanie GDD
     - __(O)__ Poprawki ewentualnych błędów
-    - __(O)__ Przeprowadzenie playtestów
 - __Tydzień 13 (23.05.2024 - 30.05.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Wprowadzanie poprawek po playtestach
-- __Tydzień 14 (29.05.2024 - 06.06.2024)__
+    - __(O)__ Poprawki ewentualnych błędów
+- __Tydzień 14 (30.05.2024 - 06.06.2024)__
     - __(O)__ Aktualizowanie GDD
-    - __(O)__ Build i zgłoszenie gry do gamejamu
+    - __(O)__ Poprawki ewentualnych błędów
+- __Tydzień 15 (06.06.2024 - 13.06.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Przeprowadzenie playtestów
+    - __(O)__ Wprowadzanie poprawek po playtestach
+- __Tydzień 16 (13.06.2024 - 20.06.2024)__
+    - __(O)__ Aktualizowanie GDD
+    - __(O)__ Wprowadzanie poprawek po playtestach
